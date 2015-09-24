@@ -1,0 +1,125 @@
+/* Styles for THIS Issue (not used by "Plain" view) */
+.section_head, .page_box { background: #fff;}
+
+@media screen {
+	/* See ui.css file */
+}
+/*====================*/
+/* Widescreen Monitor */
+@media only screen and (min-width: 1600px) {
+
+}
+
+/*==============================================================*/
+/* Widescreen Monitor (High Density) */
+@media only screen and (min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-width: 1600px) and (min--moz-device-pixel-ratio: 2),
+only screen and (min-width:1600px) and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-width:1600px) and (min-device-pixel-ratio: 2) {
+
+}
+/*==============================================================*/
+/* Desktop Screen 1280 to 1600 px */
+@media only screen and (min-width: 1280px) and (max-width: 1599px) {
+
+}
+/*==============================================================*/
+/* Desktop Screen 1280 to 1600 px */
+@media only screen and (min-width: 1280px) and (max-width: 1599px) and (max-height: 749px) {
+
+}
+/*==============================================================*/
+/* Desktop Screen (High Density) */
+@media only screen and (min-width: 1280px) and (max-width: 1599px) and (min-height: 800px) and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-width: 1280px) and (max-width: 1599px) and (min-height: 800px) and (min--moz-device-pixel-ratio: 2),
+only screen and (min-width: 1280px) and (max-width: 1599px) and (min-height: 800px) and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-width: 1280px) and (max-width: 1599px) and (min-height: 800px) and (min-device-pixel-ratio: 2) {
+
+}
+/*===================*/
+/* iPad in Landscape */
+@media only screen and (min-width: 1024px) and (max-width: 1279px)  {
+
+}
+
+/*===================================================*/
+/* iPad Retina and other hi-res tablets in Landscape */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) and (-webkit-min-device-pixel-ratio : 2.0),
+only screen and (min-width: 1024px) and (max-width: 1279px) and (min--moz-device-pixel-ratio: 2.0),
+only screen and (min-width: 1024px) and (max-width: 1279px) and (-o-min-device-pixel-ration: 2/1),
+only screen and (min-width: 1024px) and (max-width: 1279px) and (min-device-pixel-ratio : 2.0) {
+
+}
+
+/*================================*/
+/* Desktop Screen 1024 to 1280 px */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) and (min-height: 690px) {
+ .dooblecane {
+ 	color: black;
+ }
+}
+
+
+
+/*===================================*/
+/* iPad + Android Tablet in Portrait */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/*==============================================================*/
+/* iPad Retina + Hi-Res Other Tablet in Portrait */
+@media only screen and (min-width: 768px) and (max-width: 1023px) and (-webkit-min-device-pixel-ratio : 2.0),
+only screen and (min-width: 768px) and (max-width: 1023px) and (min--moz-device-pixel-ration: 2),
+only screen and (min-width: 768px) and (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-width: 768px) and (max-width: 1023px) and (min-device-pixel-ratio: 2) {
+
+}
+
+/*==============================================================*/
+/* Android HVGA and WVGA in Landscape */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+}
+
+/*==============================================================*/
+/* Android Landscape (High Density) */
+@media only screen and (min-width: 600px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio : 2.0),
+only screen and (min-width: 600px) and (max-width: 767px) and (min--moz-device-pixel-ration: 2),
+only screen and (min-width: 600px) and (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-width: 600px) and (max-width: 767px) and (min-device-pixel-ratio: 2) {
+
+}
+
+/*==============================================================*/
+/* iPhone + iPod Touch + Android Phone in Landscape */
+@media only screen and (min-width: 480px) and (max-width: 599px),
+only screen and(min-width:600px) and (max-width:767px) and (max-height:480px) {
+
+}
+
+/*==============================================================*/
+/* iPhone + iPod Touch + Android Phone in Landscape (High Density) */
+@media only screen and (min-width: 480px) and (max-width: 599px) and (-webkit-min-device-pixel-ratio : 2.0),
+only screen and (min-width: 480px) and (max-width: 599px) and (min--moz-device-pixel-ration: 2),
+only screen and (min-width: 480px) and (max-width: 599px) and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-width: 480px) and (max-width: 599px) and (min-device-pixel-ratio: 2) {
+
+}
+
+/*==============================================================*/
+/* iPhone + iPod Touch + Android Portrait */
+@media only screen and (max-width: 479px) {
+
+
+}
+
+/*==============================================================*/
+/* iPhone Retina + Android (High Density) Portrait */
+@media only screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio : 2.0),
+only screen and (max-width: 479px) and (min--moz-device-pixel-ration: 2),
+only screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
+only screen and (max-width: 479px) and (min-device-pixel-ratio: 2) {
+
+}
+

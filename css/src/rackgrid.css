@@ -1,0 +1,618 @@
+#binder {
+	top: 44px;
+	bottom: 44px;
+}
+#viewbutton4 { display: block !important;}
+#rackdata {
+	height: 0;
+	width: 0;
+	display: none;
+}
+
+#zoom {
+	top: 45px;
+}
+#controltoggle {
+	display: none;
+}
+
+#findbutton { display: none; }
+	
+/* Sheet master style is in continuous.css */ 
+	.sheet_in {
+		left: 0 !important;
+	}
+	.sheet_out_left {
+		left: 100% !important;
+	}
+	.sheet_out_right {
+		left: -100% !important;
+	}
+	.sheet_out_part_left {
+		left: 60% !important;
+	}
+	.sheet_out_part_right {
+		left: -60% !important;
+	}
+
+#folio0 {
+	-webkit-transition: left;
+	-webkit-transition-delay: 0;
+	-webkit-transition-duration: 1s;
+	-moz-transition: left;
+	-moz-transition-delay: 0;
+	-moz-transition-duration: 1s;
+	transition: left;
+	transition-delay: 0;
+	transition-duration: 1s;
+}
+#page0 { margin: 0 auto; }
+.folio, .page {
+	width: 100% !important;
+	background: transparent !important;
+	border: none !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-o-box-shadow: none !important;
+	-ms-box-shadow: none !important;
+	box-shadow: none !important;
+}
+.shadow, #spineshadow { display: none;}
+.header, .footer {
+	display: none;
+}
+.live {
+	-webkit-transform: translate3d(0,0,0);
+	margin: 0 auto 20px auto !important;
+}
+#folio1 {
+	display: none !important;
+}
+#navbar0 {
+	display: block !important;
+}
+
+
+.center {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.top {
+	top: 0px;
+}
+
+.bottom {
+	bottom: 0px;
+	}
+
+.drop {
+	position: relative;
+	top: 12px;
+}
+.header {
+	clear: both;
+	background: white;
+	background: rgba(255,255,255,.5);
+	padding: 5px;
+	border:1px solid;
+}
+
+
+.slot {
+	position: relative;
+	width: 25%;
+	height: 300px;
+	float: left;
+	margin-top: 20px;
+	display: block;
+	}
+
+.cover {
+	position: relative;
+/*	width: 180px;
+	height: 250px; */
+	background: white;
+	border: 1px solid black;
+	margin: 0 auto;
+	-moz-box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.50);
+	-webkit-box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.50);
+	-ms-box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.50);
+	box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.50);
+	overflow: hidden;
+}
+
+.rack_card {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.slot .cover {	
+	-webkit-transition-timing-function: ease-in-out;
+	-webkit-transition-duration: .25s;
+	-webkit-transition-delay: 0s;
+	-moz-transition-timing-function: ease-in-out;
+	-moz-transition-duration: .25s;
+	-moz-transition-delay: 0s;
+	-o-transition-timing-function: ease-in-out;
+	-o-transition-duration: .25s;
+	-o-transition-delay: 0s;
+	-ms-transition-timing-function: ease-in-out;
+	-ms-transition-duration: .25s;
+	-ms-transition-delay: 0s;
+	transition-timing-function: ease-in-out;
+	transition-duration: .25s;
+	transition-delay: 0s;
+}
+	.cover_out {
+		height: 0;
+		width: 0;
+	}
+	.cover_in {
+		width: 150px;
+		max-height: 230px;
+	}
+
+	.mylar {
+		position:absolute;
+		top:0;
+		left:0;
+		height:100%;
+		width:100%;
+		background: rgba(0,0,0,0); /* IE Needs This */
+	}
+	.ribbon {
+		position: absolute;
+		top: 0;
+		right: 5px;
+		height: 34px;
+		width: 22px;
+		background: url('../images/app/ui/mylist.png') 0 0 no-repeat;
+		display: none;
+	}
+	.on_reading_list { display: none;}
+
+.slot .cover:hover, .slot .cover:focus {
+	-webkit-transform: scale(1.1) !important; /* Native Scroll pixie dust over-rides */
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1) !important;
+}
+	.marked .ribbon {
+		display: block;
+	}
+	.marked .on_reading_list {
+		display: inline;
+	}
+	.cover .thumbnail {
+		height: auto;
+		width: 100%;
+		margin-bottom: -4px;
+	}
+	.cover .date {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 25px;
+		text-align: right;
+		background: #000;
+		background: rgba(0,0,0,.6);
+		overflow:hidden;
+	}
+		.cover .date p {
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 25px;
+			margin: 0 5px;
+			padding: 0;
+			color: #fff;
+		}
+		.cover .date .plusbutton {
+			position: relative;
+			height: 25px;
+			width: 25px;
+			float: left;
+			z-index: 2;
+			margin: 0;
+			-webkit-background-size: 25px 25px;
+			-moz-background-size: 25px 25px;
+			-ms-background-size: 25px 25px;
+			background-size: 25px 25px;
+		}
+		.lightboxbutton {
+			background: black url('../images/app/ui/lightboxbutton.gif') center center no-repeat;
+		}
+		.lb_minus {
+			background: black url('../images/app/ui/lb_minus.gif') center center no-repeat;
+		}
+	
+
+.slot .description {
+	display: none;
+}
+	.slot .description h1 {
+		margin: 0;
+		padding: 0;
+	}
+	.slot .description h4 {
+		font-size: 10px;
+		margin: 0;
+		padding: 0;
+	}
+	.slot .description .blurb {
+		font-size: 14px;
+	}
+	.slot .description .meta {
+		font-size: 12px;
+	}
+.appbanner_dn {
+	top: 44px;
+}
+
+	.noverflow {
+		overflow: hidden;
+	}
+.read  {
+	display: block;
+}
+	.read:hover, .read:link , .read:visited , .read:focus  {
+		text-decoration: none !important;
+	}
+	.read .button {
+		white-space: nowrap;
+		overflow: visible;
+		display: table;
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+		.read .button:hover, .read .button:focus {
+		}
+	.read .button.center {
+		margin: 0px auto;
+	}
+	.read .button p {
+		font-size: 16px;
+	}
+.slot .read {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 150px;
+	margin-left: -75px;
+}
+
+
+#notice {
+	text-align: center;
+	}
+	
+#footer {
+clear:both;
+height:100px;
+text-align:center;
+margin-bottom: 300px;	/* ensures full scroll length whether featured items are displayed or not */
+}
+	
+#footer .splash-notice {
+	font-size: 12px;
+	margin: 10px;
+	text-align: center;
+	display: block;
+	visibility: visible;
+}
+.footpages {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 10px auto;
+	padding:2px;
+	background: #fff;
+	background: rgba(255,255,255,.50);
+	color: black;
+	display: table;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#item_list {
+	overflow: visible;
+}
+
+#pagecounter {
+	position: absolute;
+	z-index: 2500;
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	color: #666;
+}
+
+.catid { display: none; }
+#helpbutton { display: none; }
+
+/* in-app viewer reading list */
+
+#dropbar_thumbs .slot {
+		width: 33%;
+		float: left;
+		margin: 0;
+		height: 175px;
+	}
+	#dropbar_thumbs .cover {
+		width: 75px;
+		max-height: 100px;
+	}
+	#dropbar_thumbs .mylar,
+	#dropbar_thumbs .date,
+	#dropbar_thumbs .slot .read {
+		position: absolute !important;
+	}
+	#dropbar_thumbs .ribbon { display: none;}
+	#dropbar_thumbs .slot .read {
+		width: 75px;
+		bottom: 20px;
+		margin-left: -37px;
+	}
+	#dropbar_thumbs .read .button {
+		width: 75px;
+		display: block;
+		overflow: hidden;
+		padding: 0;
+	}
+		#dropbar_thumbs .read .button p {
+			font-size: 12px;
+		}
+/*==============================================*/
+/*	Desktop										*/
+/*==============================================*/
+@media only screen and (min-width: 1600px)  {
+
+	#page_nav_right {
+		float: left;
+		margin-left:-10px;
+	}
+	#pagecounter {
+		top: 10px;
+		right: 10px;
+	}
+	.slot {
+		width: 14%;
+		margin-top: 25px;
+	}
+/*
+	#detailbox .gallerybox { max-width: 768px; }
+	#detailbox .gallerybox .read .button {
+		float: left;
+	}
+*/
+}
+/*==============================================================*/
+/* Desktop Screen 1280 to 1600 px */
+@media only screen and (min-width: 1280px) and (max-width: 1599px) {
+
+	#page_nav_right {
+		float: left;
+		margin-left:-10px;
+	}
+	#pagecounter {
+		top: 10px;
+		right: 10px;
+	}
+	.slot {
+		width: 20%;
+		margin-top: 25px;
+	}
+/*
+	#detailbox .gallerybox { max-width: 768px; }
+	#detailbox .gallerybox .read .button {
+		float: left;
+	}
+*/
+}
+/*==============================================*/
+/* Tablet UI (Landscape)							*/
+/*==============================================*/
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+
+	#page_nav_right {
+		float: left;
+		margin-left:-10px;
+	}
+	#pagecounter {
+		top: 10px;
+		right: 10px;
+	}
+	.slot {
+		width: 25%;
+		margin-top: 25px;
+	}
+
+	.iHide {
+		display: none;
+	}
+/*
+	#detailbox .gallerybox { max-width: 768px; }
+	#detailbox .gallerybox .read .button {
+		float: left;
+	}
+*/
+}
+
+
+/*==============================================*/
+/* Tablet UI (portrait)							*/
+/*==============================================*/
+@media only screen and (min-width: 720px) and (max-width: 1023px)  {
+
+	#page_nav_right {
+		float: left;
+		margin-left:-10px;
+	}
+	#pagecounter {
+		top: 10px;
+		right: 10px;
+	}
+	.slot {
+		width: 33%;
+		margin-top: 25px;
+	}
+
+	.breaker {
+		clear: both;
+	}
+	.iHide {
+		display: none;
+	}
+
+}
+/*==============================================*/
+/* Low-Res Tablet UI (portrait)							*/
+/*==============================================*/
+@media only screen and (min-width: 600px) and (max-width: 719px)  {
+ #pagecounter {
+ 	position: fixed;
+ 	top: 50% !important;
+ 	left: 50% !important;
+ 	right: auto !important;
+ 	height: 15px;
+ 	width: 100px;
+ 	margin-top: 40px !important;
+ 	margin-left: -55px !important;
+ 	background: black;
+ 	color: white;
+ 	-webkit-border-radius: 5px;
+ 	-moz-border-radius: 5px;
+ 	-ms-border-radius: 5px;
+ 	border-radius: 5px;
+ }
+	.slot {
+		width: 50%;
+		margin-top: 25px;
+	}
+
+
+	.breaker {
+		clear: both;
+	}
+	.iHide {
+		display: none;
+	}
+
+}
+/*==============================================*/
+/* Phone UI (Landscape)							*/
+/*==============================================*/
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+ #pagecounter {
+ 	position: fixed;
+ 	top: 50% !important;
+ 	left: 50% !important;
+ 	right: auto !important;
+ 	height: 15px;
+ 	width: 100px;
+ 	margin-top: 40px !important;
+ 	margin-left: -55px !important;
+ 	background: black;
+ 	color: white;
+ 	-webkit-border-radius: 5px;
+ 	-moz-border-radius: 5px;
+ 	-ms-border-radius: 5px;
+ 	border-radius: 5px;
+ }
+	.slot {
+		width: 25%;
+		margin: 10px 0px;
+		float: left;
+		height: 175px;
+	}
+	.cover {
+		width: 75px;
+		max-height: 100px;
+	}
+	.slot .read {
+		width: 75px;
+		bottom: 20px;
+		margin-left: -37px;
+	}
+	.read .button {
+		width: 75px;
+		display: block;
+		overflow: hidden;
+		padding: 0;
+	}
+	.read .button p {
+		font-size: 12px;
+	}
+	
+	.iHide {
+		display: none;
+	}
+
+}
+/*==============================================*/
+/* Phone UI (Portrait)							*/
+/*==============================================*/
+@media only screen and (max-width: 479px) {
+  #pagecounter {
+ 	position: fixed;
+ 	top: 50% !important;
+ 	left: 50% !important;
+ 	right: auto !important;
+ 	height: 15px;
+ 	width: 100px;
+ 	margin-top: 40px !important;
+ 	margin-left: -55px !important;
+ 	background: black;
+ 	color: white;
+ 	-webkit-border-radius: 5px;
+ 	-moz-border-radius: 5px;
+ 	-ms-border-radius: 5px;
+ 	border-radius: 5px;
+ }
+	.slot {
+		width: 33%;
+		float: left;
+		margin: 0;
+		height: 175px;
+	}
+	.cover {
+		width: 75px;
+		max-height: 100px;
+	}
+	.slot .read {
+		width: 75px;
+		bottom: 20px;
+		margin-left: -37px;
+	}
+	.read .button {
+		width: 75px;
+		display: block;
+		overflow: hidden;
+		padding: 0;
+	}
+		.read .button p {
+			font-size: 12px;
+		}
+}
+
+/*==============================================================*/
+/* High Density Displays */
+@media only screen and (-webkit-min-device-pixel-ratio : 2.0),
+only screen and (min--moz-device-pixel-ration: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2) {
+	.cover .ribbon {
+		background: url('../images/app/ui/hires/mylist.png') 0 0 no-repeat;
+		-webkit-background-size: 22px 33px;
+	}
+
+
+}

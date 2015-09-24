@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="msapplication-TileColor" content="#ADDEFA" />
+<meta name="msapplication-TileImage" content="ryuzine/images/app/icons/rack-tile.png" />
+<link rel="shortcut icon" type="images/vnd.microsoft.icon" href="ryuzine/images/app/icons/rack-favicon.ico" sizes="16x16 32x32 48x48 64x64 128x128" />
+<link rel="icon" type="image/png" href="ryuzine/images/app/icons/rack-favicon.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="ryuzine/images/app/icons/rack-icon-01.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="ryuzine/images/app/icons/rack-icon-02.png" />
+<link rel="apple-touch-icon-precomposed" href="ryuzine/images/app/icons/rack-icon-03.png" />
+ 
+<link rel="stylesheet" type="text/css" href="ryuzine/css/ui.css" id="ui_format" /> 
+<link rel="stylesheet" type="text/css" href="ryuzine/css/rackgrid.css" id="screen_format" />
+<link rel="stylesheet" type="text/css" href="ryuzine/theme/dark/theme.css" id="ui_theme" />
+<link rel="stylesheet" type="text/css" href="ryuzine/css/continuous.css" />
+<link rel="stylesheet" type="text/css" href="ryuzine/css/thisissue.css" id="this_issue" />
+<link rel="stylesheet" type="text/css" href="ryuzine/css/blank.css" id="colortext" />
+
+<title>Newsstand</title>
+<script type="text/javascript" src="js/rack.config.js" ></script>
+<script type="text/javascript" src="ryuzine/js/sniffer.js"></script>
+<script type="text/javascript" src="ryuzine/js/ryuzine.rack.js" ></script>
+
+</head>
+<body>
+<a href="#nav" id="skip2nav">Skip to Navigation</a>
+<!--// publication content below this line //-->
+<div id="front_matter">
+	<p id="summary">A Ryuzine Rack newsstand app.</p>
+	<div id="app_logo">
+		<!--// insert app logo here OR use masthead in catalog //-->
+	</div>
+	<div id="splash_screen"></div>
+	<div id="appbanner"></div>
+	<div id="welcome_sign">
+		<p></p>
+	</div>
+</div><!--// end of Front Matter //-->
+	
+<div id="issue">
+	<div id="page0" class="page recto">
+	<h1 class="header section_head"></h1>
+		<div class="live page_box">	
+			<div id="racktop" class="run-ads"></div>		
+			<div id="item_list"></div>
+			<div id="footer"></div>	
+	</div>
+</div> <!--// end of issue //-->
+
+<div id="end_matter">
+	<div id="toc">
+		<h1>Table of Contents</h1>
+		<ul id="nav">
+			<li><a href="#0">RyuzineRack</a></li>
+		</ul>
+	</div>
+		<h3>Advertisement:</h3>
+		<div id="boxad" class="light_boxed land">
+		</div>
+</div>
+<!--// end of End Matter //-->	
+
+<!--// Do not change anything below this line //-->
+<div id="splash">
+<div id="splashcell">
+<div id="splashblock">
+<p style="display:none;">This page was made for the <a href="http://www.ryumaru.com/products/ryuzine/" target="_blank">Ryuzine&trade; webapp</a>.</p>
+<noscript style="display:block;margin:0 20px;">
+	<p><strong>App Error:</strong> Data Catalog cannot be loaded. Javascript <span style="display:none;">and Stylesheets</span> disabled!</p>
+	<p>Enable <span style="display:none;">both</span> to view as a web application.</p>
+</noscript>
+</div>
+<p id="copyright" class="splash-fineprint">Ryuzine Copyright 2011,2012 K.M. Hansen &amp; Ryu Maru - All Rights Reserved</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+/* SIMPLE STYLES for RYUZINE */
+/* BASE FONT SIZE */
+p {
+	font-size: 1em;
+}
+/* SIMPLE BLOCK ALIGNMENTS */
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.clear { /* Use on next element after done floating elements */
+	clear: both;
+	display: block;
+}
+/* SIMPLE TEXT ALIGNMENTS */
+.-left {
+	text-align: left;
+}
+.-right {
+	text-align: right;
+}
+.-center {
+	text-align: center;
+}
+.-justify {
+	text-align: justify;
+}
+/* Simple Font Sizes */
+.xx-small {
+	font-size: xx-small;
+	font-size: .25em;
+}
+.x-small {
+	font-size: x-small;
+	font-size: .5 em;
+}
+.small {
+	font-size: small;
+	font-size: .75em;
+}
+.medium {
+	font-size: medium;
+	font-size: 1em;
+}
+
+.large {
+	font-size: large;
+	font-size: 1.5em;
+}
+.x-large {
+	font-size: x-large;
+	font-size: 2em;
+}
+.xx-large {
+	font-size: xx-large;
+	font-size: 3em;
+}
+/* FONT WEIGHTS (not supported by all browsers) */
+.ultra-light {
+	font-weight: 100;
+}
+.light {
+	font-weight: 200;
+}
+.book {
+	font-weight: lighter;
+	font-weight: 300;
+}
+.regular {
+	font-weight: normal;
+	font-weight: 400;
+}
+
+.medium {
+	font-weight: 500;
+}
+
+.semibold {
+	font-weight: 600;
+}
+
+strong {
+	font-weight: bold;
+	font-weight: 700;
+}
+
+.heavy {
+	font-weight: 800;
+}
+
+.ultra-black {
+	font-weight: 900;
+}
+.extra-light {
+	font-weight: 100;
+}
+.thin {
+	font-weight: 200;
+}
+.lighter {
+	font-weight: lighter;
+	font-weight: 300;
+}
+.normal {
+	font-weight: normal;
+	font-weight: 400;
+}
+
+.medium {
+	font-weight: 500;
+}
+
+.demibold {
+	font-weight: 600;
+}
+
+.bold {
+	font-weight: bold;
+	font-weight: 700;
+}
+
+.bolder {
+	font-weight: 800;
+}
+
+.poster {
+	font-weight: 900;
+}
+.black {
+	font-weight: 800;
+}
+
+.extra-black {
+	font-weight: 900;
+}
+.fat {
+	font-weight: 900;
+}
+/* Simple Font Styling */
+em {
+	font-style: italic;
+}
+.italic {
+	font-style: italic;
+}
+.oblique {
+	font-style: oblique;
+}
+.normal {
+	font-style: normal;
+}
+s {
+	text-decoration: line-through;
+}
+strike {
+	text-decoration: line-through;
+}
+.strike {
+	text-decoration: line-through;
+}
+u {
+	text-decoration: underline;
+}
+.underline {
+	text-decoration: underline;
+}
+.overline {
+	text-decoration: overline;
+}
+pre {
+	font-family: Courier, monospace, serif;
+}
+code {
+	font-family: Courier, monospace, serif;
+}
+.code {
+	font-family: Courier, monospace, serif;
+}
+sub{
+	vertical-align: sub;
+	font-size: .58em;
+}
+.sub {
+	vertical-align: sub;
+	font-size: .58em;
+}
+sup {
+	vertical-align: sup;
+	font-size: .58em;
+}
+.sup {
+	vertical-align: sup;
+	font-size: .58em;
+}
+
+/* Simple Background Colors */
+.bg-black { background-color: #000; }
+.bg-red { background-color: red; }
+.bg-orange {background-color: red; }
+.bg-yellow {background-color: yellow; }
+.bg-green { background-color: green; }
+.bg-blue { background-color: blue; }
+.bg-gray { background-color: gray; }
+.bg-white { background-color: white; }
+
+/* Simple Text Colors */
+.black { color: black; }
+.red { color: red; }
+.orange { color: orange; }
+.yellow { color: yellow; }
+.green { color: green; }
+.blue { color: blue; }
+.white { color: white; }

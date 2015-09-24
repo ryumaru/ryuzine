@@ -1,0 +1,845 @@
+Version 1.0
+===========
+
+	THEMES
+	* Themes now support “child” themes
+	* Separate theme files for Ryuzine Writer and Reader/Rack/Press
+	* Ryuzine Writer now sets a unique cookie for theme options so
+	  Writer, and Reader/Rack on the same server do not share prefs.
+	* All older Android themes have been retired, the new “Paperbot”
+	  theme is now the preferred platform theme for Android.
+	* Original “Mobile Fruit” theme replaced by “Mobile Fruit 7” and
+	  updated for iOS 8.x look and feel.
+	* “Dark” and “Light” styling moved from UI stylesheet to themes
+	* New “Writer” theme with tabbed UI (can also be used as a base
+	  for other tabbed child themes).
+
+	RYUZINE READER
+	* Updated and simplified User Interface:
+	  * no more sliding through multiple tab bars, all controls up front
+	  * Improved swipe detection for phones in portrait orientation (tap
+	    left/right edge is also now available), which makes using Ryuzine
+	    easier to use when UI bars are hidden.
+	  * default position of panels is to slide in from sides (can be changed
+	    by themes)
+	  * “Help” button moved to “Contents” panels (where it should be)
+	  * All icon images replaced by icon font
+	  * “Done” buttons on panels positioned to edges of screen to make
+	    it easier to tap them on tablets.
+	  * Themes should now focus on color and style instead of attempting
+	    to mimic native UI elements.  If you mimic native UI the end user
+	    expects the webapp to behave like a native app, which it won’t.  
+	    Third-party themes should instead be focused on just looking nice 
+	    over looking like any specific OS platform UI.  The config option
+	    for OS Theme Targeting is still in place, so you can selectively
+	    send color themes to different platforms designed to compliment
+	    (rather than mimic) that platform. 
+	  * IE 10+ missing Splash text now fixed (as well as DOM error it caused) 
+	* Shift+F4 now opens the Options Panel (it had no keys assigned to it, oops!)
+	* Splash Ad (if set) now offer reader ability to “Skip Ad”
+	* Banner Ad config settings are now consistent with other integrated ads.
+	* Most of the “skeuomorphic” page effects have been moved from the binding
+	  stylesheets into the “Page Curves” add-on, allowing for a cleaner, more
+	  modern, minimalist appearance (page shadows remain a separate effect).
+	* Integrated Banner Ad fixed so it no longer ends up with two “Close” buttons
+	  when file is subsequently edited Ryuzine Writer.
+	* You can now include an <img> tag within your #splash_title and it will
+	  replace the title text in the mobile (phone) nav bar.
+	* Loading spinner is now CSS3 powered icon font instead of animated GIF.
+	* NEW default Social Share Widget utilizes URL Parameters.  Unlike many of
+	  the social network widgets this one does NOT create or load IFRAME elements
+	  that can delay the loading of the publication.  The default share widget was
+	  also broken out into an add-on to make customization (or complete replacement)
+	  much easier.  We think this new widget meets the needs of most users enough
+	  that there’s no need to replace it. However, if you want to use another widget 	  you still can do so either within the HTML or by replacing the default script.
+	* Options Switches simplified for easier theme customization:
+		* reduced to 2 HTML elements (was 8)
+		* More CSS3 control of appearance/animations from themes
+		* .opt-disabled now applies to the <LI> tag, so themes can
+		  easily style the list item, label, and/or switch differntly
+		  to best indicate to users that an option is disabled.
+	* 2D binding stylesheets removed as nobody should still be using a version
+	  of Chrome prior to 19 or pre-Blink Opera browsers anymore.
+	* On phones in landscape orientation the page content now stretches from
+	  the top to bottom (header and footer are hidden) because it is likely
+	  users will hide the UI anyway, given the limited space.
+	* Failure to load localization script no longer stops webapp.
+	* Localization updated (“About” app now also localizes)
+	* Theme detection fixed (so Options no longer show theme enabled when none
+	  is actually loaded - happened when window URL included #anchor link)
+	* If a theme swaps the positions of the NavBar and TabBar the script now
+	  swaps the banner ad and the TOC Slider (swaps back if theme is disabled)
+	* ApplicationCache removed.
+	* “Show All Dialogs” added to Options Panel.  If there are dialogs with a
+	  “Do not show this again” checkbox the user can choose to hide them.  To
+	  over-ride dialogs previously set to hide and see them anyway you turn 
+	  this switch on and all dialogs - regardless of hide settings - will be
+	  shown (in case you hid one by accident or changed your mind, when it is
+	  again visible you can un-tick the box to make it show, then turn off all
+	  other dialogs you meant to hide by flipping the option switch to “off.”
+	* Files unique to the webapp are now in a “ryuzine”sub-folder to prevent
+	  authors overwriting or deleting them, and make it easier to drop in
+	  future backwards-compatible updates.  This is also now consistent with
+	  how the Ryuzine Press plugin already uses the webapp.
+	* Escape from dialogs with ESC key (closes all open dialogs)
+	* Up/Down arrows now also do back/next page, because in continuous or
+	  plain HTML view they are vertically scrolling and it wasn’t obvious
+	  that the left/right would move you up/down through the page sections.
+	* Font > Color Sepia/Black no longer attempts to override author’s intent
+	  when custom styling has been specified, it now only overrides the default
+	  styling.
+	* Device & Browser sniffing updated and moved into separate file.
+
+	RYUZINE RACK
+	* Same UI fixes as Ryuzine Reader
+	* Fixed issue where you could only swap to another catalog once and
+	  then could not change to another or back to the original catalog.
+	* Fixed issue with Sort Panel catalog switch buttons losing events
+	  until the browser had a resize/reorientation event
+	* Fixed issue with Sort Panel buttons getting multiple copies of the
+	  same event listener attached, causing the target function to fire
+	  dozens of times on one click.
+	* Fixed problem with “rackItems” being over-ridden by default value.
+	* Appearance of Auto-generated Promos improved to make them look more
+	  like advertisements and different from the Item Details. 
+	* Now supports global “app logo” to appear in Navbar
+	* If “masthead” is included in catalog it appears in Navbar (and will
+	  over-ride any existing app logo)  This allows individual catalogs to
+	  change the “branding” on the Newsstand.  If you switch to a catalog
+	  without a masthead the original app logo OR app title will be restored
+	  to the Navbar.
+	* UI updated to new format
+	* Bookmarking button background-size fixed for high-density displays
+	* “Find” button now only appears in the alternate (list) modes, since
+	  it does not work in “grid” view anyway.
+	* Item links changed to prevent misfires on touch devices (everything runs
+	  through tapCheck function now).
+	* Default changed to open publications in new tab/window (_blank) rather
+	  than in the same window/tab as Ryuzine Rack itself.
+	* Code for legacy link targeting removed
+	* Add/Remove item from Reading List no longer requires page refresh to 
+	  see that it has been marked/unmarked (shows up immediately now).
+	* Theme detection fixed (so Options no longer show theme enabled when none
+	  is actually loaded - happened when window URL included #anchor link)
+	* ApplicationCache removed.
+	* Banner Ad config settings are now consistent with other integrated ads.
+	* Page X of X footer removed, Navbar counter restyled to appear below spinner
+	  during page changes on small screen devices.
+	* Views stylesheet media queries had different break-points than main ui
+	  stylesheet which are now fixed.
+	* “Simple” and “Detail” list styling has minor layout fixes.
+	* If the “In App” option is in use the “Drop Bar” no longer shows thumbnails
+	  of items on the Reading List - these have been moved to a slide-in Panel
+	  using the same UI/thumbnails as the mobile version of Ryuzine Rack, and now
+	  allows management of the Reading List while a publication is open in the app.
+	* Files unique to the webapp are now in a “ryuzine”sub-folder to prevent
+	  authors overwriting or deleting them, and make it easier to drop in
+	  future backwards-compatible updates.  This is also now consistent with
+	  how the Ryuzine Press plugin already uses the webapp.
+	* Escape from dialogs with ESC key (closes all open dialogs)
+	* Font > Color Sepia/Black no longer attempts to override author’s intent
+	  when custom styling has been specified, it now only overrides the default
+	  styling.
+	* Fixed problem where whitespace in promo column was misread as possible image
+	  which would throw “Error 400: Bad Request” in promo carousel.
+	* Fixed issue with promo carousel where it only worked properly with one,
+	  three, or five promos and additional promos would be stacked on top of
+	  each other.  Minimum for animated carousel is now 3 promos, preferred is 5.
+	* Setting maxpromos to 0 (zero) now fully disables the carousel and hides the 
+	  Options Panel > Featured Items switch.
+	* You no longer need to define the image paths in the config file.  It will now
+	  always look in the /images/rack/ subfolder but there are two important changes:
+		1. The old standard and high resolution system has been scrapped.
+		   Simply supply ALL devices with 300px wide cover art images.
+		2. Cover art images must be in subfolders matching the filename of the
+		   catalog to which they belong.  For example, the default catalog is
+		   “catalog1.htm” so the corresponding cover art image folder would be:
+		   /images/rack/catalog1/
+	  This prevents you from having cover art for multiple catalogs mixed together in
+	  the one “rack” image folder.  They are now organized in subfolders.
+	* Device & Browser sniffing updated and moved into separate file.
+
+	RYUZINE WRITER
+	* Save dialog now prevents you from accidentally saving HTML file that
+	  overwrites Ryuzine Writer itself or Ryuzine Rack.
+	* Fixed Scan Directory issue with showing files that should have been
+	  hidden in the Open and Package dialogs.
+	* Simulator completely rewritten to:
+		* Make creating device profiles easier
+		* Allow Add-Ons to append custom devices profiles
+		* “Add Device” dialog updated for new method
+		* Operating System elements now independent of device profiles
+		* Ability to add custom operating system profiles
+		* Automatically prefers “Portrait” orientation for phones and
+		  “Landscape” for tablet profiles on switching devices
+		* “Fill View” now uses a dropbar control like Ryuzine Rack’s “In-App” view.
+	* Fixed Ryu Picker header and page element creation “undefined” error.
+	* ALL Editor panels can now be undocked and float
+	* Floating editor panels cannot be dragged off screen
+	* Floating editor panels now travel with Editor Workspace
+	* Removed Fullscreen Editor mode because it effectively disables floating
+	  editor panels and other editor dialogs appeared underneath it.  ESC key
+	  to get out of fullscreen mode failed intermittently (trapping you in
+	  fullscreen mode).
+	* Package Builder > Custom now lets you pick which custom web font folders or
+	  loose fonts to include in the package.  “Smallest Package” includes none,
+	  “Standard Package” copies the entire /fonts folder.
+	* Package Builder > Custom now has a checkbox to explicitly preserve the Xinha
+	  Editor “thumbs” folder, otherwise it is always removed to reduce file size.
+	  It is therefore NOT recommended that you put your own thumbnails in that folder
+	  or a folder with that name if you are not using “Custom” packaging.
+	* Package Builder now allows building packages with JUST Ryuzine Rack inside.
+	* Package Builder allows you to select specific catalog files and catalog image
+	  subfolders in the same way as you can pick and choose which addons or themes
+	  will be included in a custom package.
+	* Package Builder now allows you to select specific fonts (both organized in subfolders
+	  and loose fonts) to include in custom packages.
+	* No longer asks you for “Issue specific stylesheet” at load time
+		* Can now be set to auto-import Master Styles stylesheet in writer.config.js:
+		  	* Set “myStyles = 1”
+			* Set “importStyles = “filename.css”
+			* User can over-ride in Options Panel “Auto-import Master Styles”
+	* “Issue-specific Stylesheet” renamed “Master Styles”
+	* “My Styles” panel is now “Master Styles” and you can load/change
+	  stylesheets without having to reload Ryuzine Writer.  It also tells
+          what stylesheet filename is currently loaded.
+	* In-page styles now have their own panel called “Edition Styles” which
+	  can Add/Delete styles plus Load/Save external stylesheets.
+	* The “Edition Styles” panel also lets you create “Editor Styles” that 
+	  customize how objects appear in the Editor window while composing, but
+	  these styles are not exported when you build your magazine.  Any class name
+          with “editor” in it will be an editor-only style that will not be included
+          in your in-page Edition Styles.  This is useful if you want to, for example,
+	  color code or outline certain elements within the editor, but do not want them
+	  styled that way in the actual Ryuzine webapp or in an ePub export.
+	* The “Edition Styles” panel will now also accept simple compound and multiple
+	  class declarations from the “Add New Style” dialog (but not all will be imported
+	  from an external stylesheet).
+		Base Class: .myclass { color: blue; }
+		Compound:   .myclass.yourclass.theirclass { color: red;}
+		Multiple:   .myclass .yourclass .theirclass { color: purple;}
+
+	The difference between “compound” and “multiple” is that compound redefines what
+	happens if a single element has ALL of those classes applied to it.  It is treated
+	as a unique new class unto itself, but inherits any undefined rules from the individual
+	listed classes.  Multiples denote ancestor-descendant relationships where the first
+	class is the oldest ancestor and the last class name is the youngest descendent (which
+	means the descendants are nested inside their ancestors).  In this case only the LAST
+	class name will inherit undefined rules from the individual class of the same name.
+
+	When you import or create a multiple ancestor-descendant selector the Edition Styles
+	panel will divide it and any previously undeclared class names will be added to the
+	<style> block as empty declarations. The example above would be written into the
+	in-page style block like this:
+
+		.myclass { color: blue;}
+		.yourclass {}
+		.theirclass {}
+		.myclass .yourclass .theirclass { color: purple;}
+
+	This makes sure it is at least possible to apply “.yourclass” and “.theirclass” to
+	elements within the editor, but it is up to you - the writer - to make sure that
+	you apply the styles to the correct nested ancestor-descendant elements.
+
+	It is also possible to enter compounds like “h1.myheader” (a <h1> tag with class “.myheader”)
+	or “h1 .myheader” (a child element inside a <h1> tag with class “.myheader”).  However these
+	are currently problematic and should be avoided.  If you intend to style HTML tags you should
+	ideally do that in your “Master Styles” external stylesheet, NOT the Edition Styles.
+
+	The “Edition Styles” panel also allows you to select a style or styles from the list and
+	DELETE them.  Be aware that deleting a style will ALSO check through all the other styles
+	for every reference to the style(s) being deleted and delete them as well!  As an example
+	let’s say you defined the following:
+
+		.egg { background-color: yellow;}
+		.foo { color: brown;}
+		.young { font-size: 12px;}
+		.egg.foo.young { font-size: 24px;}
+		.egg .foo .young { color: red;}
+		.egghead { background-color: beige;}
+		.eggbert { border-radius: 8px; }
+
+	If you select “.egg” in the panel list and then the Trash icon it will ask if you want
+	to delete “.egg” and every other reference to it?  If you confirm the deletion, afterwards
+	your style block would read:
+		
+		.foo { color: brown; }
+		.young { font-size: 12px;}
+		.egghead { background-color: beige;}
+		.eggbert { border-radius: 8px;}
+
+	Notice that it left “.egghead” and “.eggbert” alone, because they do NOT reference the
+	deleted style “.egg” they just have a name with “e-g-g” in them.  But the compound style
+	“.egg.foo.young” and the ancestor-descendant style “.egg .foo .young” are both deleted 
+	because they rely on the now deleted “.egg” to work, so there’s no point in keeping them
+	around.
+
+	* File Manager fixed so it now properly detects files with extension “.jpeg”
+	* NEW Page Manager similar to those found in professional page layout software:
+		* Add/Delete pages
+		* Add Multiple Pages dialog
+		* Drag to re-order pages
+		* Insert single pages by selection
+		* Select/Deselect multiple pages
+		* 3 different page thumbnail sizes
+		* Display thumbnail image or blank thumbnails (latter improves performance)
+		* Display Facing Pages (editor width allowing)
+			* Left or Right Bound layout
+		* Outline Page Elements
+	* “Split” is now “View” and lets you select between:
+		* Auto-Split Horizontal or Vertical depending on detected window size
+		* Split Vertical top/bottom
+		* Split Horizontal left/right
+		* Reset View (no split)
+	* “Build” now takes you to the Simulator instead of “Export” (because,
+	  logically you’d want to see if it worked before exporting it).
+	* “Build” now automatically submits the “Output Options” to make sure any
+	  custom stylesheets are included in the build (but you should still make
+	  sure to double-check the Output Options before you actually Export).
+	* Fixed “Sync2Pack” function that tries to synchronize Output Format options
+	  and ConfigBuilder options (if used) with Custom Package options in the
+	  Package Builder dialog.
+	* Package Builder now allows you to make packages with just Ryuzine Rack
+	  in them (now you can choose Ryuzine, Ryuzine Rack, or Both).
+	* Better support for sharing over social networks
+	  * “Summary” element is easily read by bots, also used as meta description
+	    either of which is used by SEO and Facebook as excerpt.
+	  * “Summary” element can contain an image which is used as thumbnail for
+	    Facebook and media for “Pinterest” sharing.
+	    Note: this is not set as thumbnail with Open Graph meta because that
+	    prevents Facebook users from selecting their own thumbnail on the share.
+	    You can put more images in the “Summary” element, however, so Facebook
+	    shares only have your suggested thumbnails from which to choose.
+
+	* “Document Properties” panel is new, it lets you define more meta data for
+	  your publication and inclusion/exclusion of “unique” elements.
+		* From a blank document you can open “File > Properties” and
+		  define the “Title,” “Summary,” and what other unique elements
+		  you plan to use in your publication.  Hit “Apply” and it will
+		  create the elements in the Editor.
+		* After you have created or loaded a document you can later
+	  	  decide to turn various “unique” elements on or off.  If you
+		  disable an element any content that was in it is preserved in
+		  a variable (so you can restore it if you made a mistake), but
+		  it is only retained until you load something new in the Editor.
+		* You can also manually add or delete elements within the Editor
+		  and the Document Properties will be updated to reflect the actual
+		  contents of the document as it is right now.
+		* Summary notes a 155 character limit.  The element can be whatever
+		  length you want, but the <meta name=“description” will ignore any
+		  characters beyond 155.
+		* The Document Properties panel *tries* to identify the File Format
+		  of what is loaded into the Editor.  If it is a Ryuzine document 
+		  following the new specification it should have a <meta> “generator”
+		  tag with the current version number.  However if there is no meta
+		  tag it will try to guess what the file format is by the document
+		  structure:
+
+			* Ryuzine 0.9.5.x (or earlier) - an old, incompatible format
+			* Ryuzine 1.0 (Converted) - a 0.9.6.x file that has no
+			  version data, but could be converted to the current spec.
+			* Ryuzine 1.0 (Inferred) - a 0.9.6.7+ file that has no
+			  version data, but has the structure of the current spec.
+			* Ryuzine 1.0 - a current spec file with version data.
+			* Version Data Missing - the file has no version data and
+			  Ryuzine Writer doesn’t recognize the document structure.
+			* Ryuzine Rack - identifies a file, or preview, or a newsstand.
+
+			There is also a box at the bottom titled “Import Notes” that
+			tells you more about the file, particularly urging you to re-
+			save or rebuild the file if it was converted from one of the
+			older structures.
+	* BUILD PACKAGE - now limits user to selecting a single images sub-folder and
+	  offers the option to skip ZIPping into an archive if you would like to manually
+	  add more files and/or use some other archive format.  The folder could also be
+	  FTP’d up to a web server directly (saves you the step of unzipping it first).
+	* Styling for the Xinha Editor no longer requires a separate “Skin” file, it
+	  is now part of the Ryuzine Writer theme file. 
+
+
+“Edition Styles” Panel Notes:
+The panel does not support compound styles or nested styles.  If you load a stylesheet that has any it will alert you that they were found and will not be shown in the panel list.  It only supports simple “dot” selectors like .classname.  Tag elements (like <p> or <h1>, etc.) should have their rules set in your Master Stylesheet.
+
+If you use the “Save Styles” option from the “Editor Styles” panel it will save every selector shown in the panel, including Editor Styles. However, if you use the “Output > Preserve In-Page Styles” and then go to the “Export > HTML” tab the file will not contain the Editor Styles.
+
+NEW DOCUMENT SPECIFICATION
+There are still two document formats that can be imported to the editor:
+
+“wip” (work in progress) files are those saved from the editor workspace.  If the file has never been built before these only contain the actual pages of your publication and the “document properties” elements and possibly a link to a custom stylesheet.
+
+“Ryuzine” files are those that have already been built and saved from the “Export” workspace and therefore contain all the additional links to scripts and stylesheets necessary to work as stand-alone Ryuzine publications.  You can still import these processed files into the editor, save them as WIP files or rebuild them with your edits.
+
+These files now should have a div container with the id “issue” inside which exist all the pages of the publication.  The pages are now in the format of:
+
+	<div id=“issue”>
+		<div id=“pageX” class=“page”>
+			<div class=“header”>Heading</div>
+			<div class=“live”>
+			… page content …
+			</div>
+		</div>
+	. . . other page divs . . .
+	</div>
+
+(If it’s an older file it will automatically be converted to this new layout if possible upon importing it to the Editor)
+
+There are also two other (optional) top-level containers with the ids “front_matter” and “end_matter” which are meant to contain all the “unique” elements.  The only purpose of placing them inside these other containers is so their visibility can be easily toggled on/off in the WYSIWYG editor.  If the unique elements are not inside these containers they simply exist on the “pasteboard” in the editor window.  Ryuzine will still find them and use them regardless of where they are in the document.  Nonetheless the recommended format is:
+
+<div id=“front_matter”>
+	<h1 id=“splash_title”>Title of Publication</h1>
+	<p id=“summary”>Summary of this issue contents for SEO</p>
+	<div id=“splash_screen”>(splash ad link and image)</div>
+	<div id=“appbanner”>(mobile style banner ad link & image)</div>
+	<div id=“welcome_sign”>Optional greeting message</div>
+</div>
+<div id=“issue”>
+	<div id=“pageX” class=“page”>
+		<h1 class=“header”>Page Heading</h1>
+		<div class=“live”>
+		. . .page content. . .
+		</div>	
+	</div>
+	. . . other page divs . . .
+</div>
+<div id=“end_matter”>
+	<div id=“issue_gallery”>
+		<div class=“light_boxed”>lightboxed image</div>
+		<p class=“caption”>optional image caption</div>
+		. . .additional lightboxed images and captions . . .
+	</div>
+	<div id=“exit_message”>Optional exit messages</div>
+	<div id=“social_widget”>if you want to use your own social/sharing widget</div>
+	<div id=“offline”>optional URL of your site or this publication</div>
+	<div id=“copy_right”>optional copyright notice</div>
+</div>
+
+Again, all the elements inside of both “front_matter” and “end_matter” are optional, you can put them in any order you want and they technically don’t even need to be in either of those containers (but you won’t be able to hide them in the editor if you don’t put them in those containers).
+
+You can have other stuff in your document, for example to target SEO bots or for people with JS and CSS disabled, but anything other than those specific elements noted above gets discarded when the document is converted to Ryuzine by the Reader scripts.
+
+KNOWN PROBLEMS
+* If you manually add or delete pages in the rich-text editor Ryuzine Writer will attempt to rectify any disparity between the Page Manager thumbnails and the actual pages in the editor.  If you failed to properly close any quotes or tags this will throw a JS error, which doesn’t halt the program but it will keep throwing errors until you go into HTML edit mode and fix your code (the editor will TRY to fix the code, but may not wrap elements with your intent).
+
+Version 0.9.6.5-b
+=================
+
+THEMES
+* minor fixes to Urban theme
+* minor fixes to Coolbeans theme
+* NEW iOS7-inspired theme
+
+RYUZINE READER
+* Support for iScroll 5 Beta
+* Better apply/remove of scrolling method to panels (no longer requires refreshing
+	browser for the new setting to take effect)
+* Simpler anchor linking to other page sections from within body text of a page (no longer need to include any javascript or event handlers)
+* Lightbox Links now create lightbox button as an <a> element (needed for IE10+ using iScroll 5)
+* Pages Scroller control now supports a progress indicator in the track
+
+
+RYUZINE WRITER
+* Now includes addons for iScroll 5 Beta and ePub generation
+* Simulator skins updated to allow custom styling of simulated UI elements
+* Fixed Add-Ons error that caused "More >" button to not be created if
+  there were more than two add-ons loaded that created custom workspaces.
+
+
+Version 0.9.6.4-b
+=================
+
+RYUZINE RACK
+* Added option for link targeting.  For example if you set it to "1" the buttons open the content in a new window.
+* Fixed display of info cards in Firefox.
+* Updated for new language code implementation.
+* Fixed About Dialog box missing images error.
+* Fixed error that disabled iScroll if either Zoom & Pan or Native Scrolling were also disabled.
+* Fixed missing cover thumbnails in Reading List
+
+RYUZINE WRITER
+* Configuration Builder updated to include the new link targeting option for Ryuzine Rack.
+* Configuration Builder updated for new language localization support, removal of Country Code option.
+
+URBAN THEME
+* Fixed display of Lightbox gallery content centering across browsers.
+* Fixed missing page buttons on Ryuzine Rack
+
+LOCALIZATION ADD-ON
+* Added support for 10 new languages.  Removed necessity to declare a country code (if you are using an old config file that still declares one it is simply ignored).
+
+RYUZINE READER
+* Fixed display of Lightbox gallery content for Firefox (worked ok in WebKit, but not Mozilla).
+* Updated for new language code implementation.
+
+Opera 12.15+ users are no longer offered the choice of "Plain HTML" or "Webapp" views.  The webapp mostly works again in Opera, but not well enough to say it's supported, and we have no plans to even try specifically supporting Opera again until after a desktop Webkit/Blink version is available for testing.
+
+
+Version 0.9.6.3-b
+
+
+* Internet Explorer 8 and earlier
+* Safari 3.0 and earlier
+* webOS devices
+* BlackBerry devices
+
+UNSUPPORTED
+Internet Explorer 8 and earlier, Safari 3 and earlier are now officially "unsupported."  Opera browsers were dropped from support a while ago, but there are some versions of Opera that do (or mostly) work so Ryuzine now detects for Opera and offers users the option to either view a plain HTML version or try to run the Ryuzine webapp with a warning that there are "known problems" so there is not expectation that it will work properly.
+
+The "Legacy Support" add-on (aka Robert Nyman's "getElementsByClassName" script) is deprecated now that Ryuzine no longer accommodates legacy Internet Explorer or Safari browsers.
+
+LIMITED SUPPORT
+These browsers cannot show the page-flip animation properly if at all anyway, so they are now default to Page Animations = Off
+*Chrome 2.x
+*Safari 3.12
+*Internet Explorer 9
+*Firefox 3.6
+* Android 2.x
+* Windows Phone 7.5
+
+There have been significant issues with Android 2.x since the original version of Ryuzine, mostly related to bugs in the built-in browser regarding how it renders (or often doesn't) the CSS3 transform effects upon which Ryuzine is based.  Because there are still a significant number of Android 2.x devices in use they are still supported, but that support is limited due to the buggy nature of the browser.  What does this "limited" support mean?
+* No page-flipping "Magazine" mode
+* No Grid View thumbnail navigation mode
+* No native scrolling mode
+* Browser User Agent String must be set to "Android"
+* Seriously "low-end" devices may not be usable at all (but try "Continuous" or "HTML Only" views first)
+
+Support in Windows Phone 7.5 is also "limited" because the Internet Explorer Mobile browser is based on Internet Explorer 9.  Windows Phone also does not understand the WebKit touch events used in Ryuzine so the "swipe" gesture doesn't turn the pages (there are proprietary Microsoft touch events but they have not yet been added to Ryuzine).
+
+SUPPORTED
+*Chrome 20
+*Safari 4
+* Firefox 4
+* iOS 4
+* Android 4
+
+UNTESTED
+We are no longer testing Ryuzine in webOS/openWebOs, BlackBerry, Firefox Mobile, or pretty much anything else we haven't mentioned.  That doesn't mean Ryuzine won't work on those platforms, it means we don't know whether it does or not and are no longer making any special accommodations for them or, obviously, any other platforms we haven't mentioned.
+
+Windows Phone 8 has also not been tested, however Ryuzine doesn't use any of the Internet Explorer 10 features which are disabled in the mobile version so everything, aside from the swipe gesture, should work.
+
+RYUZINE READER
+Eliminated nearly 500 lines of code with the removal/change of which platforms and browsers Ryuzine will now support.  It's only 4KB but most of it was made up of complex, nested alternatives depending on the browser/platform that no longer have to be processed.
+
+Automatic updating of old-format Ryuzine files is now handled differently.  The page is rewritten first to the new format and then processed like any new format file would be.  Known problems with the auto-update:
+
+* Pages may be blank until you force a rebinding event either by resizing the window or changing the orientation of the device (this seems specific to webkit browsers, Firefox and IE did not do this).
+* If the lightbox links use something other than index numbers as targets they'll be broken
+* Old format Ryuzine files can now be imported into the Ryuzine Writer editor
+
+* Fixed issue with splash title using a banner image rather than text also being placed in footers.  Now detects for image as splash title and uses the title tag text in footers if that is the case.
+* Fixed double page turn-back error in phone landscape view
+* Fixed iScroll injection on auto-updated files.  Check for iScroll is now done later for all documents and should prevent iScroll initialization problems.
+* Fixed addition/removal of mouse/touch events to pages
+* Fixed page scrolling length error when Page Animations are disabled
+
+* VIEWS now have keyboard shortcuts for desktop users:
+	CTRL+L = Continuous/Linear
+	CTRL+G = Grid View
+	CTRL+H = HTML Only
+	CTRL+M = Magazine (default)
+
+* App always scrolls to the top of content now after a View change (problem was content could be already out of view and inaccessible)
+* Fixed positioning error in Firefox when returning to Magazine View from Grid View
+* Disabled Pages Slider for Windows Phone 7 (touch controls for it didn't work anyway)
+* Disabled iScroll for Windows Phone 7 (it used to show in Options but had no effect whether turned on or off)
+* Enabled iScroll for Internet Explorer 9 and 10 (used to cause layout errors so it was disabled)
+* Fixed UI rendering errors with buttons and lists in Firefox 18+
+
+
+RYUZINE WRITER
+
+* Now supports importing old "processed" Ryuzine files for editing
+* Added Keyboard Shortcuts for switching between workspaces
+* Added "Loading" animated icon on start-up
+* Template Wizard now has settings for building Webcomic templates
+	- select Manga binding
+	- "contain" fitting option
+	- auto-generates CSS and HTML
+	- option to create template and build publication in one go
+* Fix to simulated publication in Firefox 13+
+* Fixed missing layouts for right-bound Packaged publications
+* Packaging wizard drop-down lists for Server source files now synced with Output Options
+* Packaging wizard "Custom" section now lists add-ons and themes by the actual folder names and
+   builds the lists by checking the actual folder contents first (so you cannot accidentally declare an
+   add-on or theme that is not available to be included in the package).
+* Automatic conversion on import of files created with Adobe InDesign
+	* Import files created with Export for Dreamweaver
+	* Import files created with Structure > Export XML
+* File Operations updated to check if directory is writable first
+* NEW "Add On" system for extending Ryuzine Writer
+	* Easily add your own start buttons, dialog boxes, option switches, and entire workspaces
+	* Chain-load add-ons (i.e., add-on can load other add-ons)
+	* Create add-on packages that auto-install a corresponding script or stylesheet for Ryuzine Reader
+* Navigation and Tab Bars updated to support new add-on extensions.
+* RyuPicker plugin updated, can now wrap both text and images in Ryuzine elements (previously only would do text selections)
+* RyuPicker plugin now asks for a unique ID for lightboxed elements (previous versions required you to place all lightbox elements in a specific order to make sure they were assigned the correct index numbers as an ID, and lightbox links could only refer to them by numerical index.  This version now allows you to set and target by any alphanumeric ID and place the lightboxed content in any order you please).
+
+THEMES
+* Fixed "Cool Beans" missing controls in 768px wide portrait view
+
+Version 0.9.6.2-b
+=================
+Ryuzine Reader
+1. Added new "Grid View" thumbnail navigation option
+2. Added keyboard shortcuts for changing Views
+3. Fixed iScroll mouseover error in "ui_light.css" file
+4. Updated Localization add-on for new view feature
+5. Fixed display error in Continuous View @ 1280 px wide
+6. Added Print styles for new Grid View (lets you print "contact sheet")
+
+Ryuzine Reader & Rack
+1. App visual assets moved to images sub-folder
+2. Improvements to UI for high-density displays
+
+Ryuzine Rack
+1. Cover image aspect ratio preserved (no longer distorted)
+2. Cover image in Grid View is now button to show item details
+3. Added "Reading List" feature
+
+Ryuzine Writer
+1. updated for compatibility with OVR v. 1.4 add-on (note that this 
+makes it incompatible with previous versions of the OVR add-on).
+
+Version 0.9.6.1-b
+=================
+Ryuzine Writer & Ryuzine Reader
+
+Bug fixes to “Bubble Guide” help
+1. Localization bug fixes & updates
+2. Theme targeting updated for desktop platforms
+3. Theme targeting for Windows 8 “Metro” fixed
+4. Theme targeting gracefully falls back for Windows systems now.
+5. Windows 8 “Metro” scaling issue fixed.
+6. Internet Explorer single page portrait page display bug fixed.
+7. “fillpad” setting changed to “pgsize” now does square, tall, and fill-all.
+8. New “mask” container added to hide un-styled content from being seen onload.
+9. Lightbox Links can now be styled with TEN different icons indicating the media type of the lightboxed content.
+10. Fixed “thisissue.css” file which had a typo in the media query for high-density displays (error caused styles intended for high-density 1280px displays to be shown for standard density 1600+ displays).
+11. Fixed “live” area resizing/orientation change error (only affected publications using OVR add-on).
+
+Ryuzine Writer
+1. Added notice to IE 9 users of incompatibility.
+2. Added notice to Opera users that it is no longer a supported browser.
+3. Updated for new “pgsize” options in Config Builder
+4. Lightbox Link tool now has option to set “media type” of link icon.
+
+Themes
+Beebot, Coolbeans, Mobilefruit, and Urban were updated to customize 
+the position of the Bubble Guide for their respective layouts.
+
+Version 0.9.6.0-b
+=================
+Ryuzine Reader
+1. Issue-specific stylesheet no longer specified in config file
+2. Android 2.x fixes/changes:
+	a. fixed scrolling in panels
+	b. prevents incompatible page shadows setting
+	c. disables pages shadows and 3D page turn
+	d. fixed "cover clearing" issue
+	e. fixed page turn error when themes are applied
+3. Android 3+ fixes/changes
+	a. fixed scrolling issue in panels
+	b. added Native Momentum Scrolling
+4. iOS 5+ devices:
+	a. added Native Momentum Scrolling
+	b. fixed horizontal scrolling error in panels
+	c. fixed Safari version detection in App View mode
+5. Zoom & Pan no longer enabled by default on touch devices
+6. Dynamic theme loading fixed for Android 3+, Windows Phone, and BlackBerry
+7. Internet Explorer Favicon and Shortcut added (including Windows 8 Pinning)
+8. Animations now supported in Internet Explorer 10 (3D page turns are still buggy)
+9. Experimental detection of Internet Explorer 10 running in "Modern UI" full-screen and snapped modes
+10. Margins fixed in Continuous View
+11. Fixed missing resource error for "Help" lightbox content
+12. Fixed lightbox.css file, now allows custom gallery CSS3 animations (you have to pick one for all of them though)
+13. Splash screen can now be animated with CSS3
+14. Right-binding (which was partially broken) is now fixed
+15. Platform theme targeting now includes Windows 8 "Modern UI" mode
+16. Options panel updated to make it more clear when options are disabled by another setting
+17. UI is now dynamically generated
+18. Default Share widget now properly handles document titles with quotes, apostrophes, and dashes.
+19. Fixed selector position when long localized text is applied to Option Panel
+20. NEW "Cool Beans" theme for OS integration with Android "Jelly Bean."
+21. NEW default theme available in "light" and "dark" base variations
+22. Previous default theme is now broken out into its own theme.
+23. Themes are now also applied to Lightbox containers
+24. In-Page styles are now removed in "Plain HTML" view.  Ryuzine attempts to store the styles in a cookie file
+	so they can be restored.
+25. NEW "Page Slider" navigation option alternative to Table of Contents Panel.
+26. UI can now be hidden with all themes.  User can choose manual or automatic hiding.
+27. The "fillpad" option is replaced with "filial" which does exactly what it sounds like - fills all the 
+	available space in the bowser (best only used for fluid layouts).
+28. iScroll script implemented as an optional add-on.
+29. Improved Legacy Compatibility for Non-IE Browsers (old versions of desktop and mobile Safari)
+30. Added error handling (especially if javascript and/or stylesheets are disabled)
+31. Easy updating of existing publications (just drop old Ryuzine file into new Ryuzine installation)
+32. Dropped support for Internet Explorer 7 and earlier and Opera browsers
+
+Ryuzine Writer (formerly Ryuzine Machine)
+1. Fixed WYSIWYG toolbar and button display error for Opera 11.x browsers (Opera 12.x is not supported)
+2. "Add Device" dialog OS options fixed and updated for Windows 8 and iOS 5+
+3. New Device Profiles:
+	a. iPad 2/3
+	b. Samsung GalaxyTab2 10.1
+	c. HP Touchpad
+	d. iPhone 5
+	e. Nokia Lumia 920
+	f. Microsoft Surface RT
+	g. Microsoft Surface Pro
+4. Fixed Windows Phone "browser view" in Simulator
+5. "bannerad" element renamed "appbanner" to prevent name/class collisions with other bannerads or ad scripts
+6. NEW! PHP File Operations when running from localhost development server for Open/Save files
+7. Simulator now fixed for Firefox browser.
+8. Experimental compatibility with Internet Explorer 9 & 10 (still has minor UI problems but functions work)
+9. UI completely redesigned to be more intuitive, clean, and increase work space.
+10. Disabling WYSIWYG editor and running locally (no web server) no longer triggers Xinha warning dialog.
+11. NEW Options Panel allows you to change config file setting within webapp (retained in cookie file)
+12. Ryuzine Writer can now use the same themes as Ryuzine Reader (all the themes were rewritten)
+13. Simulator now includes Anders Tornblad's "addTouch" script for multi-touch simulation on desktop systems
+	(note: the "addTouch" script is still considered experimental and has some usability issues)
+14. NEW "Start Page" with shortcut buttons to common starting tasks.
+15. WYSIWYG Full-Screen editing now actually fills browser (and if browser if fullscreen is true fullscreen editing)
+16. NEW Build Ryuzine Configuration Files
+17. NEW Build & Edit Ryuzine Rack Data Catalog Files
+18. Improved Split-View Coding Mode (auto-splits horizontally/vertically based portrait/landscape or use manual buttons)
+19. NEW Load URLs in the Simulator (to check mobile view of Ryuzine publications already on the web)
+20. NEW Load Ryuzine Files directly into the editor (no need for "source files" anymore)
+21. NEW Test Configurations and Issue-specific styles in the Simulator before putting them in external files.
+22. NEW Build Package option (req. PHP File Operations) bundles publications into downloadable ZIP files.
+23. NEW Issue-specific style link imports with file and is used in WYSIWYG editor.
+24. Experimental "Mobile Mode" UI for Android 3+ and iOS 5+ devices (it's still has some bugs so it is not
+	recommended for production use).
+
+Ryuzine Rack
+This is a new addition with this version that provides a "newsstand" style webapp you can use as a library 
+to organize and promote your Ryuzine publications.
+* Intuitive rich app experience
+* Can auto-generate promotions
+* Not limited to Ryuzine media - link to any type of content anywhere.
+* Grid, Detail List, and Simple List viewing modes
+* Touch "swipe" enabled
+* Multiple pagination for large catalogs
+* Deliver higher quality images to high-density displays
+* Built on Ryuzine Reader - uses same configuration file and themes
+* Unlimited custom catalogs
+* Uses plain HTML files and HTML Tables instead of a database
+* Responsive design automatically adapts to different screen sizes
+Note: Ryuzine Rack does not work on Opera 12.x.
+
+
+Version 0.9.5.0-b
+=================
+Ryuzine Web App
+1. Added Multiple In-App Bookmarking
+2. Added Bookmark Management Panel
+3. Help info replaced with Guided Help
+5. 3D Animation option added (if browser supports it)
+6. Localization reduced to one file
+7. CSS Animation method for Integrated Lightbox
+8. CSS Animation method for Control Bar
+9. UI updated for iPad Retina Display
+10. Keyboard controls updated
+11. Color Schemes for Text & Background added to Fonts Panel
+12. offline cache file updated
+
+Ryuzine Writer
+1. Updated to read/write 0.9.5 format files
+2. Additional Skins for Simulator
+3. Custom Config File in Output Options
+4. Simulator "Add Device" Dialog fixed
+
+
+VERSION 0.9.4.0-b
+=================
+Ryuzine Web App
+1. Fixed <header> content warning in Safari
+2. Updated appearance of default theme
+3. Fixed overflow problem in TOC with long titles
+4. Share Bubble now expands to fit content
+5. Minor code changes to allow Ryuzine Press integration
+
+Ryuzine Writer
+1. Fixed Page and Lightbox generator
+2. Minor code changes to sync with Ryuzine Press methods
+3. Lightbox Links can now be alphanumeric
+4. OVR Player 1.3 support (dropped 1.2 and earlier)
+
+
+Version 0.9.3.0-b
+=================
+Ryuzine Web App
+1. Views preference now persistently stored in cookie file
+2. Send custom themes to BlackBerry Tablet and Windows Phone
+3. Send different themes to Android -2.x and Android 3.x+
+4. +300% load speed increase
+5. 30-50% Memory usage reduction (depending on content)
+6. Greater stability on iOS devices
+7. Android 2.x page turn bug fixed (req. Android not spoof UA)
+8. "Widescreen" Android phones now correctly fill content in landscape
+
+Ryuzine Writer Authoring App
+1. Simulator devices can now be skinned
+2. Simulator devices can be zoomed in/out
+3. UI fixes for Firefox (though FF is still not officially supported)
+4. Option to over-ride WYSIWYG loading on supported browsers
+
+VERSION 0.9.2.0-b
+=================
+1. Internet Explorer 7 Support
+2. Added BlackBerry Playbook Support
+3. Two-Page Spreads now available in legacy browsers
+4. Added Keyboard Controls for in-App bookmark and bookmark clearing
+
+CHANGE LOG 0.9.1.0-b
+=====================
+
+Ryuzine Web App
+
+1. Added ability to target webOS devices with custom theme
+2. Set up optional features as “add-ons”
+3. Fixed Share bubble for third party widgets
+4. Added Configurable Zoom & Pan capability for mobile devices
+5. Added User Configurable Options Panels with Cookie Preference storage
+6. Meta Viewport now added dynamically based on device and settings
+7. Rewrote page animation function to disable it for legacy browsers for better performance
+8. Rewrote page flip function so links can contain anchor targets
+9. Added ability to share link to specific page within magazine
+10. Added In-App Bookmark feature
+11. Separated page curves from themes as optional add-on
+12. Switched UI animations from JS to CSS so themes can now change animation effects
+13. Added more keyboard controls
+14. Added support for Windows Phone 7.5 devices
+
+Ryuzine Writer Web App
+
+1. Touch-enabled web app so it can be used on mobile devices
+2. Added meta viewport data compatible with webOS
+3. Added Toggle Button for Editor Panels
+4. Added code to hide disabled toolbar buttons in Text Edit mode
+5. Custom Device Profiles now persistent (stored in Cookie)
+6. Option to import custom stylesheet for “My Styles” panel
+7. Option to change default issue-specific style
+8. In-Page Styles can now be preserved
+9. Pop-Out option for Simulator (fills browser)
+10. Added Output Options Panel
+
+Version 0.9.0.0-b
+=================
+
+Ryuzine Web App
+
+1. Added Built-in e-mail sharing widget
+2. Removed Javascript-Based animation for legacy browsers (to improve usability)
+3. Added Language Localization Option
+4. Added Keyboard Controls for page flipping back and forth
+5. Added webOS support
+6. Added automatic Zoom & Pan detection (still buggy)
+7. Major rewrite of UI and Theme stylesheets
+
+Ryuzine Writer Web App
+
+1. Added Split-View for Coding & Preview
+2. Added option to create custom device profiles in Simulator
+3. Added "Tags" side panel for coding from scratch
+4. Added Template creator
+5. Added "Browser View" and "Screen Only" Simulator options
+6. Import options for both source HTML files and Ryuzine files.

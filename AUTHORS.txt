@@ -1,0 +1,7 @@
+RYUZINE PROJECT CONTRIBUTORS
+============================
+
+K.M. Hansen <software@ryumaru.com>
+
+==================================
+This is a list of people who have made a significant investment of time, with useful results, into the released Ryuzine projects.

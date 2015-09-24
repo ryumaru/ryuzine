@@ -1,0 +1,30 @@
+/* Sepia Color Scheme */
+/* Over-rides other page background and text colors 	*/
+/* Except for those explicitly set with ID classes		*/
+/* change background to !important to over-ride those 	*/
+
+
+body {
+	background: #f1efe2 !important;
+}
+	.plank .salute, .plank h1, .plank h2, .plank h3, .plank h4, .plank p {
+		color: #a19988 !important;
+		-webkit-text-shadow: none;
+		-moz-text-shadow: none;
+		text-shadow: none;
+	}
+
+
+.page {
+	color: #5f5032;
+	background-color: #f9f1d6;
+}
+	
+	.header, .footer {
+		color: #5f5032;
+		background-color: transparent;
+	}
+
+	.page h1, .page h2, .page h2, .page h4 {
+		color: #5f5032;
+	}

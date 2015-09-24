@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ryuzine Rack Data</title>
+</head>
+<body>
+<!--// 	INSTRUCTIONS FOR EDITING THIS RYUZINERACK DATA TABLE //
+	1. 	Do not put any HTML code in the table cells.  Plain text data ONLY.
+	2. 	Do not insert <img> tags, just file names with the extension.
+	3. 	Do not use full URL paths to images UNLESS you left the rackImg variable empty in your config file
+	4. 	Cover Thumbnails need to be provided in two sizes:
+			180x250 for standard definition screens
+			360x500 for high density screens (like Apple's "Retina" displays)
+			(images are fitted by width, if they are longer it will simply crop the bottom)
+	5. 	Promotion Images also need to be provied in two sizes:
+			640x300 for standard definition screens
+			1280x600 for high density screens
+	6. 	If you do not want to make a Promo image you can simply enter the word "auto" (without quotes)
+		and a promotional box will be automatically created from the other data for that item.
+	7. 	You can have as many Media Types and Categories as you like and call them whatever you like.
+	8. 	You can use just about any date format you want, though Month and Year work best you can mix date formats.
+	9. 	URLs should be simple text not <a> links.
+	10.	You can extend this table with additional sortable or non-sortable data columns.  If you make the column 
+		sortable the column header text is used in the Sort List within the RyuzineRack webapp.
+//--> 
+
+	<table cellpadding="5" cellspacing="0" border="1"><tr><td><strong>Masthead</strong> (optional):</td>
+	<td title="masthead">optional_masthead_image.jpg</td></tr></table>
+	<p></p>
+	<table cellpadding="0" cellspacing="0" border="1" title="table" class="sortable">
+		<thead>
+			<tr>
+				<th class="nosort">ID</th>
+				<th>Date</th>
+				<th>Title</th>
+				<th class="nosort">Description</th>
+				<th>Category</th>
+				<th class="nosort">URL</th>
+				<th>Type</th>
+				<th class="nosort">Thumbnail</th>
+				<th class="nosort">Promotion</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>January 2013</td>
+				<td>Title Goes Here</td>
+				<td>Write in a description for this item.</td>
+				<td>Book</td>
+				<td>http://www.ryumaru.com/library/</td>
+				<td>Ryuzine</td>
+				<td></td> <!--// cover image thumbnail //-->
+				<td>auto</td>
+			</tr>
+		</tbody>
+  </table>
+</body>
+</html>
