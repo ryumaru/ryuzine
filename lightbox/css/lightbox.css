@@ -1,0 +1,1203 @@
+/* Lightbox Effect Sizes  */
+/*********************************************************/
+/* Ryuzine Version 1.0 */
+/* Fallback for older browsers that do not understand media queries */
+
+.binder_filter {	
+	/* 	This is just a SFX while book is in background under lightbox
+		It does not work in most browsers yet, otherwise ignored.
+		Edit filter for effect you wish to apply (if any).
+	*/
+	/* Blur */
+/*	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	filter: blur(10px);
+*/
+}
+
+
+#lightbox {
+	position: absolute;
+	top: -900%; left: -900%;
+	height: 100%;
+	width: 100%;
+	z-index: 2200;
+	display: none;
+}
+
+#shade {
+	position: absolute;
+	top: 0; left: 0;
+	height: 100%;
+	width: 100%;
+	background: transparent;
+	z-index: 0;
+		-webkit-transition: background;
+		-webkit-transition-timing-function: ease-in-out;
+		-webkit-transition-duration: .25s;
+		-moz-transition-property: background;
+		-moz-transition-timing-function: ease-in-out;
+		-moz-transition-duration: .25s;
+		-o-transition-property: background;
+		-o-transition-timing-function: ease-in-out;
+		-o-transition-duration: .25s;
+		-ms-transition-property: background;
+		-ms-transition-timing-function: ease-in-out;
+		-ms-transition-duration: .25s;
+	transition-property: background;
+	transition-timing-function: ease-in-out;
+	transition-duration: .25s;
+}
+
+#shade h1 {
+	display: none;
+}
+
+
+.lighttable {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	display: table;
+	visibility: hidden;
+	/* Safari and Chrome */
+		-webkit-transiton: all;
+		-webkit-transform-origin: 50% 50%;
+		-webkit-transition-timing-function: ease-in-out;
+		-webkit-transition-duration: 1s;
+		-webkit-transition-delay: 0s;
+		-webkit-user-select: none;
+	/* Firefox 4+ */
+		-moz-transition: all;
+		-moz-transform-origin: 50% 50%;
+		-moz-transition-timing-function: ease-in-out;
+		-moz-transition-duration: 1s;
+		-moz-transition-delay: 0s;
+	/* Opera 11.10+ */
+		-o-transition: all;
+		-o-transform-origin: 50% 50%;
+		-o-transition-timing-function: ease-in-out;
+		-o-transition-duration: 1s;
+		-o-transition-delay: 0s;
+	/* IE 9+ */
+		-ms-transition: all;
+		-ms-transform-origin: 50% 50%;
+		-ms-transition-timing-function: ease-in-out;
+		-ms-transition-duration: 1s;
+		-ms-transition-delay: 0s;
+	/* CSS3 Standards */
+		transition: all;
+		transform-origin: 50% 50%;
+		transition-timing-function: ease-in-out;
+		transition-duration: 1s;
+		transition-delay: 0s;
+}
+
+/* LIGHTBOX ANIMATION EFFECTS */
+/* Uncomment whichever animation effect you want to use */
+
+/* Slide In From Top */
+
+.lightbox_out {
+	top: -3000px;
+	left: 0;
+		-webkit-transform: translateY(-3000px);
+		-moz-transform: translateY(-3000px);
+		-o-transform: translateY(-3000px);
+		-ms-transform: translateY(-3000px);	
+		transform: translateY(-3000px);
+}
+
+.lightbox_in {
+	top: 0;
+	left: 0;
+		-webkit-transform: translateY(0%);
+		-moz-transform: translateY(0%);
+		-o-transform: translateY(0%);
+		-ms-transform: translateY(0%);	
+		transform: translateY(0%);	
+}
+
+
+
+/* Zoom In/Out Center */
+/*
+.lightbox_out {
+	top: 0;
+	left: 0;
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+		-o-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);	
+}
+
+.lightbox_in {
+	top: 0;
+	left: 0;
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);	
+		transform: scale(1);	
+}
+*/
+
+/* Curve-Ball Pitch Left */
+/*
+.lightbox_out {
+	top: 0;
+	left: 0;
+		-webkit-transform: scale(0) translateX(-100%);
+		-moz-transform: scale(0);
+		-o-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);	
+}
+
+.lightbox_in {
+	top: 0;
+	left: 0;
+		-webkit-transform: scale(1) translateX(0%);
+		-moz-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);	
+		transform: scale(1);	
+}
+*/
+
+/* Slide In From Left */
+/*
+.lightbox_out {
+	top: 0;
+	left: -3000px;
+		-webkit-transform: translateX(-3000px);
+		-moz-transform: translateX(-3000px);
+		-o-transform: translateX(-3000px);
+		-ms-transform: translateX(-3000px);
+		transform: translateX(-3000px);	
+}
+
+.lightbox_in {
+	top: 0;
+	left: 0;
+		-webkit-transform: translateX(0%);
+		-moz-transform: translateX(0%);
+		-o-transform: translateX(0%);
+		-ms-transform: translateX(0%);	
+		transform: translateX(0%);	
+}
+*/
+
+
+
+
+
+.lightcell {
+	position: relative;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	*top: 25%;
+	*height: auto;
+	*width: 340px;
+	margin: 0 auto;
+	display: table-cell;
+	white-space: no-wrap;
+	vertical-align: middle;
+}
+
+
+.pic {
+	position: relative;
+	display: table;
+	border: 3px solid #fff;
+	background: white;
+	margin: 0 auto;
+	max-width: 90%;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	-moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75), -2px -2px 8px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75), -2px -2px 8px rgba(0, 0, 0, 0.75);
+	-ms-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75), -2px -2px 8px rgba(0, 0, 0, 0.75);
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75), -2px -2px 8px rgba(0, 0, 0, 0.75);
+}
+
+.pic .shim {
+	border: 1px solid red;
+	display: table-cell;
+}
+
+.pic img { /* Applied to All Images */
+	display: block;
+	margin: 0 auto;
+	border: none;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+.ryucard {
+	font-family: Arial, sans-serif;
+	text-align: left;
+	font-size: 1em;
+	word-wrap: break-word;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.port img {
+	width: auto;
+	height: 640px;
+}
+.land img {
+	width: 640px;
+	height: auto;
+}
+.port .ryucard {
+	width: 480px;
+	height: 640px;
+}
+.land .ryucard {
+	width: 640px;
+	height: 480px;
+}
+	.land .ryucard img,
+	.port .ryucard img {
+		height: auto;
+		width: auto;
+	}
+		
+.gallerybox.card {
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+	.gallerybox.card .area {
+		position: absolute;
+		top: 0;	left: 0;
+		bottom: 0; right: 0;
+		width: 100%;
+		height: auto;
+		overflow: auto;
+	}
+		.gallerybox.card .area .rack_card {
+			height: auto;
+			width: 100%;
+			margin: 0 auto;
+			text-align: left;
+			padding: 10px 20px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+			/* generally any card with images display them at their actual size */
+			.gallerybox.card .area .rack_card img {
+				height: auto;
+				width: auto;
+			}
+				/* for cover thumbnails in rack scale them */
+				.gallerybox.card .area .rack_card .cover img {
+					height: auto;
+					width: 100%;
+				}
+
+
+.caption, .ryucard p {
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-size: 12pt;
+	font-weight: bold;
+	word-wrap: break-word;
+}
+
+
+.blocky {
+	position: relative;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	float: right;
+	z-index: 10;
+	margin-top: -30px;
+	margin-right: -30px;
+	display: block;
+}
+
+.button.closeit {
+	position: relative;
+	margin: 10px auto;
+	height: 30px;
+	width: 30px;
+	background: #000;
+	border: 3px solid #fff;
+	text-align: center;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75), -2px -2px 8px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75), -2px -2px 8px rgba(0, 0, 0, 0.75);
+	-ms-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75), -2px -2px 8px rgba(0, 0, 0, 0.75);
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75), -2px -2px 8px rgba(0, 0, 0, 0.75);
+}
+	.button.closeit span.symbol {
+		margin-top: 2px;
+	}
+	.button.closeit span.label { display: none; }
+	.button.closeit span.symbol::before {
+		font-family: 'FontAwesome';
+		content: '\f00d';
+	}
+
+/* Lightbox Content in-page Thumbnail */
+
+.lightboxthumb {
+	display: table !important;
+	margin: 0 10px;
+}
+
+.lightboxthumb .thumb {
+	width: 240px;
+}
+
+.lightboxbutton, .lb_plus, .lb_3d, .lb_document, .lb_info, .lb_larger, .lb_magnify,
+.lb_movie, .lb_photo, .lb_video, .lb_website, .lb_minus {
+	position: relative;
+	margin-top: -25px;
+	height: 25px;
+	width: 25px;
+	display: block;
+	-webkit-background-size: 25px 25px;
+	-moz-background-size: 25px 25px;
+	-ms-background-size: 25px 25px;
+	background-size: 25px 25px;
+}
+.lb_plus, .lightboxbutton {
+	background: black url('../images/app/ui/lightboxbutton.gif') 0 0 no-repeat;
+}
+.lb_3d {
+	background: black url('../images/app/ui/lb_3d.gif') 0 0 no-repeat;
+}
+.lb_document {
+	background: black url('../images/app/ui/lb_document.gif') 0 0 no-repeat;
+}
+.lb_info {
+	background: black url('../images/app/ui/lb_info.gif') 0 0 no-repeat;
+}
+.lb_larger {
+	background: black url('../images/app/ui/lb_larger.gif') 0 0 no-repeat;
+}
+.lb_magnify {
+	background: black url('../images/app/ui/lb_magnify.gif') 0 0 no-repeat;
+}
+.lb_movie {
+	background: black url('../images/app/ui/lb_movie.gif') 0 0 no-repeat;
+}
+.lb_photo {
+	background: black url('../images/app/ui/lb_photo.gif') 0 0 no-repeat;
+}
+.lb_video {
+	background: black url('../images/app/ui/lb_video.gif') 0 0 no-repeat;
+}
+.lb_website {
+	background: black url('../images/app/ui/lb_website.gif') 0 0 no-repeat;
+}
+.lb_minus {
+	background: black url('../images/app/ui/lb_minus.gif') 0 0 no-repeat;
+}
+
+@media only screen {
+
+
+}
+
+/*==============================================================*/
+/* Widescreen Monitor */
+
+@media only screen and (min-width: 1600px) {
+
+	.port img {
+		width: auto;
+		height: 800px;
+	}
+	.port .ryucard {
+		width: 600px;
+		height: 800px;
+	}	
+	.land img {
+		width: 1024px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 1024px;
+		height: 768px;
+	}	
+	.caption, .ryucard p {
+		max-width: 1024px;
+	}
+	.gallerybox.card {
+		width: 600px;
+		height: 378px;
+	}	
+}
+/*==============================================================*/
+/* Widescreen Monitor (High Density) */
+@media only screen and (min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-width: 1600px) and (min--moz-device-pixel-ratio: 2),
+only screen and (min-width:1600px) and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-width:1600px) and (min-device-pixel-ratio: 2) {
+	.port img {
+		width: auto;
+		height: 800px;
+	}
+	.port .ryucard {
+		width: 600px;
+		height: 800px;
+	}	
+	.land img {
+		width: 1024px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 1024px;
+		height: 768px;
+	}	
+	.caption, .ryucard p {
+		max-width: 1024px;
+	}	
+	.gallerybox.card {
+		width: 600px;
+		height: 378px;
+	}
+	.lb_plus, .lightboxbutton {
+		background: black url('../images/app/ui/hires/lightboxbutton.gif') 0 0 no-repeat;
+	}
+	.lb_3d {
+		background: black url('../images/app/ui/hires/lb_3d.gif') 0 0 no-repeat;
+	}
+	.lb_document {
+		background: black url('../images/app/ui/hires/lb_document.gif') 0 0 no-repeat;
+	}
+	.lb_info {
+		background: black url('../images/app/ui/hires/lb_info.gif') 0 0 no-repeat;
+	}
+	.lb_larger {
+		background: black url('../images/app/ui/hires/lb_larger.gif') 0 0 no-repeat;
+	}
+	.lb_magnify {
+		background: black url('../images/app/ui/hires/lb_magnify.gif') 0 0 no-repeat;
+	}
+	.lb_movie {
+		background: black url('../images/app/ui/hires/lb_movie.gif') 0 0 no-repeat;
+	}
+	.lb_photo {
+		background: black url('../images/app/ui/hires/lb_photo.gif') 0 0 no-repeat;
+	}
+	.lb_video {
+		background: black url('../images/app/ui/hires/lb_video.gif') 0 0 no-repeat;
+	}
+	.lb_website {
+		background: black url('../images/app/ui/hires/lb_website.gif') 0 0 no-repeat;
+	}
+	.lb_minus {
+		background: black url('../images/app/ui/hires/lb_minus.gif') 0 0 no-repeat;
+	}
+}
+
+/*==============================================================*/
+/* Desktop Screen 1280 to 1600 px */
+@media only screen and (min-width: 1280px) and (max-width: 1599px) {
+	.port img {
+		width: auto;
+		height: 640px;
+	}
+	.port .ryucard {
+		width: 480px;
+		height: 640px;
+	}
+	.land img {
+		width: 800px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 800px;
+		height: 600px;
+	}	
+.caption, .ryucard p {
+	max-width: 800px;
+}
+	.gallerybox.card {
+		width: 600px;
+		height: 378px;
+	}
+}
+/*==============================================================*/
+/* Desktop Screen 1280 to 1600 px */
+@media only screen and (min-width: 1280px) and (max-width: 1599px) and (max-height: 749px) {
+	.port img {
+		width: auto;
+		height: 640px;
+	}
+	.port .ryucard {
+		width: 480px;
+		height: 640px;
+	}	
+	.land img {
+		width: 800px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 800px;
+		height: 600px;
+	}	
+.caption, .ryucard p {
+	max-width: 800px;
+}
+	.gallerybox.card {
+		width: 600px;
+		height: 378px;
+	}
+}
+/*==============================================================*/
+/* Desktop Screen (High Density) */
+@media only screen and (min-width: 1280px) and (max-width: 1599px) and (min-height: 800px) and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-width: 1280px) and (max-width: 1599px) and (min-height: 800px) and (min--moz-device-pixel-ratio: 2),
+only screen and (min-width: 1280px) and (max-width: 1599px) and (min-height: 800px) and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-width: 1280px) and (max-width: 1599px) and (min-height: 800px) and (min-device-pixel-ratio: 2) {
+	.port img {
+		width: auto;
+		height: 640px;
+	}
+	.port .ryucard {
+		width: 480px;
+		height: 640px;
+	}	
+	.land img {
+		width: 800px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 800px;
+		height: 600px;
+	}	
+.caption, .ryucard p {
+	max-width: 800px;
+}
+	.gallerybox.card {
+		width: 600px;
+		height: 378px;
+	}
+	.lb_plus, .lightboxbutton {
+		background: black url('../images/app/ui/hires/lightboxbutton.gif') 0 0 no-repeat;
+	}
+	.lb_3d {
+		background: black url('../images/app/ui/hires/lb_3d.gif') 0 0 no-repeat;
+	}
+	.lb_document {
+		background: black url('../images/app/ui/hires/lb_document.gif') 0 0 no-repeat;
+	}
+	.lb_info {
+		background: black url('../images/app/ui/hires/lb_info.gif') 0 0 no-repeat;
+	}
+	.lb_larger {
+		background: black url('../images/app/ui/hires/lb_larger.gif') 0 0 no-repeat;
+	}
+	.lb_magnify {
+		background: black url('../images/app/ui/hires/lb_magnify.gif') 0 0 no-repeat;
+	}
+	.lb_movie {
+		background: black url('../images/app/ui/hires/lb_movie.gif') 0 0 no-repeat;
+	}
+	.lb_photo {
+		background: black url('../images/app/ui/hires/lb_photo.gif') 0 0 no-repeat;
+	}
+	.lb_video {
+		background: black url('../images/app/ui/hires/lb_video.gif') 0 0 no-repeat;
+	}
+	.lb_website {
+		background: black url('../images/app/ui/hires/lb_website.gif') 0 0 no-repeat;
+	}
+	.lb_minus {
+		background: black url('../images/app/ui/hires/lb_minus.gif') 0 0 no-repeat;
+	}
+
+}
+/*===================*/
+/* iPad in Landscape */
+@media only screen and (min-width: 1024px) and (max-width: 1279px)  {
+	.port img {
+		width: auto;
+		height: 640px;
+	}
+	.port .ryucard {
+		width: 480px;
+		height: 640px;
+	}	
+	.land img {
+		width: 640px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 640px;
+		height: 480px;
+	}	
+.caption, .ryucard p {
+	max-width: 640px;
+}
+	.gallerybox.card {
+		width: 600px;
+		height: 378px;
+	}
+	
+
+}
+/*===================================================*/
+/* iPad Retina and other hi-res tablets in Landscape */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) and (-webkit-min-device-pixel-ratio : 2.0),
+only screen and (min-width: 1024px) and (max-width: 1279px) and (min--moz-device-pixel-ratio: 2.0),
+only screen and (min-width: 1024px) and (max-width: 1279px) and (-o-min-device-pixel-ration: 2/1),
+only screen and (min-width: 1024px) and (max-width: 1279px) and (min-device-pixel-ratio : 2.0) {
+	.port img {
+		width: auto;
+		height: 640px;
+	}
+	.port .ryucard {
+		width: 480px;
+		height: 640px;
+	}	
+	.land img {
+		width: 640px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 640px;
+		height: 480px;
+	}	
+.caption, .ryucard p {
+	max-width: 640px;
+}
+	.gallerybox.card {
+		width: 600px;
+		height: 378px;
+	}
+	.lb_plus, .lightboxbutton {
+		background: black url('../images/app/ui/hires/lightboxbutton.gif') 0 0 no-repeat;
+	}
+	.lb_3d {
+		background: black url('../images/app/ui/hires/lb_3d.gif') 0 0 no-repeat;
+	}
+	.lb_document {
+		background: black url('../images/app/ui/hires/lb_document.gif') 0 0 no-repeat;
+	}
+	.lb_info {
+		background: black url('../images/app/ui/hires/lb_info.gif') 0 0 no-repeat;
+	}
+	.lb_larger {
+		background: black url('../images/app/ui/hires/lb_larger.gif') 0 0 no-repeat;
+	}
+	.lb_magnify {
+		background: black url('../images/app/ui/hires/lb_magnify.gif') 0 0 no-repeat;
+	}
+	.lb_movie {
+		background: black url('../images/app/ui/hires/lb_movie.gif') 0 0 no-repeat;
+	}
+	.lb_photo {
+		background: black url('../images/app/ui/hires/lb_photo.gif') 0 0 no-repeat;
+	}
+	.lb_video {
+		background: black url('../images/app/ui/hires/lb_video.gif') 0 0 no-repeat;
+	}
+	.lb_website {
+		background: black url('../images/app/ui/hires/lb_website.gif') 0 0 no-repeat;
+	}
+	.lb_minus {
+		background: black url('../images/app/ui/hires/lb_minus.gif') 0 0 no-repeat;
+	}
+
+}
+
+/*================================*/
+/* Desktop Screen 1024 to 1280 px */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) and (min-height: 690px) {
+	.port img {
+		width: auto;
+		height: 640px;
+	}
+	.port .ryucard {
+		width: 480px;
+		height: 640px;
+	}
+	.land img {
+		width: 640px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 640px;
+		height: 480px;
+	}
+	.gallerybox.card {
+		width: 600px;
+		height: 378px;
+	}	
+.caption, .ryucard p {
+	max-width: 640px;
+}
+}
+
+
+
+/*===================================*/
+/* iPad + Android Tablet in Portrait */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.port img {
+		width: auto;
+		height: 640px;
+	}
+	.port .ryucard {
+		width: 480px;
+		height: 640px;
+	}
+	.land img {
+		width: 640px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 640px;
+		height: 480px;
+	}
+	.gallerybox.card {
+		width: 600px;
+		height: 378px;
+	}	
+.caption, .ryucard p {
+	max-width: 640px;
+}	
+
+
+}
+/*==============================================================*/
+/* iPad Retina + Hi-Res Other Tablet in Portrait */
+@media only screen and (min-width: 768px) and (max-width: 1023px) and (-webkit-min-device-pixel-ratio : 2.0),
+only screen and (min-width: 768px) and (max-width: 1023px) and (min--moz-device-pixel-ration: 2),
+only screen and (min-width: 768px) and (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-width: 768px) and (max-width: 1023px) and (min-device-pixel-ratio: 2) {
+	.port img {
+		width: auto;
+		height: 640px;
+	}
+	.port .ryucard {
+		width: 480px;
+		height: 640px;
+	}
+	.land img {
+		width: 640px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 640px;
+		height: 480px;
+	}
+	.gallerybox.card {
+		width: 600px;
+		height: 378px;
+	}	
+.caption, .ryucard p {
+	max-width: 640px;
+}	
+
+	.lb_plus, .lightboxbutton {
+		background: black url('../images/app/ui/hires/lightboxbutton.gif') 0 0 no-repeat;
+	}
+	.lb_3d {
+		background: black url('../images/app/ui/hires/lb_3d.gif') 0 0 no-repeat;
+	}
+	.lb_document {
+		background: black url('../images/app/ui/hires/lb_document.gif') 0 0 no-repeat;
+	}
+	.lb_info {
+		background: black url('../images/app/ui/hires/lb_info.gif') 0 0 no-repeat;
+	}
+	.lb_larger {
+		background: black url('../images/app/ui/hires/lb_larger.gif') 0 0 no-repeat;
+	}
+	.lb_magnify {
+		background: black url('../images/app/ui/hires/lb_magnify.gif') 0 0 no-repeat;
+	}
+	.lb_movie {
+		background: black url('../images/app/ui/hires/lb_movie.gif') 0 0 no-repeat;
+	}
+	.lb_photo {
+		background: black url('../images/app/ui/hires/lb_photo.gif') 0 0 no-repeat;
+	}
+	.lb_video {
+		background: black url('../images/app/ui/hires/lb_video.gif') 0 0 no-repeat;
+	}
+	.lb_website {
+		background: black url('../images/app/ui/hires/lb_website.gif') 0 0 no-repeat;
+	}
+	.lb_minus {
+		background: black url('../images/app/ui/hires/lb_minus.gif') 0 0 no-repeat;
+	}
+
+}
+
+/*==============================================================*/
+/* Android HVGA and WVGA in Landscape */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+	.port img {
+		width: auto;
+		height: 320px;
+	}
+	.port .ryucard {
+		width: 240px;
+		height: 320px;
+	}	
+	.land img {
+		width: 480px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 480px;
+		height: 320px;
+	}	
+.caption, .ryucard p {
+		width: 480px;
+		margin: 0 auto;
+	}
+	.gallerybox.card {
+		width: 480px;
+		height: 310px;
+	}
+
+}
+/*==============================================================*/
+/* Android Landscape (High Density) */
+@media only screen and (min-width: 600px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio : 2.0),
+only screen and (min-width: 600px) and (max-width: 767px) and (min--moz-device-pixel-ration: 2),
+only screen and (min-width: 600px) and (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-width: 600px) and (max-width: 767px) and (min-device-pixel-ratio: 2) {
+	.port img {
+		width: auto;
+		height: 320px;
+	}
+	.port .ryucard {
+		width: 240px;
+		height: 320px;
+	}
+	.land img {
+		width: 480px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 480px;
+		height: 320px;
+	}
+.caption, .ryucard p {
+		width: 480px;
+		margin: 0 auto;
+	}
+	.gallerybox.card {
+		width: 480px;
+		height: 310px;
+	}	
+	.lb_plus, .lightboxbutton {
+		background: black url('../images/app/ui/hires/lightboxbutton.gif') 0 0 no-repeat;
+	}
+	.lb_3d {
+		background: black url('../images/app/ui/hires/lb_3d.gif') 0 0 no-repeat;
+	}
+	.lb_document {
+		background: black url('../images/app/ui/hires/lb_document.gif') 0 0 no-repeat;
+	}
+	.lb_info {
+		background: black url('../images/app/ui/hires/lb_info.gif') 0 0 no-repeat;
+	}
+	.lb_larger {
+		background: black url('../images/app/ui/hires/lb_larger.gif') 0 0 no-repeat;
+	}
+	.lb_magnify {
+		background: black url('../images/app/ui/hires/lb_magnify.gif') 0 0 no-repeat;
+	}
+	.lb_movie {
+		background: black url('../images/app/ui/hires/lb_movie.gif') 0 0 no-repeat;
+	}
+	.lb_photo {
+		background: black url('../images/app/ui/hires/lb_photo.gif') 0 0 no-repeat;
+	}
+	.lb_video {
+		background: black url('../images/app/ui/hires/lb_video.gif') 0 0 no-repeat;
+	}
+	.lb_website {
+		background: black url('../images/app/ui/hires/lb_website.gif') 0 0 no-repeat;
+	}
+	.lb_minus {
+		background: black url('../images/app/ui/hires/lb_minus.gif') 0 0 no-repeat;
+	}	
+	
+}
+
+/*==============================================================*/
+/* iPhone + iPod Touch + Android Phone in Landscape */
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+
+	.port img {
+		width: auto;
+		height: 240px;
+	}
+	.port .ryucard {
+		width: 320px;
+		height: 240px;
+	}	
+	.land img {
+		width: 320px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 320px;
+		height: 240px;
+	}
+	.ovr {
+	position: relative;
+	margin: 0 auto;
+	width: 300px;
+	}
+
+	.ovr img, .ovr .vr img {
+	width: 300px;
+	height: 211px;
+	}	
+	.vr {
+		width: 300px;
+		height: 211px;
+	}
+	.gallerybox.card {
+		width: 320px;
+		height: 300px;
+	}	
+	
+.caption, .ryucard p {
+		display: none;
+	}
+
+
+
+}
+
+/*==============================================================*/
+/* iPhone + iPod Touch + Android Phone in Landscape (High Density) */
+@media only screen and (min-width: 480px) and (max-width: 599px) and (-webkit-min-device-pixel-ratio : 2.0),
+only screen and (min-width: 480px) and (max-width: 599px) and (min--moz-device-pixel-ration: 2),
+only screen and (min-width: 480px) and (max-width: 599px) and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-width: 480px) and (max-width: 599px) and (min-device-pixel-ratio: 2) {
+	.port img {
+		width: auto;
+		height: 240px;
+	}
+	.port .ryucard {
+		width: 320px;
+		height: 240px;
+	}	
+	.land img {
+		width: 320px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 320px;
+		height: 240px;
+	}	
+	.ovr {
+	position: relative;
+	margin: 0 auto;
+	width: 300px;
+	}
+
+	.ovr img, .ovr .vr img {
+	width: 300px;
+	height: 211px;
+	}	
+	.vr {
+		width: 300px;
+		height: 211px;
+	}
+	
+	.gallerybox.card {
+		width: 320px;
+		height: 300px;
+	}	
+.caption, .ryucard p {
+		display: none;
+	}
+	.lb_plus, .lightboxbutton {
+		background: black url('../images/app/ui/hires/lightboxbutton.gif') 0 0 no-repeat;
+	}
+	.lb_3d {
+		background: black url('../images/app/ui/hires/lb_3d.gif') 0 0 no-repeat;
+	}
+	.lb_document {
+		background: black url('../images/app/ui/hires/lb_document.gif') 0 0 no-repeat;
+	}
+	.lb_info {
+		background: black url('../images/app/ui/hires/lb_info.gif') 0 0 no-repeat;
+	}
+	.lb_larger {
+		background: black url('../images/app/ui/hires/lb_larger.gif') 0 0 no-repeat;
+	}
+	.lb_magnify {
+		background: black url('../images/app/ui/hires/lb_magnify.gif') 0 0 no-repeat;
+	}
+	.lb_movie {
+		background: black url('../images/app/ui/hires/lb_movie.gif') 0 0 no-repeat;
+	}
+	.lb_photo {
+		background: black url('../images/app/ui/hires/lb_photo.gif') 0 0 no-repeat;
+	}
+	.lb_video {
+		background: black url('../images/app/ui/hires/lb_video.gif') 0 0 no-repeat;
+	}
+	.lb_website {
+		background: black url('../images/app/ui/hires/lb_website.gif') 0 0 no-repeat;
+	}
+	.lb_minus {
+		background: black url('../images/app/ui/hires/lb_minus.gif') 0 0 no-repeat;
+	}
+
+}
+
+
+/*==============================================================*/
+/* iPhone + iPod Touch + Android Portrait */
+@media only screen and (max-width: 479px) {
+
+	.port img {
+		width: auto;
+		height: 320px;
+	}
+	.port .ryucard {
+		width: 240px;
+		height: 320px;
+	}
+	.land img {
+		width: 300px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 300px;
+		height: 320px;
+	}	
+.caption, .ryucard p {
+		width: 300px;
+		margin: 0 auto;
+	}
+	.ovr {
+	position: relative;
+	margin: 0 auto;
+	width: 300px;
+	}
+
+	.ovr img, .ovr .vr img {
+	width: 300px;
+	height: 211px;
+	}	
+	.vr {
+		width: 300px;
+		height: 211px;
+	}
+	
+	.gallerybox.card {
+		width: 240px;
+		height: 300px;
+	}
+
+
+}
+
+/*==============================================================*/
+/* iPhone Retina + Android (High Density) Portrait */
+@media only screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio : 2.0),
+only screen and (max-width: 479px) and (min--moz-device-pixel-ration: 2),
+only screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
+only screen and (max-width: 479px) and (min-device-pixel-ratio: 2) {
+
+	.port img {
+		width: auto;
+		height: 320px;
+	}
+	.port .ryucard {
+		width: 240px;
+		height: 320px;
+	}
+	.land img {
+		width: 320px;
+		height: auto;
+	}
+	.land .ryucard {
+		width: 320px;
+		height: 240px;
+	}
+	
+.caption, .ryucard p {
+		width: 300px;
+		margin: 0 auto;
+	}
+	
+	.gallerybox.card {
+		width: 240px;
+		height: 300px;
+	}	
+	.ovr {
+	position: relative;
+	margin: 0 auto;
+	width: 300px;
+	}
+
+	.ovr img, .ovr .vr img {
+	width: 300px;
+	height: 211px;
+	}	
+	.vr {
+		width: 300px;
+		height: 211px;
+	}
+	.lb_plus, .lightboxbutton {
+		background: black url('../images/app/ui/hires/lightboxbutton.gif') 0 0 no-repeat;
+	}
+	.lb_3d {
+		background: black url('../images/app/ui/hires/lb_3d.gif') 0 0 no-repeat;
+	}
+	.lb_document {
+		background: black url('../images/app/ui/hires/lb_document.gif') 0 0 no-repeat;
+	}
+	.lb_info {
+		background: black url('../images/app/ui/hires/lb_info.gif') 0 0 no-repeat;
+	}
+	.lb_larger {
+		background: black url('../images/app/ui/hires/lb_larger.gif') 0 0 no-repeat;
+	}
+	.lb_magnify {
+		background: black url('../images/app/ui/hires/lb_magnify.gif') 0 0 no-repeat;
+	}
+	.lb_movie {
+		background: black url('../images/app/ui/hires/lb_movie.gif') 0 0 no-repeat;
+	}
+	.lb_photo {
+		background: black url('../images/app/ui/hires/lb_photo.gif') 0 0 no-repeat;
+	}
+	.lb_video {
+		background: black url('../images/app/ui/hires/lb_video.gif') 0 0 no-repeat;
+	}
+	.lb_website {
+		background: black url('../images/app/ui/hires/lb_website.gif') 0 0 no-repeat;
+	}
+	.lb_minus {
+		background: black url('../images/app/ui/hires/lb_minus.gif') 0 0 no-repeat;
+	}
+
+}

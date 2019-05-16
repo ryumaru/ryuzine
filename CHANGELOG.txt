@@ -1,0 +1,56 @@
+Version 1.0
+===========
+
+ADD-ONS PACK FOR RYUZINE READER & RACK
+
+MANIFEST
+========
+
+* depthfx
+* iscroll
+* lightbox
+* localize
+* ovr
+* ryulightbox
+* socialwidget
+* themeset
+
+DETAILS
+=======
+
+* depthfx (new)
+..+ "pagecurves" appearance broken out into this optional add-on.
+
+* iscroll
+..+ updated to iScroll 5.1.3
+
+* lightbox
+..+ updated with new add-on info block
+..+ added check for dependencies
+..+ added gallery feature
+..+ functions moved from config to js/lightbox.js
+
+* localize (new)
+..+ "localization" add-on name changed to "localize"
+..+ "ryuzine.localization.js" deprecated, replaced by "localization.js"
+..+ parse and merge functions added for contributing translations
+..+ now supports custom css based on language.  For example German and Japanese may require a font-size reduction to fit text.
+..+ now uses separate translation files for each language code.
+..+ added translations for Ryuzine Writer
+
+* ovr
+..+ functions moved into "ovr" subfolder
+..+ Ryuzine integration function added to config file.
+
+* ryulightbox
+..+ added css
+..+ added content icons
+..+ moved functions into js/ryulightbox.js file
+
+* socialwidget (new)
+..+ built-in social media sharing feature broken out into optional add-on.
+
+* themeset (new)
+..+ renamed "themeshow" add-on to "themeset"
+..+ added support for more themes
+

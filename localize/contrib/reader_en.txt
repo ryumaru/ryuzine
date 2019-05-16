@@ -1,0 +1,175 @@
+Skip Ad
+
+Bookmarks
+
+Add
+
+Done
+
+Fonts
+
+Normal
+
+Sepia
+
+Black
+
+Decrease
+
+Colors
+
+Increase
+
+Contents
+
+Other Views
+
+Continuous
+
+Grid View
+
+HTML Only
+
+Magazine
+
+Cancel
+
+Options
+
+Help
+
+Pages Slider
+
+Page Shadows
+
+3D Page Turns
+
+My Reading List
+
+Featured Items
+
+Item Limit
+
+Filter All
+
+Page Animations
+
+Native Scrolling
+
+Zoom &#38; Pan
+
+Theme UI
+
+Auto-hide UI
+
+Show All Dialogs
+
+About Ryuzine
+
+Close
+
+Advertisement
+
+Back
+
+Next
+
+Slider
+
+Font
+
+Share
+
+Views
+
+RYUZINE HELP Step through cards with bottom buttons or click Play All.
+
+Play All
+
+Swipe left/right to flip pages on touch-enabled devices.
+
+Tap outer margins to flip pages back and forth.  Desktops can also use arrow keys.
+
+Phones in portrait mode can use navigation bar buttons.
+
+Quickly flip to any page from any page.
+
+Font size can be adjusted up/down to your preference
+
+Page color scheme can be changed for easier reading.
+
+Alternative Views change how pages are displayed.
+
+Options Panel offers additional user preferences (stored in cookie file).
+
+Share panel allows sharing via e-mail or social networks (depending on widget).
+
+Hide the User Interface for an unobstructed view.
+
+Press upper corner or CTRL+Insert to open the In-App Bookmarks Panel
+
+Add or Delete bookmarks for this issue (stored in browser cookie).
+
+Zoom &amp; Pan button toggles zooming and dragging while zoomed (only on touch devices).
+
+Some Ryuzine features are not available on all platforms or in all browsers.
+
+Name
+
+Version
+
+Author
+
+Website
+
+License
+
+Ryuzine™ is a javascript application designed for publishing content to the web and mobile devices in a familiar magazine-style format.
+
+Publishing Kit available at
+
+Publishing with this program requires compliance with the software license
+
+LICENSE FILE
+
+Ryuzine, and the Ryuzine logo,  are trademarks of Ryu Maru, located in Minnesota USA, and may not be used without permission. The names of other companies, products, services and content distributed via the Ryuzine publishing platform are the property of their respective owners.
+
+Add Bookmark for Page
+
+Confirm Bookmark Deletion for Page
+
+Bookmark list is empty
+
+Error: Configuration file could not be found!
+
+App Error: Loading configuration variables failed.
+
+This item is already on your reading list.
+
+Add to Reading List?
+
+Remove from Reading List?
+
+App Error: can not find item in reading list
+
+Found
+
+matches
+
+Reading List is empty.
+
+Go Back to Rack
+
+My Reading List
+
+Hiding dialogs is being overidden, go to OPTIONS > SHOW ALL DIALOGS and turn it OFF to allow hiding
+
+Sort List
+
+Gallery Grid
+
+Detail List
+
+Simple List
+
+DELETE ENTIRE READING LIST? (Warning: This cannot be undone!)

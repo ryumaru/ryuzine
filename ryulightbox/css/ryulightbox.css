@@ -1,0 +1,484 @@
+		#links {
+			position: absolute;
+			top: 0; left: 0;
+			right: 0; bottom: 0;
+			height: auto;
+			width: auto;
+			overflow: auto;
+			overflow-x: hidden;
+		}
+			div.lightboxthumb {
+				position: relative;
+				display: table;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			div.lightboxthumb a {
+				height: 25px;
+				width: 25px;
+				background-color: black;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: 1;
+				-webkit-background-size: 25px 25px;
+				-moz-background-size: 25px 25px;
+				-ms-background-size: 25px 25px;
+				background-size: 25px 25px;
+			}
+				.lb_plus, .lightboxbutton {
+					background: black url('../images/lightboxbutton.gif') 0 0 no-repeat;
+				}
+				.lb_3d {
+					background: black url('../images/lb_3d.gif') 0 0 no-repeat;
+				}
+				.lb_document {
+					background: black url('../images/lb_document.gif') 0 0 no-repeat;
+				}
+				.lb_info {
+					background: black url('../images/lb_info.gif') 0 0 no-repeat;
+				}
+				.lb_larger {
+					background: black url('../images/lb_larger.gif') 0 0 no-repeat;
+				}
+				.lb_magnify {
+					background: black url('../images/lb_magnify.gif') 0 0 no-repeat;
+				}
+				.lb_movie {
+					background: black url('../images/lb_movie.gif') 0 0 no-repeat;
+				}
+				.lb_photo {
+					background: black url('../images/lb_photo.gif') 0 0 no-repeat;
+				}
+				.lb_video {
+					background: black url('../images/lb_video.gif') 0 0 no-repeat;
+				}
+				.lb_website {
+					background: black url('../images/lb_website.gif') 0 0 no-repeat;
+				}
+				.lb_minus {
+					background: black url('../images/lb_minus.gif') 0 0 no-repeat;
+				}
+			a.lightboxlink::before {
+				display: inline;
+				height:15px;
+				width: 15px;
+				content: '';
+				background: blue;
+			}
+			#lightbox {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				text-align: center;
+				display: none;
+				z-index: 2200;
+			}
+				#lightbox #shade {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: rgba(0,0,0,.75);
+				}
+					#lightbox #shade::after {
+						content: 'X';
+						position: absolute;
+						top: 5px;
+						right: 5px;
+						background: black;
+						color: white;
+						height: 30px;
+						width: 30px;
+						padding: 1px;
+						line-height: 30px;
+						text-align: center;
+						border-radius: 100%;
+						border: 2px solid white;
+						z-index: 9999;
+					}
+				#lightbox .light_boxed {
+					position: absolute;
+					top: 0%; left: 0%;
+					right: 0%; bottom: 0%;
+					max-height: 100%;
+					max-width: 100%;
+					margin: auto;
+					padding: 10px;
+					overflow: hidden;
+					display: none;
+					background: white;
+					box-sizing: border-box;	/* ensure padding or margins are from border inward */
+					-webkit-transition-duration: 1s;
+					-moz-transition-duration: 1s;
+					-ms-transition-duration: 1s;
+					transition-duration: 1s;
+				}
+					#lightbox .light_boxed.out {
+						left: -100%;
+						right: 100%;
+					}
+					#lightbox .light_boxed.in {
+						left: 0%;
+						right: 0%;
+					}
+					#lightbox .light_boxed.deck {
+						left: 100%;
+						right: -100%;
+					}
+					#lightbox .light_boxed .area {
+						position: absolute;
+						top: 0; left: 0;
+						right: 0; bottom: 0;
+						display: block;
+						height: auto;
+						width: auto;
+						word-wrap: break-word;
+						overflow: auto;
+					}
+					/* By default images are scaled down by width if necessary */
+					#lightbox .light_boxed img {
+						max-width: 100%;	/* do not let it be wider than lightbox */
+						height: auto;		/* over-ride any inline height setting  */
+						box-sizing: border-box;
+						-webkit-transition-duration: .4s;
+						-moz-transition-duration: .4s;
+						-ms-transition-duration: .4s;
+						transition-duration: .4s;
+					}
+						/* 	For the below, .light_boxed.land wins over img.portrait
+							and .light_boxed.port wins over img.landscape for scaling */
+						/* scale up/down by width */
+						#lightbox .light_boxed.land img,
+						#lightbox .light_boxed img.landscape {
+							width: 100%;
+							height: auto;
+							max-height: none;
+						}
+						/* scale up/down by height */
+						#lightbox .light_boxed.port img,
+						#lightbox .light_boxed img.portrait {
+							width: auto;
+							max-width: none;
+							max-height: 100%;
+						}
+					#lightbox .light_boxed iframe {
+						display: block;
+						width: 100%;
+						height: 90%; /* helps prevent double scrollbar */
+						box-sizing: border-box;
+						border: none;
+					}
+						#lightbox .light_boxed iframe html {
+							overflow: hidden !important;
+						}
+					#lightbox .light_boxed .rack_card {
+						width: 100%;
+						height: 95%;
+						padding: 20px;
+						text-align: left;
+						-wekbit-box-sizing: border-box;
+						-moz-box-sizing: border-box;
+						-ms-box-sizing:border-box;
+						box-sizing: border-box;
+					}
+						/* generally any card with images display them at their actual size */
+						#lightbox .light_boxed .area .rack_card img {
+							height: auto;
+							width: auto;
+						}
+							/* for cover thumbnails in rack scale them */
+							#lightbox .light_boxed .area .rack_card .cover img {
+								height: auto;
+								width: 100%;
+							}
+			/* 	OVR cannot be set to % height because "scrollbox"
+				parent has not set height because of iScroll so
+				our best option is to just push it down and let
+				ovr.css determine the size */
+					.light_boxed .ovr {
+						margin-top: 50px;
+					}
+					#lightbox .light_boxed figcaption,
+					#lightbox .light_boxed .caption {
+						display: block;
+						margin-top:10px;
+					}
+					#lightbox .light_boxed figcaption p,
+					#lightbox .light_boxed .caption p {
+						display: inline-block;
+						font-family: sans-serif;
+						font-weight: bold;
+						font-size: 12px;
+						margin: 0;
+						padding: 0;
+						max-width: 90%;
+					}
+					#lightbox #galleryback {
+						position: fixed;
+						height: 30px;
+						width: 30px;
+						left: 0;
+						top: 50%;
+						margin-top: -15px;
+						display: none;
+						z-index: 9999;
+						text-shadow: 0 0 5px black;
+					}
+						#galleryback p {
+							color: white;
+							opacity: .65;
+						}
+						#galleryback:hover p, #galleryback:focus p {
+							color: white;
+							opacity: 1;
+						}
+						#galleryback p span.symbol::before {
+							content: '\f053';
+							font-size: 36px;
+						}
+						#galleryback p span.label {
+							display: none;
+						}
+					#lightbox #gallerynext {
+						position: fixed;
+						height: 30px;
+						width: 30px;
+						right: 0;
+						top: 50%;
+						margin-top: -15px;
+						display: none;
+						z-index: 9999;
+						text-shadow: 0 0 5px black;
+					}
+						#gallerynext p {
+							color: white;
+							opacity: .65;
+						}
+						#gallerynext:hover p, #gallerynext:focus p {
+							color: white;
+							opacity: 1;
+						}
+						#gallerynext p span.symbol::before {
+							content: '\f054';
+							font-size: 36px;
+						}
+						#gallerynext p span.label {
+							display: none;
+						}
+					#lightbox.gallery #galleryback,
+					#lightbox.gallery #gallerynext {
+						display: block;
+					}
+/* heights + 40px for Polaroid look and space for caption */
+ @media screen and (min-width: 1600px) {
+	.light_boxed {		/* 4:3 ratio (also if you set data-aspect=square */
+		width: 1280px;
+		height: 1064px;
+	}
+	.light_boxed.wide {	/* 16:9 ratio widescreen */
+		width: 1280px;
+		height: 760px;
+	}
+	.light_boxed.book {	/* 3:4 ratio portrait orientation */
+		width: 640px;
+		height: 840px;
+	}
+	.light_boxed.tall {	/* 9:16 ratio portrait orientation */
+		width: 450px;
+		height: 840px;
+	}
+	#detailbox.light_boxed {
+		width: 600px;
+		height: 378px;
+	}
+}
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
+	.light_boxed {
+		width: 1024px;
+		height: 808px;
+	}
+	.light_boxed.wide {
+		width: 1024px;
+		height: 616px;
+	}
+	.light_boxed.book {
+		width: 480px;
+		height: 680px;
+	}
+	.light_boxed.tall {
+		width: 405px;
+		height: 760px;
+	}
+	#detailbox.light_boxed {
+		width: 600px;
+		height: 378px;
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+	.light_boxed {
+		width: 800px;
+		height: 640px;
+	}
+	.light_boxed.wide {
+		width: 800px;
+		height: 490px;
+	}
+	.light_boxed.book {
+		width: 480px;
+		height: 680px;
+	}
+	.light_boxed.tall {
+		width:	405px;
+		height: 760px;
+	}
+	#detailbox.light_boxed {
+		width: 600px;
+		height: 378px;
+	}
+}
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+	.light_boxed {
+		width: 640px;
+		height: 520px;
+	}
+	.light_boxed.wide {
+		width: 720px;
+		height: 445px;
+	}
+	.light_boxed.book {
+		width: 480px;
+		height: 680px;
+	}
+	.light_boxed.tall {
+		width: 405px;
+		height: 740px;
+	}
+	#detailbox.light_boxed {
+		width: 600px;
+		height: 378px;
+	}
+	.light_boxed .ovr {
+		margin-top: 0px;
+	}
+}
+@media screen and (min-width: 600px) and (max-width: 719px) {
+	.light_boxed {
+		width: 600px;
+		height: 490px;
+	}
+	.light_boxed.wide {
+		width: 600px;
+		height: 378px;
+	}
+	.light_boxed.book {
+		width: 480px;
+		height: 640px;
+	}
+	.light_boxed.tall {
+		width: 360px;
+		height: 640px;
+	}
+	#detailbox.light_boxed {
+		width: 600px;
+		height: 378px;
+	}
+
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+	.light_boxed {
+		width: 480px;
+		height: 380px;
+	}
+	.light_boxed.wide {
+		width: 480px;
+		height: 310px;
+	}
+	.light_boxed.book {
+		width: 320px;
+		height: 480px;
+	}
+	.light_boxed.tall {
+		width: 360px;
+		height: 568px;
+	}
+		#lightbox .light_boxed.book figcaption,
+		#lightbox .light_boxed.book .caption,
+		#lightbox .light_boxed.tall figcaption,
+		#lightbox .light_boxed.tall .caption {
+			display: none;
+		}
+
+}
+@media screen and (max-width: 479px) {
+	.light_boxed {
+		width: 320px;
+		height: 280px;
+	}
+	.light_boxed.wide {
+		width: 320px;
+		height: 220px;
+	}
+	.light_boxed.book {
+		width: 240px;
+		height: 320px;
+	}
+	.light_boxed.tall {
+		width: 320px;
+		height: 480px;
+	}
+		#lightbox .light_boxed iframe {
+			height: 100%;
+		}
+		#lightbox .light_boxed figcaption,
+		#lightbox .light_boxed .caption {
+			display: none;
+		}
+}
+
+@media screen and (max-height: 576px) and (orientation: landscape) {
+	#lightbox .light_boxed {
+		height: 100%;
+	}
+}
+@media only screen and (-webkit-min-device-pixel-ratio : 2.0),
+only and (min--moz-device-pixel-ration: 2),
+only and (-o-min-device-pixel-ratio: 2/1),
+only and (min-device-pixel-ratio: 2) {
+	.lb_plus, .lightboxbutton {
+		background: black url('../images/hires/lightboxbutton.gif') 0 0 no-repeat;
+	}
+	.lb_3d {
+		background: black url('../images/hires/lb_3d.gif') 0 0 no-repeat;
+	}
+	.lb_document {
+		background: black url('../images/hires/lb_document.gif') 0 0 no-repeat;
+	}
+	.lb_info {
+		background: black url('../images/hires/lb_info.gif') 0 0 no-repeat;
+	}
+	.lb_larger {
+		background: black url('../images/hires/lb_larger.gif') 0 0 no-repeat;
+	}
+	.lb_magnify {
+		background: black url('../images/hires/lb_magnify.gif') 0 0 no-repeat;
+	}
+	.lb_movie {
+		background: black url('../images/hires/lb_movie.gif') 0 0 no-repeat;
+	}
+	.lb_photo {
+		background: black url('../images/hires/lb_photo.gif') 0 0 no-repeat;
+	}
+	.lb_video {
+		background: black url('../images/hires/lb_video.gif') 0 0 no-repeat;
+	}
+	.lb_website {
+		background: black url('../images/hires/lb_website.gif') 0 0 no-repeat;
+	}
+	.lb_minus {
+		background: black url('../images/hires/lb_minus.gif') 0 0 no-repeat;
+	}
+}
