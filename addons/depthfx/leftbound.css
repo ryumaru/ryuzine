@@ -1,0 +1,239 @@
+/* Title: Rounded Theme	 					*/
+/* Compatibility: 0.9.0						*/
+/* Creator: Kristiana Hansen				*/
+/* Contact: software@kmhcreative.com		*/
+/* License: Freeware						*/
+/* Comments: Adds Rounded Corners in Spreads*/
+/*==========================================*/
+	.page {
+		border: 1px solid #333;
+	}
+
+		.spine {
+		position: absolute;
+		width: 100%;
+		height: 50%;
+		background: #333;
+		-webkit-box-shadow: 5px 0 20px #000, -5px 0 20px #000;
+		-moz-box-shadow: 5px 0 20px #000, -5px 0 20px #000;
+		-o-box-shadow: 5px 0 20px #000, -5px 0 20px #000;
+		-ms-box-shadow: 5px 0 20px #000, -5px 0 20px #000;
+		box-shadow: 5px 0 20px #000, -5px 0 20px #000;
+		}
+		
+	.appbanner_dn .appbannerbox {
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.75);
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,.75);
+		-ms-box-shadow: 0 0 10px rgba(0,0,0,.75);
+		box-shadow: 0 0 10px rgba(0,0,0,.75);
+	}
+
+
+/*==============================================*/
+/*	Desktop										*/
+/*==============================================*/
+@media only screen and (min-width: 1600px)  {
+
+	
+	.recto {
+	-webkit-border-top-left-radius: 50px 10px;
+	-webkit-border-bottom-left-radius: 50px 10px;
+	-moz-border-radius: 50px 0px 0px 50px / 10px 0px 0px 10px; 
+	-o-border-radius: 50px 0px 0px 50px / 10px 0px 0px 10px;
+	border-radius: 50px 0px 0px 50px / 10px 0px 0px 10px; 
+	}
+	
+	.verso {
+	-webkit-border-top-right-radius: 50px 10px;
+	-webkit-border-bottom-right-radius: 50px 10px;
+	-moz-border-radius: 0px 50px 50px 0px / 0px 10px 10px 0;
+	-o-border-radius: 0px 50px 50px 0px / 0px 10px 10px 0;
+	border-radius: 0px 50px 50px 0px / 0px 10px 10px 0;
+	}
+	.covercorners-front {
+			-webkit-border-top-left-radius: 20px 5px;
+			-webkit-border-bottom-left-radius: 20px 5px;
+		-moz-border-radius: 20px 0px 0px 20px / 5px 0px 0px 5px;
+		-o-border-radius: 20px 0px 0px 20px / 5px 0px 0px 5px;
+		border-radius: 20px 0px 0px 20px / 5px 0px 0px 5px;
+		}
+	
+	.covercorners-back {
+			-webkit-border-top-right-radius: 20px 5px;
+			-webkit-border-bottom-right-radius: 20px 5px;
+		-moz-border-radius: 0px 20px 20px 0px / 0px 5px 5px 0px;
+		-o-border-radius: 0px 20px 20px 0px / 0px 5px 5px 0px;
+		border-radius: 0px 20px 20px 0px / 0px 5px 5px 0px;
+		}
+		
+	.covershadow-front {
+		-webkit-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-moz-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-o-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-ms-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+	}
+
+	.covershadow-back {
+		-webkit-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-moz-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-o-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-ms-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+	}
+		.spine {
+			background: rgba(0, 0, 0, 0.50);
+			-webkit-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+			-moz-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+			-o-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+			-ms-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+			box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		}
+			.spine.spine_top{ top: 6px; }
+			.spine.spine_bot { bottom: 6px; }
+	.shadow { /* Shadow for page turn effect */
+		position:absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.15);
+			-webkit-border-top-left-radius: 300px 10px;
+			-webkit-border-top-right-radius: 300px 10px;
+			-webkit-border-bottom-left-radius: 300px 10px;
+			-webkit-border-bottom-right-radius: 300px 10px;
+		-moz-border-radius: 300px 300px 300px 300px / 10px 10px 10px 10px;
+		-o-border-radius: 300px 300px 300px 300px / 10px 10px 10px 10px;
+		-ms-border-radius: 300px 300px 300px 300px / 10px 10px 10px 10px;
+		border-radius: 300px 300px 300px 300px / 10px 10px 10px 10px;
+		visibility: visible;
+		display: block;
+		}
+
+
+}
+
+
+/*==============================================*/
+/* Tablet UI (Landscape)							*/
+/*==============================================*/
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+
+	
+		
+	.recto {
+	-webkit-border-top-left-radius: 50px 10px;
+	-webkit-border-bottom-left-radius: 50px 10px;
+	-moz-border-radius: 50px 0px 0px 50px / 10px 0px 0px 10px; 
+	-o-border-radius: 50px 0px 0px 50px / 10px 0px 0px 10px;
+	border-radius: 50px 0px 0px 50px / 10px 0px 0px 10px; 
+	}
+	
+	.verso {
+	-webkit-border-top-right-radius: 50px 10px;
+	-webkit-border-bottom-right-radius: 50px 10px;
+	-moz-border-radius: 0px 50px 50px 0px / 0px 10px 10px 0;
+	-o-border-radius: 0px 50px 50px 0px / 0px 10px 10px 0;
+	border-radius: 0px 50px 50px 0px / 0px 10px 10px 0;
+	}
+	.covercorners-front {
+			-webkit-border-top-left-radius: 20px 5px;
+			-webkit-border-bottom-left-radius: 20px 5px;
+		-moz-border-radius: 20px 0px 0px 20px / 5px 0px 0px 5px;
+		-o-border-radius: 20px 0px 0px 20px / 5px 0px 0px 5px;
+		border-radius: 20px 0px 0px 20px / 5px 0px 0px 5px;
+		}
+	
+	.covercorners-back {
+			-webkit-border-top-right-radius: 20px 5px;
+			-webkit-border-bottom-right-radius: 20px 5px;
+		-moz-border-radius: 0px 20px 20px 0px / 0px 5px 5px 0px;
+		-o-border-radius: 0px 20px 20px 0px / 0px 5px 5px 0px;
+		border-radius: 0px 20px 20px 0px / 0px 5px 5px 0px;
+		}
+	.covershadow-front {
+		-webkit-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-moz-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-o-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-ms-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+	}
+
+	.covershadow-back {
+		-webkit-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-moz-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-o-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-ms-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+	}
+		.spine {
+			background: rgba(0, 0, 0, 0.50);
+			-webkit-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+			-moz-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+			-o-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+			-ms-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+			box-shadow: 1px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		}
+			.spine.spine_top{ top: 8px; }
+			.spine.spine_bot { bottom: 8px; }	
+	.shadow { /* Shadow for page turn effect */
+		position:absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.15);
+			-webkit-border-top-left-radius: 300px 10px;
+			-webkit-border-top-right-radius: 300px 10px;
+			-webkit-border-bottom-left-radius: 300px 10px;
+			-webkit-border-bottom-right-radius: 300px 10px;
+		-moz-border-radius: 300px 300px 300px 300px / 10px 10px 10px 10px;
+		-o-border-radius: 300px 300px 300px 300px / 10px 10px 10px 10px;
+		-ms-border-radius: 300px 300px 300px 300px / 10px 10px 10px 10px;
+		border-radius: 300px 300px 300px 300px / 10px 10px 10px 10px;
+		visibility: visible;
+		display: block;
+		}
+}
+
+/*==============================================================*/
+/* Desktop Screen 1280 to 1600 px */
+@media only screen and (min-width: 1280px) and (max-width: 1599px) and (min-height: 795px) {
+
+}
+
+/*==============================================*/
+/* Tablet UI (portrait)							*/
+/*==============================================*/
+@media only screen and (min-width: 600px) and (max-width: 1023px)  {
+	.covercorners-back { /* Used as stand-in way to target last page */
+		-webkit-box-shadow: 10px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-moz-box-shadow: 10px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-o-box-shadow: 10px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		-ms-box-shadow: 10px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+		box-shadow: 10px 0 10px rgba(0, 0, 0, 0.50), -1px 0 10px rgba(0, 0, 0, 0.50);
+	}	
+}
+
+
+/*==============================================*/
+/* Phone UI (Landscape)							*/
+/*==============================================*/
+@media only screen and (min-width: 480) and (max-width: 599px) {
+
+
+}
+
+
+
+/*==============================================*/
+/* Phone UI (Portrait)							*/
+/*==============================================*/
+@media only screen and (max-width: 479px) {
+	.navbars_hide {
+
+	}
+	.navbars_show {
+
+	}	
+}
