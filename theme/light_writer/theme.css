@@ -1,0 +1,13 @@
+/* 	Title: Light Writer
+	Ryuzine Version: 1.0
+	Copyright 2015 K.M. Hansen (software@kmhcreative.com)
+	License: CC BY-SA 4.0
+	License URI: http://creativecommons.org/licenses/by-sa/4.0/
+
+	Comments: A base theme for Ryuzine Writer
+	
+	To Modify: use @import url(); at start of your child theme
+	and load this file and then any others on which your theme
+	is based.  Then put your custom over-rides in your theme.
+*/
+@import url("../light/theme.css");

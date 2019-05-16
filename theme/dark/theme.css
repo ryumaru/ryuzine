@@ -1,0 +1,275 @@
+/* 	Dark UI Color Theme
+	v. 1.0
+	Copyright 2015 K.M. Hansen (software@kmhcreative.com)
+	License: CC BY-SA 4.0
+	License URI: http://creativecommons.org/licenses/by-sa/4.0/
+
+	Description: New default Dark Theme
+
+*/
+
+body {
+	background-color: #0556A5;
+}
+#loadicon::before {
+	color: #ccc;
+}
+#controltoggle {
+	background-color: #000;
+}
+#splash {
+	background-color: #000;
+	color: #eee;
+}
+.splash-port {
+	color: #27AAE1;
+}
+.splash-fineprint a {
+	color: #fff;
+}
+	.splash-fineprint a:visited {
+		color: #ccc;
+	}
+.title {
+	color: #fff;
+}
+.navbars, .titlebar {
+	background-color: #111;
+	border-bottom: 1px solid #333;
+}
+.tabbars {
+	background-color: #111;
+	border-top: 1px solid #333;
+}
+.panel.style1 {
+	background-color: #111;
+	background-color: rgba(0,0,0,.93);
+}
+.panel.style2 {
+	background-color: #111;
+	border: 1px solid #111;
+}
+.panel.style3 {
+	background: #111;
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0.9) 0%, rgba(11,11,11,0.9) 55%, rgba(17,17,17,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.9)), color-stop(55%,rgba(11,11,11,0.9)), color-stop(100%,rgba(17,17,17,1)));
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.9) 0%,rgba(11,11,11,0.9) 55%,rgba(17,17,17,1) 100%);
+	background: -o-linear-gradient(top,  rgba(0,0,0,0.9) 0%,rgba(11,11,11,0.9) 55%,rgba(17,17,17,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0.9) 0%,rgba(11,11,11,0.9) 55%,rgba(17,17,17,1) 100%);
+	background: linear-gradient(to bottom,  rgba(0,0,0,0.9) 0%,rgba(11,11,11,0.9) 55%,rgba(17,17,17,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6000000', endColorstr='#111111',GradientType=0 );
+	border: 1px solid #111;
+}
+.pointer {
+	background-color: #111;
+	border-bottom: 1px solid #111;
+	border-right:  1px solid #111;
+}
+.dialog {
+	background: rgb(193,196,206);
+}
+.button p {
+	color: #ccc;
+}
+	.button:hover p {
+		color: #27aae1;
+	}
+.button.type1 {
+
+}
+	.button.type1:hover, .button.type1:focus {
+	
+	}
+	.button.type1:hover p, .button.type1:focus p {
+	
+	}
+.button.type2 {
+
+}
+	.button.type2:hover, .button.type2:focus {
+	
+	}
+	.button.type2:hover p, .button.type2:focus p {
+	
+	}
+.button.type3 {
+	background-color: #333;
+}
+	.button.type3:hover, .button.type3:focus {
+		background-color: #27AAE1;
+	}
+	.button.type3:hover p, .button.type3:focus p {
+		color: #fff;
+	}
+.button.type4 {
+	background-color: #27AAe1;
+}
+.button.type4:hover, .button.type4:focus {
+	background-color: #fff;
+}
+	.button.type4 p {
+		color: #fff;
+	}
+	.button.type4:hover p, .button.type4:focus p {
+		color: #0556a5;
+	}
+
+/* share widget */
+.rz-sharethis.iconfont a.rz-share {
+	color: #ccc;
+}
+.rz-sharethis.iconfont a.rz-share:hover,
+.rz-sharethis.iconfont a.rz-share:hover span {
+	color: #27aae1;
+}
+
+#bmark_panel ul li {
+	border-bottom: 1px solid #333;
+}
+	#bmark_panel ul .button:hover, #bmark_panel ul .button:focus {
+	
+	}
+	#bmark_panel ul .button:hover p, #bmark_panel ul .button:focus p {
+		color: #cc0000;
+	}
+#opt_panel ul li {
+	border-bottom: 1px solid #333;
+}
+	.optitem, .opt-drop p, #ipp {
+		color: #999;
+	}
+	.opt-switch span.symbol::before { /* switch track */
+		background-color: #000;
+		border: 2px solid #333;
+	}
+		.opt-switch.opt-on span.symbol::before {
+			background-color: #0556a5;
+		}
+	.opt-switch span.symbol::after { /* switch knob */
+		background-color: #eee;
+	}
+		.opt-switch.opt-on span.symbol::after {
+		
+		}
+	#opt_panel .smallprint {
+		color: #666;
+	}
+	.buttonbox {	/* if UI Constructor puts bar buttons in panels */
+		border: 1px solid #333;
+	}
+#toc_panel ul li {
+	border-bottom: 1px solid #333;
+}
+	.list_up {
+	
+	}
+	.list_up a, .list_up .label {
+		color: #999;
+	}
+	.list_down {
+		background-color: #0556A5;
+	}
+	.list_down a, .list_down .label {
+		color: #fff;
+	}
+#font_panel .area .sub-button:hover, #font_panel .area .sub-button:focus {
+	background-color: #0556A5;
+}
+	#font_panel .area .sub-button:hover p,
+	#font_panel .area .sub-button:focus p {
+		color: #fff;
+	}
+	#fontbox, #colorbox {
+		background-color: #111;
+		border: 1px solid #111;
+	}
+	#fontup {
+		border-color: #333;
+	}
+#tocslider_track {
+	background-image: url('images/slider.png');
+}
+#tocslider_button {
+	background-color: #111;
+	border: 1px solid #eee;
+}
+	#tocslider_button p {
+		color: #eee;
+	}
+	#tocslider_button:hover, #tocslider_button:focus {
+		background-color: #27aae1;
+	}
+	#tocslider_button:hover p, #tocslider_button:focus p {
+	}	
+
+.ryudialog {
+	background-color: #eee;
+}
+	.ryudialog .area .button p {
+		color: #333;
+	}
+		.ryudialog .area .button:hover p,
+		.ryudialog .area .button:focus p {
+			color: #0556a5;
+		}
+	.ryudialog .area.action {
+		border-bottom: 1px solid #333;
+	}
+	.ryudialog .area ul.opts {
+		background-color: #fff;
+		border: 1px solid #ccc;
+	}
+		.ryudialog .area ul.opts li span.optitem {
+			color: #111;
+		}
+	.ryudialog .actionbar {
+		background-color: #333;
+	}
+		.ryudialog .actionbar .hidebox {
+			color: #ccc;
+		}
+
+#boxad_timer {
+	color: #fff;
+}				
+
+/* Ryuzine Rack */
+
+#racktop h1 {
+	color: #fff;
+}
+	.promo .description h4 {
+		background: yellow;
+		background: -moz-linear-gradient(left,  rgba(255,230,39,1) 0%, rgba(253,207,12,1) 70%, rgba(253,205,9,0) 77%, rgba(253,202,5,0) 87%, rgba(252,199,2,1) 95%, rgba(252,197,0,1) 100%);
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,230,39,1)), color-stop(70%,rgba(253,207,12,1)), color-stop(77%,rgba(253,205,9,0)), color-stop(87%,rgba(253,202,5,0)), color-stop(95%,rgba(252,199,2,1)), color-stop(100%,rgba(252,197,0,1)));
+		background: -webkit-linear-gradient(left,  rgba(255,230,39,1) 0%,rgba(253,207,12,1) 70%,rgba(253,205,9,0) 77%,rgba(253,202,5,0) 87%,rgba(252,199,2,1) 95%,rgba(252,197,0,1) 100%);
+		background: -o-linear-gradient(left,  rgba(255,230,39,1) 0%,rgba(253,207,12,1) 70%,rgba(253,205,9,0) 77%,rgba(253,202,5,0) 87%,rgba(252,199,2,1) 95%,rgba(252,197,0,1) 100%);
+		background: -ms-linear-gradient(left,  rgba(255,230,39,1) 0%,rgba(253,207,12,1) 70%,rgba(253,205,9,0) 77%,rgba(253,202,5,0) 87%,rgba(252,199,2,1) 95%,rgba(252,197,0,1) 100%);
+		background: linear-gradient(to right,  rgba(255,230,39,1) 0%,rgba(253,207,12,1) 70%,rgba(253,205,9,0) 77%,rgba(253,202,5,0) 87%,rgba(252,199,2,1) 95%,rgba(252,197,0,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe627', endColorstr='#fcc500',GradientType=1 );
+	}
+	.promo .read .button, #gallery1 .read .button {
+		background: #0556a5;
+	}
+	.read .button {
+		border: 1px solid #ccc;
+	}
+	.read .button:hover, .read .button:focus {
+		background: #0556a5;
+		border: 1px solid #27aae1;
+	}
+	.read .button:hover p, .read .button:focus p {
+		color: #27aae1;
+	}
+#longbox {
+	background-color: #fff;
+}
+#dropbar {
+	border-bottom: 1px solid #ccc;
+}
+	#droptab {
+		background-color: #000;
+		background-color: rgba(0,0,0,.5);
+		border: 1px solid #ccc;
+		border-top: none;
+	}

@@ -1,0 +1,732 @@
+/*	Writer Base Theme
+	Ryuzine 1.0
+	Copyright 2015 K.M. Hansen (software@kmhcreative.com)
+	License: CC BY-SA 4.0
+	License URI: http://creativecommons.org/licenses/by-sa/4.0/
+	
+	Comments: A base theme for Ryuzine Writer
+	
+	To Modify: use @import url(); at start of your child theme
+	and load this file and then any others on which your theme
+	is based.  Then put your custom over-rides in your theme.
+*/
+
+
+.workspace {
+	top: 68px;
+	bottom: 0px;
+}
+#controlbox0 {
+	z-index: 1200;
+}
+.navbars {
+	height: 24px;
+	background: none;
+	border: none;
+}
+	.navbars_show {
+		top: 44px;
+		bottom: auto;
+	}
+	.dropbar_hide {
+		top: -25px;
+	}
+/* Next 2 are actually return from Fill View in Simulator */
+#back2rack {
+	width: auto;
+}
+	#back2rack span.label {
+		line-height: 24px;
+		font-size: 14px;
+	}
+.navbars .titlebar { display: none; }
+.navbars .addon_ws .titlebar {
+	display: inline-block;
+	right: 35px;
+	width: auto;
+	overflow: visible;
+	background: transparent;
+}
+	.navbars .addon_ws .titlebar h1.title {
+		color: #999;
+		font-size: 18px;
+		line-height: 24px;
+		text-align: right;
+	}
+.navset {
+	left: 0px;
+	background: #eee;
+}
+	.nav_deck { top: 24px;}
+	.nav_in { top: 0px;}
+	.nav_out { top: -24px;}
+#controlbox1 {
+	height: 32px;
+	z-index: 1000;
+}
+#tabbar0, .tabbars {
+	height: 32px;
+	background: none;
+	border: none;
+}
+	.tabbars_show {
+		top: 12px;
+		bottom: auto;
+	}
+#controlset0 .button {
+	min-width: 100px;
+	width: auto;
+	height: 32px;
+	-webkit-transition-duration: .5s;
+	-webkit-transition-delay: 1s;
+	-moz-transition-duration: .5s;
+	-moz-transition-delay: 1s;
+	-ms-transition-duration: .5s;
+	-ms-transition-delay: 1s;
+	transition-duration: 1s;
+	transition-delay: .5s;
+}
+	div#b_start1 { display: none; }
+	div#b_start.button {
+		position: relative;
+		display: block;
+	}
+	#controlset0 .button p span.symbol,
+	div#b_start.button p span.symbol {
+		font-size: 16px;
+		float: left;
+		height: auto;
+		line-height: 24px;
+		margin: 5px;
+		-webkit-transition-duration: .5s;
+	
+		-webkit-transition-delay: 1s;
+		-moz-transition-delay: 1s;
+		-ms-transition-delay: 1s;
+		transition-delay: 1s;
+	}
+	div#b_start p span.symbol::before {
+		background-size: 16px;
+	}
+	
+	#controlset0 .button p span.label,
+	div#b_start.button p span.label {
+		font-size: 14px;
+		float: left;
+		line-height: 32px;
+		margin: 0 5px;
+		-webkit-transition-duration: .5s;
+		-webkit-transition-delay: .75s;
+		-moz-transition-delay: .75s;
+		-ms-transition-delay: .75s;
+		transition-delay: .75s;
+	}
+		div#b_start.button p span.symbol::before {
+			background-size: 16px 16px;
+			width: 16px;
+			height: 16px;
+			margin: 3px;
+		}
+	div#addonsbutton.button, div#optbutton.button {
+		float: right;
+		width: 32px;
+		min-width: 32px;
+	}
+		div#addonsbutton.button { margin-right: 32px;}
+		div#addonsbutton.button p span.symbol { margin-top: 1px; }
+		div#optbutton.button { 
+			position: absolute;
+			right: 0;
+			margin: -4px 0;
+		}
+		div#addonsbutton.button p span.symbol,
+		div#optbutton.button p span.symbol {
+			font-size: 24px;
+			float: none;
+		}
+		div#addonsbutton.button p span.label,
+		div#optbutton.button p span.label {
+			display: none;
+		}
+	div#b_configuration.button, div#b_databuilder.button {
+		float: left;
+	}
+	div#b_export { display: block;}
+	div#pfbutton { display: none;}
+	#controlset0 .button.selected_workspace {
+		-webkit-border-radius: 5px 5px 0 0;
+		-moz-border-radius: 5px 5px 0 0;
+		-ms-border-radius: 5px 5px 0 0;
+		border-radius: 5px 5px 0 0;
+		-webkit-box-shadow: inset 0 -44px 0px #eee;
+		-moz-box-shadow: inset 0 -44px 0px #eee;
+		-ms-box-shadow: inset 0 -44px 0px #eee;
+		box-shadow: inset 0 -44px 0px #eee;
+	}
+		#controlset0 .button.selected_workspace p span.symbol,
+		#controlset0 .button.selected_workspace p span.label {
+			color: #0556A5;
+		}
+		#b_start.button.selected_workspace {	/* do not apply to start button */
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			-ms-box-shadow: none;
+			box-shadow: none;
+		}
+			#b_start.button.selected_workspace p span.label {
+				color: #eee;
+			}
+			
+		div#addonsbutton.button.selected_workspace { 
+			margin-right: 32px;
+			width: auto;
+			min-width: 100px;
+		}
+		div#addonsbutton.button.selected_workspace p span.symbol { 
+			margin-top: 4px; 
+		}
+		div#addonsbutton.button.selected_workspace p span.symbol {
+			font-size: 16px;
+			float: left;
+		}
+		div#addonsbutton.button.selected_workspace p span.label {
+			display: block;
+		}
+	#navset0 { display: none;}	
+	.navset .button {
+		height: 24px;
+		width: auto;
+		float: left !important;
+		margin: 0 5px;
+	}
+	.navset .button p span.symbol { display: none;}
+	.navset .button p span.label {
+		color: #111;
+		font-size: 14px;
+		line-height: 24px;
+	}
+	.workspace {
+	background: #eee;
+	background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 5%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(5%,rgba(204,204,204,1)));
+	background: -webkit-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 5%);
+	background: -o-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 5%);
+	background: -ms-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 5%);
+	background: linear-gradient(to bottom, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 5%);
+	}
+	#start { background: transparent;}
+	#newstyle {
+	background: #eee;
+	background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 5%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(5%,rgba(204,204,204,1)));
+	background: -webkit-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 5%);
+	background: -o-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 5%);
+	background: -ms-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 5%);
+	background: linear-gradient(to bottom, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 5%);
+	}
+		li.tab {
+			box-shadow: none;
+			border: 1px solid #999;
+			border-bottom: 1px solid #eee;
+			-webkit-border-radius: 5px 5px 0 0;
+			-moz-border-radius: 5px 5px 0 0;
+			-ms-border-radius: 5px 5px 0 0;
+			border-radius: 8px 8px 0 0;
+			margin: 2px;
+			height: 32px;
+			line-height: 32px;
+			font-size: 14px;
+			font-weight: normal;
+			width: 100px;
+		}
+		div.area.tabsections {
+			box-shadow: none;
+			border-top: 1px solid #999;
+			top: 35px;
+		}
+		.ryudialog .area.tabsections { top: 79px;}
+#helpbutton {
+	float: left;
+}
+#addonsdone {
+	float: right;
+}
+	#addons span.symbol::before {
+		content: '\f18e';
+	}
+		
+#addons_panel.in {
+	left: auto;
+	right: 0%;
+	top: 0%;
+	bottom: 0%
+	z-index: 20;
+}
+#addons_panel.out {
+	left: auto;
+	right: -100%;
+	top: 0%;
+	z-index: 1;
+}
+
+/*==============================================*/
+/*	Ryuzine Writer Xinha Panels and Dialogs		*/
+/*==============================================*/
+
+.htmlarea .toolbar .indicator {
+	background: #fff;
+}
+
+.htmlarea .toolbar {
+	background: #eee;
+	border-bottom: 1px solid #999;
+	border-top: none;
+}
+.htmlarea .toolbar .button {
+background: transparent;
+}
+.htmlarea .toolbar a.button:hover {
+background: #ccc;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+}
+.htmlarea .toolbar .separator {
+  border-left: 1px dotted #ccc;
+}
+
+.htmlarea .statusBar {
+  border-color: 1px solid #333;
+	background: #eee;
+  font: 11px Arial,Helvetica,sans-serif;
+}
+
+.htmlarea .statusBar .statusBarWidgetContainer {
+	background: #eee;
+}
+.htmlarea .statusBar .statusBarTree a:visited {
+	color:darkBlue; 
+}
+.htmlarea .statusBar .statusBarTree a:hover {
+  background-color: transparent;
+  color: darkBlue;
+}
+
+.dialog {
+	color: #111;
+	border: 1px solid #000;
+	background: #eee;
+ }
+ 	div.dialog .div.panel_flyout {
+ 		border: none;
+ 	}
+ 	div.dialog .div.panel_flyout ul {
+ 		border: 1px solid #000;
+ 	}
+.panel a {
+  color:#111;
+  border-bottom: 1px dotted #bbb;
+}
+.panel a:hover {
+  background-color: #333;
+}
+.dialog .title,.dialog  h1,.htmlarea .panel h1 {
+	color: #111;
+}
+.dialog button {
+	border: 1px solid #fff;
+	background: #ccc;
+}
+.dialog button:hover, .dialog button:focus {
+	color: #111;
+	background: #999;
+}
+
+.dialog input[type=button],.dialog input[type=submit]{
+	border: 1px solid #fff;
+	background: #ccc;
+}
+.dialog input[type=button]:hover, .dialog input[type=submit]:hover,
+.dialog input[type=button]:focus, .dialog input[type=submit]:focus {
+	color: #111;
+	background: #ccc;
+}
+div.dialog div.panel_flyout ul {
+	background: #eee;
+	border: 1px solid black;
+}
+	div.dialog div.panel_flyout ul li {
+		border-bottom: 1px solid #ccc;
+	}
+		div.dialog div.panel_flyout ul li:hover {
+			background-color: #111;
+			color: white;
+		}
+	div.dialog li.marked {
+		background-color: #111;
+		color: white;
+	}
+	div.dialog li.selected {
+		background-color: #0556a5;
+		color: white;
+	}
+.htmlarea .dTreeNode {
+  color:black;
+}
+.htmlarea .panel, .htmlarea .panels_left, .htmlarea .panels_right {
+	background: #eee;
+}
+.RYUPickerOption {
+	color: #111;
+	border: 1px solid #999;
+	background: #eee;
+
+}
+.RYUPickerOptionOver {
+	color: #ccc;
+	background: #0556A5;
+}
+.RYUPickerOptionActive {
+	border: 1px solid yellow;
+}
+#ryu_picker {
+	background: #eee !important;
+}
+	div.dialog.panel {
+		border-bottom: 1px solid black !important;
+	}
+
+	div.dialog>h1.popout {
+		color: #111;
+		background-color: #ccc;
+	}
+	div.dialog div.adjustable {
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+	}
+		div.dialog div.adjustable>ul li {
+			border-bottom: 1px solid #666;
+		}
+	div.dialog div.panel_controls {
+		background: #ccc;
+	}
+div#pagemanager {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+	div.dialog div.panel_flyout::before {
+		color:#111;
+	}
+	div#pagemanager li {
+		border: 1px solid #999;
+	}
+	
+/* Help Bubble */
+.writer .card2 {
+	top: 0%;
+	right: auto;
+	left: 0%;
+	margin: 30px 0 0 30px;
+}
+	.writer .card2 #help_guide {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+.writer .card3 {
+	margin-top: 50px;
+}
+	.writer .card3 #help_guide {
+		-webkit-transform: rotate(-27deg);
+		-moz-transform: rotate(-27deg);
+		-ms-transform: rotate(-27deg);
+		transform: rotate(-27deg);
+	}
+.writer .card8 {
+	margin: 55px 0 0 -50px;
+}
+.writer .card9 {
+	margin: 55px 0 0 10px;
+}
+.writer .card11 {
+	margin: 55px 0 0 70px;
+}
+.writer .card14 {
+	margin-top: 50px;
+}
+	.writer .card14 #help_guide {
+		-webkit-transform: rotate(-27deg);
+		-moz-transform: rotate(-27deg);
+		-ms-transform: rotate(-27deg);
+		transform: rotate(-27deg);
+	}
+.writer .card16 {
+	top: 0%;
+	margin: 30px 0 0 250px;
+}
+	.writer .card16 #help_guide {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+.writer .card17 {
+	margin-top: 50px;
+}
+	.writer .card17 #help_guide {
+		-webkit-transform: rotate(-27deg);
+		-moz-transform: rotate(-27deg);
+		-ms-transform: rotate(-27deg);
+		transform: rotate(-27deg);
+	}
+.writer .card18 {
+	margin: 55px 0 0 -40px;
+}
+	.writer .card18 #help_guide {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);		
+	}
+.writer .card20 {
+	margin: 55px 0 0 30px;
+}
+.writer .card21 {
+	margin: 55px 0 0 95px;
+}
+.writer .card22 {
+	margin: 55px 0 0 160px;
+}
+.writer .card23 {
+	top: 0%;
+	left: 0%;
+	margin: 30px 0 0 500px;
+}
+	.writer .card23 #help_guide {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);		
+	}
+.writer .card26 {
+	left: 0%;
+	margin: 50px 0 0 0px;
+}
+	.writer .card26 #help_guide {
+		-webkit-transform: rotate(-20deg);
+		-moz-transform: rotate(-20deg);
+		-ms-transform: rotate(-20deg);
+		transform: rotate(-20deg);
+	}
+.writer .card28 {
+	top: 0%;
+	left: 0%;
+	margin: 30px 0 0 370px;
+}
+	.writer .card28 #help_guide {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+.writer .card30 {
+	margin-top: 50px;
+}
+	.writer .card30 #help_guide {
+		-webkit-transform: rotate(-27deg);
+		-moz-transform: rotate(-27deg);
+		-ms-transform: rotate(-27deg);
+		transform: rotate(-27deg);
+	}
+.writer .card32 {
+	margin: 55px 0 0 -50px;
+}
+.writer .card34 {
+	margin: 55px 0 0 10px;
+}
+.writer .card36 {
+	top: 0%;
+	left: 0%;
+	margin: 55px 0 0 70px;
+}
+	.writer .card36 #help_guide {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+.writer .card37 #help_guide {
+		-webkit-transform: rotate(540deg);
+		-moz-transform: rotate(540deg);
+		-ms-transform: rotate(540deg);
+		transform: rotate(540deg);
+}
+.writer .card38 {
+	top: 0%;
+	margin: 0 0 0 -250px;
+}
+	.writer .card38 #help_guide {
+		-webkit-transform: rotate(40deg);
+		-moz-transform: rotate(40deg);
+		-ms-transform: rotate(40deg);
+		transform: rotate(40deg);	
+	}
+.writer .card40 {
+	top: 0%;
+	left: 100%;
+	margin: 30px 0 0 -300px;
+}
+	.writer .card40 #help_guide {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+@media screen and (max-width: 768px) {
+	#controlset0 .button {
+		min-width: 0px;
+	}
+	div#addonsbutton.button.selected_workspace {
+		float: right;
+		width: 32px;
+		min-width: 32px;
+	}
+		div#addonsbutton.button.selected_workspace { margin-right: 32px;}
+		div#addonsbutton.button.selected_workspace p span.symbol { margin-top: 1px; }
+		div#addonsbutton.button.selected_workspace p span.symbol {
+			font-size: 24px;
+			float: none;
+		}
+		div#addonsbutton.button.selected_workspace p span.label {
+			display: none;
+		}
+	.writer .card2 {
+		margin: 30px 0 0 -10px;
+	}
+	.writer .card16 {
+		margin: 30px 0 0 170px;
+	}
+	.writer .card23 {
+		margin: 30px 0 0 400px;
+	}
+	.writer .card28 {
+		margin: 30px 0 0 275px;
+	}
+}
+@media screen and (max-width: 719px) {
+	#controlset0 .button {
+		min-width: 0px;
+		width: 40px;
+		margin: 0px;
+	}
+	div#addonsbutton.button, div#addonsbutton.button.selected_workspace {
+		width: 40px;
+		min-width: 40px;
+	}
+		div#addonsbutton.button, div#addonsbutton.button.selected_workspace { margin-right: 40px; }
+	
+	#controlset0 .button p span.symbol { 
+		font-size: 24px;
+		float: none;
+	}
+	#controlset0 .button p span.label { display: none; }
+	div#b_start.button p span.symbol::before {
+		height: 24px;
+		width: 24px;
+		margin: 0;
+		-webkit-background-size: 24px 24px;
+		-moz-background-size: 24px 24px;
+		-ms-background-size: 24px 24px;
+		background-size: 24px 24px;
+	}
+	.htmlarea .toolbar .droplist:hover,
+	.htmlarea .toolbar .droplist:focus {
+		background: #ccc;
+		background: rgba(0,0,0,.10);
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		border-radius: 5px;
+	}
+	.writer .card2 {
+		margin: 30px 0 0 -40px;
+	}
+		.writer .card2 #help_guide {
+		-webkit-transform: rotate(-15deg);
+		-moz-transform: rotate(-15deg);
+		-ms-transform: rotate(-15deg);
+		transform: rotate(-15deg);
+		}
+	.writer .card8 #help_guide {
+		-webkit-transform: rotate(-10deg);
+		-moz-transform: rotate(-10deg);
+		-ms-transform: rotate(-10deg);
+		transform: rotate(-10deg);
+	}
+	.writer .card9 {
+		margin: 55px 0 0 -20px;
+	}
+	.writer .card11 {
+		margin: 55px 0 0 25px;
+	}
+	.writer .card14 {
+		margin: 50px 0 0 -40px;
+	}
+	.writer .card16 {
+		margin: 30px 0 0 0px;
+	}
+	.writer .card23 {
+		margin: 30px 0 0 80px;
+	}
+	.writer .card28 {
+		margin: 30px 0 0 40px;
+	}
+}
+@media screen and (max-width: 599px) {
+	.navbars { height: 32px; }
+	.nav_deck { top: 32px;}
+	.nav_out { top: -32px;}
+	.navset .button {
+		height: 32px;
+		width: 40px;
+		margin: 0px;
+	}
+	.navset .button p { color: #0556a5;}
+	.navset .button p span.symbol {
+		display: block;
+	}
+	.navset .button p span.label {
+		display: none;
+	}
+	.workspace { top: 76px; }
+	.writer .card39 {
+		margin: -138px 0 0 -138px;
+	}
+}
+@media screen and (max-width: 479px) {
+
+	li.tab { 
+		width: 78px;
+	 	margin: 0;
+	 }
+	 .writer .card21 {
+	 	margin: 55px 0 0 0px;
+	 }
+	 .writer .card22 {
+	 	margin: 55px 0 0 40px;
+	 }
+	 .writer .card32 #help_guide {
+	 	-webkit-transform: rotate(-12deg);
+	 	-moz-transform: rotate(-12deg);
+	 	-ms-transform: rotate(-12deg);
+	 	transform: rotate(-12deg);
+	 }
+	 .writer .card34 {
+	 	margin: 55px 0 0 -40px;
+	 }
+	 .writer .card36 {
+	 	margin: 55px 0 0 0px;
+	 }
+}

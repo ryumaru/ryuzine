@@ -1,0 +1,902 @@
+/* 	Title: Urban Theme
+	Ryuzine Version: 0.9.6.7
+	Copyright 2015 K.M. Hansen (software@kmhcreative.com)
+	License: CC BY-SA 4.0
+	License URI: http://creativecommons.org/licenses/by-sa/4.0/
+	
+	Comments: Designed for Windows Metro/Modern
+*/
+
+@import url('../dark/theme.css');
+
+body {
+	background-color: #999; 	/* change this to customize */
+	background-image: url('images/gray_circle_bg.png');
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+}
+	.plank {
+		height: 250px;
+		width: 250px;
+		padding: 0;
+		-webkit-border-radius: 250px;
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+		-ms-border-radius: 100%;
+		border-radius: 100%;
+	}
+		.plank p {
+			display: table-cell;
+			padding-top: 75px;
+		}
+		#plankL {
+			margin: 20% 0 0 20%;
+			border: 4px solid rgba(128,128,128,.3);
+		}
+		/* decorative circle goodness */
+			#plankL::before {
+				position: absolute;
+				top: -100px;
+				left: -50px;
+				height: 100px;
+				width: 100px;
+				border: 10px solid rgba(128,128,128,.3);
+				-webkit-border-radius: 100px;
+				-webkit-border-radius: 100%;
+				-moz-border-radius: 100%;
+				-ms-border-radius: 100%;
+				border-radius: 100%;
+				content: ' ';
+				display: block;
+				z-index: -1;
+			}
+			#plankL::after {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				height: 50px;
+				width: 50px;
+				border: 1px solid rgba(128,128,128,.3);
+				-webkit-border-radius: 50px;
+				-webkit-border-radius: 100%;
+				-moz-border-radius: 100%;
+				-ms-border-radius: 100%;
+				border-radius: 100%;
+				content: ' ';
+				display: block;
+				z-index: -1;
+			}
+		#plankR {
+			margin: 15% 15% 0 0;
+			border: 6px solid rgba(128,128,128,.3);
+		}
+			#plankR::before {
+				position: absolute;
+				top: -25px;
+				left: -25px;
+				height: 75px;
+				width: 75px;
+				border: 15px solid rgba(128,128,128,.3);
+				-webkit-border-radius: 75px;
+				-webkit-border-radius: 100%;
+				-moz-border-radius: 100%;
+				-ms-border-radius: 100%;
+				border-radius: 100%;
+				content: ' ';
+				display: block;
+				z-index: -1;
+			}
+			#plankR::after {
+				position: absolute;
+				bottom: 100px;
+				right: -250px;
+				height: 400px;
+				width: 400px;
+				border: 2px solid rgba(128,128,128,.3);
+				-webkit-border-radius: 400px;
+				-webkit-border-radius: 100%;
+				-moz-border-radius: 100%;
+				-ms-border-radius: 100%;
+				border-radius: 100%;
+				content: ' ';
+				display: block;
+				z-index: -1;
+			}
+
+#splash {
+	background: #0556A5;
+	-webkit-transform-origin: left;
+	-moz-transform-origin: left;
+	-o-transform-origin: left;
+	-ms-transform-origin: left;
+	transform-origin: left;
+}
+	.splash_in {
+		-webkit-transform: perspective(1000px) rotateY(0deg);
+		-moz-transform: perspective(1000px) rotateY(0deg);
+		-ms-transform: perspective(1000px) rotateY(0deg);
+		transform: perspective(1000px) rotateY(0deg);
+	}
+	.splash_out {
+		-webkit-transform: perspective(1000px) rotateY(90deg);
+		-moz-transform: perspective(1000px) rotateY(90deg);
+		-ms-transform: perspective(1000px) rotateY(90deg);
+		transform: perspective(1000px) rotateY(90deg);
+	}
+	#splash .splash-title, #splash .splash-title img, #splash .splash-port { visibility: hidden; }
+	#logo { height: 114px !important; width: 114px !important; }
+	#ryuzinereader #splashblock, #ryuzinereader #logo {
+		background: url('images/reader_white.png') center center no-repeat;
+	}
+	#ryuzinerack #splashblock, #ryuzinerack #logo {
+		background: url('images/rack_white.png') center center no-repeat;
+	}
+
+
+#navbar0, .navbars, .navset, .navset .titlebar {
+	height: 48px;
+}
+	.navbars .button span.label {
+		display: none;
+	}
+#controlbox1, #tabbar0, .tabbars {
+	height: 68px;
+}
+	.tabbars, .navbars {
+		background: #111;
+	}
+#zoomtoggle, #controltoggle {
+	border-radius: 0px;
+}
+.controlset {
+	height: 68px;
+}
+	.tabbars_hide {
+		bottom: -68px;
+	}
+.button.center {
+	margin: 0px auto -56px auto;
+}
+.button p {
+	color: #fff;
+}	
+.button p span.symbol {
+	border: 2px solid white;
+	-webkit-border-radius: 28px;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	border-radius: 100%;
+	height: 28px;
+	width: 28px;
+	font-size:18px;
+	line-height: 28px;
+	margin: 10px auto 4px auto;
+}
+.button:hover {
+	background-color: transparent;
+}
+	.button:hover p {
+		color: #fff;
+	}
+	.button:hover p span.symbol {
+		background-color: #2771ee;
+		border: 2px solid #2771ee;
+	}
+/* Panels */
+.panel.style1, .panel.style2, .panel.style3, .panel.style4 {
+	background: #fff;
+}
+.panel.style1.left {
+	border-right: 1px solid black;
+}
+.panel.style1.right {
+	border-left: 2px solid #2771ee;
+}
+.panel.style2, .panel.style3 {
+	border: 1px solid black;
+}
+.panel .titlebar, .ryudialog .titlebar {
+	height: 56px;
+	border: none;
+	background: #2771ee;
+}
+	.ryudialog .titlebar .title,
+	.panel .titlebar .title {
+		line-height: 56px;
+		text-align: left;
+		margin-left: 10px;
+	}
+	.panel.style1.left .titlebar .title {
+		text-align: center;
+		margin-left: 0px;
+	}
+	.panel .titlebar .button,
+	.ryudialog .titlebar .button {
+		top: -56px;
+	}
+	.ryudialog .titlebar .button span.label,
+	.panel .titlebar .button span.label {
+		display: none;
+	}
+	.panel.style1 .area,
+	.ryudialog .area {
+		top: 56px;
+	}
+#toc_panel {
+	background: #2771ee;
+	border-right: 1px solid black;
+}
+	#toc_panel.out {
+		margin-left: -1px;
+	}
+	#toc_panel .titlebar {
+		background: #2771ee;
+		border: none;
+	}
+		h1#toctitle.title { text-align: center; }
+		#toc_panel .area { 
+			background: #2771ee;
+		}
+			#toc_panel .area li {
+				border: none;
+			}
+			#toc_panel .area li a {
+				font-size: 11pt;
+				font-family: SegoeUI, Arial, sans-serif !important;
+				color: #fff;
+				font-weight: 600;
+				margin-left: 20px;
+			}
+#bmark_panel {
+	background: #2771ee;
+	border-left: 1px solid black;
+}
+	#bmark_panel.out {
+		margin-right: -1px;
+	}
+	#bmark_panel .titlebar {
+		background: #2771ee;
+		border: none;
+	}
+			#bmarktitle {
+				font-size: 20pt;
+				font-family: SegoeUI, Arial, sans-serif !important;
+				font-weight: 200;
+				line-height: 56px;
+				color: #fff;
+				text-shadow: none;
+				text-align: center;
+				margin: 0;
+			}
+		#bmark_panel .area { 
+			background: #2771ee;
+		}
+			#bmark_panel ul li {
+				border: none;
+			}
+			#bmark_panel ul li a {
+				font-family: SegoeUI, Arial, sans-serif !important;
+				font-size: 11pt;
+				color: #fff;
+				font-weight: 600;
+			}
+			#bmark_panel .area li {
+				border: none;
+			}
+			#bmark_panel .area li a {
+				font-size: 11pt;
+				font-family: SegoeUI, Arial, sans-serif !important;
+				color: #fff;
+				font-weight: 600;
+				margin-left: 20px;
+			}
+
+#share_panel {
+	background: #fff;
+	border: 2px solid #000;
+}
+	.rz-sharethis.iconfont a.rz-share, .rz-sharethis.iconfont a.rz-share span {
+		color: #111;
+	}
+	.rz-sharethis.iconfont a.rz-share:hover, .rz-sharethis.iconfont a.rz-share:hover span {
+		color: #2771ee;
+	}
+	#share_panel .pointer, #find_panel .pointer { display: none; }
+
+#font_panel {
+	background: #fff;
+	left: 56px;
+	height: 70px;
+	width: 180px;
+	border: 2px solid #000;
+}
+	#font_panel .area p {
+		color: #111;
+	}
+	#colorbox, #fontbox {
+		background: #fff;
+		height: 100%;
+		width:100%;
+	}
+	#fontbox {
+		border: none;
+		border-bottom: 2px solid #000;
+	}
+	#colorbox { 
+		border: 2px solid #000;
+		border-bottom: none;
+		margin-left: -2px;
+	}
+		#font_panel .area .sub-button {
+			height: 100%;
+		}
+		#font_panel .area .sub-button p span.symbol {
+			border-color: black;
+		}
+		#font_panel .area .sub-button:hover, #font_panel .area .sub-button:focus {
+			background: none;
+		}
+			#font_panel .area .sbu-button:hover p span.symbol,#font_panel .area .sub-button:focus p span.symbol {
+				border-color: #2771ee;
+			}
+			#font_panel .area .sub-button:hover p span.label, #font_panel .area .sub-button:focus p span.label {
+				color: black;
+			}
+		#fontdn {
+			
+		}
+			#font_panel .area #fontdn:focus, #font_panel .area #fontdn:hover {
+				
+			}
+		#fontup {
+			border: none;
+		}
+			#font_panel .area #fontup:hover, #font_panel .area #fontup:focus {
+				
+			}
+		#colors {
+
+		}
+		#color_basic {
+		}
+			#color_basic span.symbol {
+				width: 28px;
+			}
+		#color_sepia {
+			background: none;
+			border: none;
+		}
+			#color_sepia span.symbol {
+				width: 28px;
+			}
+		#color_black {
+			background: none;
+		}
+			#color_black span.symbol {
+				width: 28px;
+			}
+		#font_panel .pointer { display: none; }
+		
+#views_panel {
+	background: #fff;
+	border: 2px solid #000;
+	width: 175px;
+	margin-right: 82px;
+	padding: 0;
+}
+	#views_panel .titlebar {
+		position: relative;
+		display: block;
+		background: #fff;
+		border: none;
+		text-align: left;
+		height: 44px;
+	}
+	#viewstitle {
+		font-family: SegoeUI, Arial, sans-serif !important;
+		font-size: 11pt;
+		font-weight: 600;
+		color: #000;
+		margin-left: 10px;
+	}
+	#viewsdone, #views_panel .pointer { display: none; }
+		.button.type3 {
+			border: none;
+			background: #ccc;
+			min-width: 150px;
+			width: 90%;
+			margin: 10px auto;
+			height: 30px;
+		}
+			.button.type3:hover, .button.type3:focus {
+				background: #2771ee;
+			}
+			.button.type3 p {
+				font-family: SegoeUI, Arial, sans-serif !important;
+				font-size: 11pt;
+				line-height: 30px;
+				color: #000;
+			}
+			.button.type3 p span.label {
+				line-height: 30px;
+			}
+		.button.type4 {
+			border: none;
+			background: #2771ee;
+			min-width: 150px;
+			width: 90%;
+			margin: 10px auto;
+			height: 30px;
+		}
+			.button.type4:hover, .button.type4:focus {
+				background: black;
+			}
+			.button.type4 p {
+				font-family: SegoeUI, Arial, sans-serif !important;
+				font-size: 11pt;
+				line-height: 30px;
+			}
+			.button.type4 p span.label {
+				line-height: 30px;
+			}
+		
+#opt_panel {
+	background: #2771ee;
+	border-left: 2px solid rgba(39, 113, 238,.8);
+}
+	#opt_panel.out {
+		margin-right: -2px;
+	}
+		#opt_titlebar {
+			background: #2771ee;
+			border: none;
+		}
+			#opttitle {
+				font-size: 20pt;
+				font-family: SegoeUI, Arial, sans-serif;
+				font-weight: 200;
+				margin-left: 10px;
+				line-height: 56px;
+				color: #fff;
+				text-align: left;
+				text-shadow: none;
+			}
+		#opt_panel .area { 
+			top: 56px;
+			background: #fff;
+			margin: 0px;
+		}
+	.opt-switch span.symbol::before {
+		top: 8px;
+		width: 46px;
+		height: 16px;
+		border-color: #999;
+		background-color: #999;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		-ms-border-radius: 0px;
+		border-radius: 0px;
+		box-shadow: inset 1px 1px 0 white, inset -1px -1px 0 white;
+		-webkit-transition: none;
+		-moz-transition: none;
+		-ms-transition: none;
+		transition: none;
+	}
+	.opt-switch span.symbol::after {
+		top: 10px;
+		height: 16px;
+		width: 12px;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		-ms-border-radius: 0px;
+		border-radius: 0px;
+		background: black;
+		-webkit-transition: none;
+		-moz-transition: none;
+		-ms-transition: none;
+		transition: none;
+	}
+		.opt-switch.opt-on span.symbol::before {
+			background-color: #2771ee;
+		}
+		.opt-switch.opt-on span.symbol::after {
+			margin-left: 34px;
+		}
+
+			#opt_panel ul {
+				background: #fff;
+				margin-left: 20px;
+			}
+			#opt_panel .area li {
+				border: none;
+				background: #fff;
+			}
+			.optitem {
+				font-size: 11pt;
+				font-family: SegoeUI, Arial, sans-serif;
+				color: #000;
+				font-weight: normal;
+				letter-spacing: .02em;
+			}
+		#opt_panel .smallprint {
+			font-family: SegoeUI, Arial, sans-serif;
+			font-size: 11pt;
+			text-align: left;
+			margin-left: 26px;
+		}
+		#opt_panel .pointer { display: none; }
+		.opt-solo {
+			height: 34px;
+			margin-left: 26px;
+			border: none;
+			background: #ccc;
+		}
+		.opt-solo p {
+			color: #000;
+			font-family: SegoeUI, Arial, sans-serif;
+			font-size: 16px;
+			line-height: 34px;
+			font-weight: normal;
+		}
+		.opt-switch.opt-drop {
+			margin: 2px 10px;
+		}
+			.opt-drop p { color: #222; }
+		.opt-li select.listbox {
+			margin: 8px 10px;
+		}		
+/* Change Icon Fonts or clear out for ones where we are using images */	
+	#back span.symbol::before {
+		content: '\f053';
+		margin-left: -5px;
+	}
+	#next span.symbol::before {
+		content: '\f054';
+		margin-left: 5px;
+	}
+	#controltoggle span.symbol {
+		border: none;
+	}
+		#controltoggle:hover span.symbol,
+		#controltoggle:focus span.symbol {
+			background: none;
+		}
+	#controltoggle.up span.symbol::before {
+		line-height: 28px;
+	}
+	#controltoggle.down span.symbol::before {
+		line-height: 28px;
+	}
+		#fontdn span.symbol::before {
+			content: '\f068';
+		}
+		#fontup span.symbol::before {
+			content: '\f067';
+		}
+		#colors span.symbol::before {
+			content: '\f042';
+		}
+	#addmark span.symbol::before {
+		content: '';
+	}
+		#bmarkdone span.symbol::before {
+			content: '';
+		}
+	/* Ryuzine Rack Buttons */
+	#page_first span.symbol::before {
+		content: '\f053\f053';
+		margin-left: -7px;
+		letter-spacing: -5px;
+	}
+	#page_back span.symbol::before {
+		content: '\f053';
+		margin-left: -5px;
+	}
+	#page_next span.symbol::before {
+		content: '\f054';
+		margin-left: 5px;
+	}
+	#page_last span.symbol::before {
+		content: '\f054\f054';
+		margin-left: -2px;
+		letter-spacing: -5px;
+	}
+		#back2rack span.symbol {
+			margin: 0;
+			height: 28px;
+			width: 28px;
+			line-height: 30px;
+			margin-top: 7px;
+			background-image: none;
+		}
+		#back2rack span.label {
+			display: block;
+		}
+		#back2rack span.symbol::before {
+			content: '\f009';
+		}
+	#unmark span.symbol::before {
+		content: '\f068';
+	}
+	#numark span.symbol::before {
+		content: '\f067';
+	}
+/* Now add our Windows style images */
+/* Clear out Icon Font we are using images */	
+	#tocdone, .panel.style1.left .button.done {
+		float: left;
+	}
+		.panel.style1.left .button.done p span.symbol::before,
+		#tocdone span.symbol::before {
+			content: '\f060';
+		}
+			.panel.style1.left .button.done:hover p span.symbol,
+			.panel.style1.left .button.done:focus p span.symbol,
+			#tocdone:hover span.symbol,
+			#tocdone:focus span.symbol {
+				color: #2771ee;
+				background: white;
+				border-color: white;
+			}
+	#helpbutton {
+		float: right;
+		margin-left: -120px;
+		margin-right: 60px;
+	}
+			#helpbutton:hover span.symbol,
+			#helpbutton:focus span.symbol {
+				border-color: white;
+				color: #2771ee;
+				background: white;
+			}
+	#findbutton {
+		float: right;
+	}
+			#findbutton:hover span.symbol,
+			#findbutton:focus span.symbol {
+				border-color: white;
+				color: #2771ee;
+				background: white;
+			}
+	.panel.style1.right .button.done p span.symbol::before,
+	#optdone span.symbol::before {
+			content: '\f061';
+	}
+			.panel.style1.right .button.done:hover p span.symbol,
+			.panel.style1.right .button.done:focus p span.symbol,
+			#optdone:hover span.symbol,
+			#optdone:focus span.symbol {
+				border-color: white;
+				color: #2771ee;
+				background: white;
+			}
+	#addmark:hover span.symbol, #addmark:focus span.symbol {
+		border-color: white;
+		color: #2771ee;
+		background: white;
+	}
+		#addmark span.symbol::before {
+			content: '\f067';
+		}
+		#ipp {
+			color: #000;
+			margin: 0 10px 0 0;
+		}
+	#bmarkdone:hover span.symbol, #bmarkdone:focus span.symbol {
+		border-color: white;
+		color: #2771ee;
+		background: white;
+	}
+		#bmarkdone span.symbol::before {
+			content: '\f061';
+		}
+		#bmark_panel ul .button p span.label {
+			display: none;
+		}
+		#bmark_panel ul .button:hover p span.symbol,
+		#bmark_panel ul .button:focus p span.symbol {
+			border-color: red;
+			color: white;
+			background: red;
+		}
+		#bmark_panel ul .button p span.symbol::before {
+			content: '\f00d';
+		}
+#find_panel {
+	height: 49px;
+}
+	#findall div.button p span.label {
+		display: block;
+		color: black;
+	}	
+	.tocsliderIN {
+		bottom: 75px;
+	}
+.lighttable { display: block; }
+.lightcell { 
+	display: block; 
+	top: -10px;
+}
+.pic {
+	display: block;
+	height: 100%;
+	width: 100%;
+	border: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+	border-radius: 0;
+}
+	.pic .dyn_img { margin: 0 auto; }
+	.pic img {
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-ms-border-radius: 0;
+		-o-border-radius: 0;
+		border-radius: 0;
+	}
+	.blocky { 
+		margin: 0;
+		height: 48px;
+		width: 30px;
+		float: none;
+		left: 20px;
+	}
+		.button.closeit {
+			height: 28px;
+			width: 28px;
+			top: 10px;
+			background: white;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			-ms-box-shadow: none;
+			-o-box-shadow: none;
+			box-shadow: none;
+		}
+			.button.closeit span.symbol {
+				border-color: black;
+				color: black;
+			}
+			.button.closeit span.symbol::before {
+				content: '\f060';
+			}
+			.button.closeit:hover span.symbol, .button.closeit:focus span.symbol {
+				color: white;
+			}
+			.caption, .ryubox p {
+				margin-top: 10px;
+				max-width: 100%;
+			}
+.lightbox_out {
+	top: 0;
+	left: -3000px;
+		-webkit-transform: translateX(-3000px);
+		-moz-transform: translateX(-3000px);
+		-o-transform: translateX(-3000px);
+		-ms-transform: translateX(-3000px);
+		transform: translateX(-3000px);	
+}
+
+.lightbox_in {
+	top: 0;
+	left: 0;
+		-webkit-transform: translateX(0%);
+		-moz-transform: translateX(0%);
+		-o-transform: translateX(0%);
+		-ms-transform: translateX(0%);	
+		transform: translateX(0%);	
+}
+
+	.buttonbox {
+		display: table;
+		width: 90%;
+		max-width: 600px;
+		min-width: 150px;
+		height: 56px;
+		margin: 0 auto 10px auto;
+		border: 1px solid #999;
+	}
+		.buttonbox .button.type1 p span.symbol,
+		.buttonbox .button.type2 p span.symbol {
+			display: block;
+			color: #222;
+			border-color: #222;
+		}
+			.buttonbox .button.type1:hover p span.symbol,
+			.buttonbox .button.type2:hover p span.symbol {
+				color: #2771ee;
+				border-color: #2771ee;
+			}
+				.buttonbox .button.type1:hover p span.symbol::before,
+				.buttonbox .button.type2:hover p span.symbol::before {
+					color: #fff;
+				}
+		.buttonbox .button.type1 p span.label,
+		.buttonbox .button.type2 p span.label {
+			display: block;
+			color: #222;
+		}
+			.buttonbox .button.type1:hover p span.label,
+			.buttonbox .button.type2:hover p span.label {
+				color: #2771ee;
+			}
+p#boxad_timer {
+	left: auto;
+	right: 68px;
+	top: 7px;
+}
+
+@media screen and (min-width: 720px) {
+	.panel.style1 {
+		width: 346px;
+	}
+}
+@media screen and (max-width: 719px) {
+#controlbox1, #tabbar0, .tabbars {
+	height: 48px;
+}
+	.tabbars_hide {
+		bottom: -49px;
+	}
+	.tabbars, .navbars {
+		background: #222;
+	}
+	.button p span.symbol {
+		margin: 7px auto 4px auto;
+	}
+	.button.type1 p span.label,
+	.button.type2 p span.label {
+		display: none;
+	}
+	#font_panel .button p span.label {
+		display: block;
+	}
+.panel.style1 .titlebar {
+	height: 48px;
+	border: none;
+}
+	.panel.style1 .titlebar .title {
+		line-height: 48px;
+	}
+	.panel.style1 .titlebar .button {
+		top: -48px;
+	}
+	.panel.style1 .area {
+		top: 48px;
+	}
+	#toc_panel .area {
+		top: 48px;
+	}
+	#bmark_panel .area {
+		top: 48px;
+	}
+	#opttitle {
+		line-height: 48px;
+	}
+	#opt_panel .area {
+		top: 48px;
+	}
+	#views_panel {
+		left: 50%;
+		margin-left: -87px;
+	}
+	#views_panel.in {
+		bottom: 70px;
+	}
+	.tocsliderIN {
+		bottom: 55px;
+	}
+}
+@media screen and (max-width: 479px) {
+	.navbars_hide {
+		top: -49px;
+	}
+	.appbanner_dn {
+		top: 49px;
+	}
+}
