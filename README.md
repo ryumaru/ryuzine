@@ -49,6 +49,12 @@ AUTHORING static publications requires installing Ryuzine on a Development Serve
 
 Dynamic publications (those that bridge WordPress blog content into the Ryuzine webapp) require that Ryuzine Reader be installed *inside* the Ryuzine Press plugin (which has a utility for doing so).
 
+### Code Contributions
+
+**THIS REPOSITORY USES SUBTREES!**  The "addons" and "themes" folders are imported as subtrees from the "ryuzine-addons" and "ryuzine-themes" repositories, respectively.  Each of those, however, are entirely made up of subtrees imported from the individual add-on and theme repositories.  You should make changes to the repository for the specific add-on or theme instead of editing files in this repository. Then pull the commits from that repository into either the "ryuzine-addons" or "ryuzine-themes" repository, and finally pull those repositories into this one.
+
+See also *Open Source Porject Contributions* at http://www.ryumaru.com/contributing-code/ and *Open Source Code of Conduct* at http://www.ryumaru.com/open-source-code-conduct/ for more details.
+
 ### License
 
 “Ryuzine” and “Ryuzine Writer” are released under the Mozilla Public License (MPL) 2.0, the full text of which is bundled with the webapps. “Ryuzine Press” is released under the GNU General Public License version 3 (GPLv3).  Add-ons, Themes, Skins or other components may be under other licenses.
