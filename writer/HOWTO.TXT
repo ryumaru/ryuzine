@@ -1,0 +1,23 @@
+This theme only contains styling for Ryuzine Writer.  It was also designed to be used as a “base” for other Ryuzine Writer themes that want to use a “tabbed” User Interface.
+
+Either copy the “writer_base.css” file into your custom theme and use:
+
+@import url(“writer_base.css”);
+
+at the head of your custom theme’s “writer.css” stylesheet
+
+- OR -
+
+If you are certain that the “writer” theme will be available you can just import it like this:
+
+@import url(“../writer/writer_base.css”);
+
+Note: The “writer_base.css” only defines the colors specific to the “writer” layout.  If you also want base colors for other UI elements you should do this:
+
+For a light color base:
+@import url(“../light/writer.css”);
+@import url(“../writer/writer_base.css”);
+
+For a dark color base:
+@import url(“../dark/writer.css”);
+@import url(“../writer/writer_base.css”);

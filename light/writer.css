@@ -1,0 +1,172 @@
+/* 	Light UI Color Theme
+	v. 1.0
+	Copyright 2015 K.M. Hansen (software@kmhcreative.com)
+	License: CC BY-SA 4.0
+	License URI: http://creativecommons.org/licenses/by-sa/4.0/
+	
+	Description: New default Dark Theme
+
+*/
+@import url('theme.css');
+
+/* Ryuzine Writer Xinha Panels and Dialogs */
+#start .splash-title {
+	color: #fff;
+}
+.htmlarea .toolbar .indicator {
+	background: #fff;
+}
+
+.htmlarea .toolbar {
+	background: #eee;
+	border-bottom: 1px solid #999;
+	border-top: none;
+}
+.htmlarea .toolbar .button {
+background: transparent;
+}
+.htmlarea .toolbar a.button:hover {
+background: #ccc;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+}
+.htmlarea .toolbar .separator {
+  border-left: 1px dotted #ccc;
+}
+
+.htmlarea .statusBar {
+  border-color: 1px solid #333;
+	background: #eee;
+  font: 11px Arial,Helvetica,sans-serif;
+}
+
+.htmlarea .statusBar .statusBarWidgetContainer {
+	background: #eee;
+}
+.htmlarea .statusBar .statusBarTree a:visited {
+	color:darkBlue; 
+}
+.htmlarea .statusBar .statusBarTree a:hover {
+  background-color: transparent;
+  color: darkBlue;
+}
+
+.dialog {
+	color: #111;
+	border: 1px solid #000;
+	background: #eee;
+ }
+ 	div.dialog .div.panel_flyout {
+ 		border: none;
+ 	}
+ 	div.dialog .div.panel_flyout ul {
+ 		border: 1px solid #000;
+ 	}
+#editor .panel a {
+  color:#111;
+  border-bottom: 1px dotted #bbb;
+}
+#editor .panel a:hover {
+  background-color: #333;
+}
+.dialog .title,.dialog  h1,.htmlarea .panel h1 {
+	color: #111;
+}
+.dialog button {
+	border: 1px solid #fff;
+	background: #ccc;
+}
+.dialog button:hover, .dialog button:focus {
+	color: #111;
+	background: #999;
+}
+
+.dialog input[type=button],.dialog input[type=submit]{
+	border: 1px solid #fff;
+	background: #ccc;
+}
+.dialog input[type=button]:hover, .dialog input[type=submit]:hover,
+.dialog input[type=button]:focus, .dialog input[type=submit]:focus {
+	color: #111;
+	background: #ccc;
+}
+div.dialog div.panel_flyout ul {
+	background: #eee;
+	border: 1px solid black;
+}
+	div.dialog div.panel_flyout ul li {
+		border-bottom: 1px solid #ccc;
+	}
+		div.dialog div.panel_flyout ul li:hover {
+			background-color: #111;
+			color: white;
+		}
+	div.dialog li.marked {
+		background-color: #111;
+		color: white;
+	}
+	div.dialog li.selected {
+		background-color: #0556a5;
+		color: white;
+	}
+.htmlarea .dTreeNode {
+  color:black;
+}
+.htmlarea .panel, .htmlarea .panels_left, .htmlarea .panels_right {
+	background: #eee;
+}
+.RYUPickerOption {
+	color: #111;
+	border: 1px solid #999;
+	background: #eee;
+
+}
+.RYUPickerOptionOver {
+	color: #ccc;
+	background: #0556A5;
+}
+.RYUPickerOptionActive {
+	border: 1px solid yellow;
+}
+#ryu_picker {
+	background: #eee !important;
+}
+	div.dialog.panel {
+		border-bottom: 1px solid black !important;
+	}
+
+	div.dialog>h1.popout {
+		color: #111;
+		background-color: #ccc;
+	}
+	div.dialog div.adjustable {
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+	}
+		div.dialog div.adjustable>ul li {
+			border-bottom: 1px solid #666;
+		}
+	div.dialog div.panel_controls {
+		background: #ccc;
+	}
+div#pagemanager {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+	div.dialog div.panel_flyout::before {
+		color:#111;
+	}
+	div#pagemanager li {
+		border: 1px solid #999;
+	}
+.xinha_mobile {
+	background-color: #ccc;
+}
+	.xinha_mobile .xinha_iframe {
+		border: 1px solid #333 !important;
+		/* Do not apply ANY CSS3 effects of it breaks rendering! */
+	}	
+
+	

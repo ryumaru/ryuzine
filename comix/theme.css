@@ -1,0 +1,343 @@
+/* 	Comix Theme
+	v. 1.0
+	Copyright 2015 K.M. Hansen (software@kmhcreative.com)
+	License: CC BY-SA 4.0
+	License URI: http://creativecommons.org/licenses/by-sa/4.0/
+
+	Description: A theme suitable for anyone with a super suit.
+
+*/
+@import url('../dark/theme.css');
+@import url('fonts/VTC-Letterer-Pro/stylesheet.css');
+body {
+	background: #3366cc url('images/fabric.jpg');
+}
+#splash, #racktop {		
+	color: white;
+background: #900000;
+background: -moz-linear-gradient(top,  rgb(255,239,99) 0%, rgb(241,218,54) 5%, rgb(221,0,0) 5%, rgb(144,0,0) 50%, rgb(84,0,0) 95%, rgb(0,33,84) 95%, rgb(0,102,255) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(255,239,99)), color-stop(5%,rgb(241,218,54)), color-stop(5%,rgb(221,0,0)), color-stop(50%,rgb(144,0,0)), color-stop(95%,rgb(84,0,0)), color-stop(95%,rgb(0,33,84)), color-stop(100%,rgb(0,102,255)));
+background: -webkit-linear-gradient(top,  rgb(255,239,99) 0%,rgb(241,218,54) 5%,rgb(221,0,0) 5%,rgb(144,0,0) 50%,rgb(84,0,0) 95%,rgb(0,33,84) 95%,rgb(0,102,255) 100%);
+background: -o-linear-gradient(top,  rgb(255,239,99) 0%,rgb(241,218,54) 5%,rgb(221,0,0) 5%,rgb(144,0,0) 50%,rgb(84,0,0) 95%,rgb(0,33,84) 95%,rgb(0,102,255) 100%);
+background: -ms-linear-gradient(top,  rgb(255,239,99) 0%,rgb(241,218,54) 5%,rgb(221,0,0) 5%,rgb(144,0,0) 50%,rgb(84,0,0) 95%,rgb(0,33,84) 95%,rgb(0,102,255) 100%);
+background: linear-gradient(top,  rgb(255,239,99) 0%,rgb(241,218,54) 5%,rgb(221,0,0) 5%,rgb(144,0,0) 50%,rgb(84,0,0) 95%,rgb(0,33,84) 95%,rgb(0,102,255) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffef63', endColorstr='#0066ff',GradientType=0 );
+
+}
+	.splash-title, #racktop h1 {
+		color: #F1DA36; 
+		text-shadow: 0px 0px 15px red;
+	}
+	
+	.splash-port {
+
+		}
+	
+	.splash-notice {
+		text-shadow: 0px 2px 2px #222;
+	}
+	.splash_in {
+	}
+	.splash_out {
+		top: -100% !important;
+	}
+		#loadicon::before {
+		color: #F1DA36; 
+		text-shadow: 0px 0px 15px red;
+		}
+
+.page {
+	border: 1px solid #999;
+}
+
+.button p {
+	color: #fff;
+}
+	.button p span.label {
+		font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+	}
+	.button:hover {
+		background: #f1da36;
+	}
+	.button:hover p {
+		color: #000;
+	}
+	.button.type1 { /* Standard Button */
+		border-left: 1px solid #f1da36;
+		border-right: 1px solid #f1da36;
+	}
+	.button.type1:hover, .button.type1:focus {
+	}
+		.button.type1 p {
+			font-family: VTCLettererProRegular, Arial, sans-serif;
+			line-height: 44px;
+		}
+		.button.type1:hover p, .button.type1:focus p {
+			color: #000;
+		}
+	
+	.button.type2 { /* Blue Button */
+		background: #f1da36; /* Old browsers */	
+	}
+	
+	.button.type2:hover, .button.type2:focus {
+		background: #0066ff; /* Old browsers */	}
+		.type2 p {
+			color: #000;
+			line-height: 43px;
+			font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+		}
+		
+		.button.type2:hover p, .button.type2:focus p {
+			color: #fff;
+		}
+	
+	.button.type3 { /* Widebutton */
+		border: 1px double #fff;
+		background: #900000; /* Old browsers */
+	}
+	
+	.button.type3:hover, .button.type3:focus {
+	background: #f1da36; /* Old browsers */
+	}
+	
+		.button.type3 p span.label {
+			font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+			color: #fff;
+		}
+		
+		.button.type3:hover p span.label, .button.type3:focus p span.label {
+			color: #000;
+		}
+		
+		
+	.button.type4 { /* Wide Cancel Button */
+	border: 1px double #0066ff;
+	background: #f1da36; /* Old browsers */
+	}
+	
+	.button.type4:hover, .button.type4:focus {
+		background: #0066ff; /* Old browsers */
+	}
+	
+		.button.type4 p span.label {
+			font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+			color: #000;
+		}
+		.button.type4:hover p span.label, .button.type4:focus p span.label {
+			color: #fff;
+		}
+		.promo .read .button {
+			background: yellow;
+		}
+			.promo .read .button:hover {
+				background: #0556a5;
+			}
+			.read .button {
+				border: 1px solid #ccc;
+			}
+			.read .button:hover, .read .button:focus {
+				color: #cc0000;
+				border: 1px solid #cc0000;
+			}
+		.rz-sharethis.iconfont a.rz-share,
+		.rz-sharethis.iconfont a.rz-share span {
+			color: #3366cc;
+		}
+		.rz-sharethis.iconfont a.rz-share:hover,
+		.rz-sharethis.iconfont a.rz-share:hover span {
+			color: #cc0000;
+		}
+		
+	.buttonbox {
+		background-color: #900000;
+		border-color: #000;
+	}
+
+.navbars, .titlebar {
+	border-bottom: 1px solid #000;
+	background: #900000; /* Old browsers */
+}
+.title {
+	color: #fff;
+	text-shadow: 0px 1px 1px #333;
+	font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+	font-weight: bold;
+}
+
+.tabbars {
+		border-top: 1px solid #000;
+		background: #900000; /* Old browsers */
+}
+	#controltoggle, #zoom {
+		background-color: #000;
+	}
+#controltoggle.up span.symbol::before,
+#zoom span.symbol::before {
+	color: white;
+}
+#tocslider_button {
+	background: #fff url('images/halftone.png') 0 0 repeat-x;
+}
+	#tocslider_button p { color: black; }
+	#tocslider_button:hover {
+		background: #cc0000 url('images/halftone.png') 0 0 repeat-x;
+	}
+	#tocslider_track {
+		background: yellow url('../../images/app/ui/slider.png') 0 0 no-repeat;
+		height: 5px;
+	}
+.panel.style1 {
+	background-color: #fff;
+}
+.panel.style2, .panel.style3 {
+	background: #fff;
+	border: 1px solid black;
+	border-radius: 10px;
+	-moz-box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.70);
+	-webkit-box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.70);
+	box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.70);
+}
+.pointer {
+	background: white;
+	border-bottom:1px solid black;
+	border-right: 1px solid black;
+	-moz-box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.70);
+	-webkit-box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.70);
+	box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.70);
+}
+	#share_panel .pointer {
+		bottom:-11px;
+	}
+	#views_panel .pointer {
+		bottom:-26px;
+	}
+#font_panel {
+
+}
+	#fontbox {
+		background: white;
+		border: none;
+		border-radius: 10px;
+	}
+		#fontbox p {
+			color: #000;
+		}
+	#fontdn, #color_basic {
+		-webkit-border-top-left-radius: 10px;
+		-webkit-border-bottom-left-radius: 10px;
+		-moz-border-radius-topleft: 10px;
+		-moz-border-radius-bottomleft: 10px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
+	#fontup {
+		border-left: 2px solid #ddd;
+		border-right: 2px solid #ddd;
+	}
+	#colors, #color_black {
+		-webkit-border-top-right-radius: 10px;
+		-webkit-border-bottom-right-radius: 10px;
+		-moz-border-radius-topright: 10px;
+		-moz-border-radius-bottomright: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	#font_panel .area .sub-button:hover {
+		background: #f1da36;
+	}
+		#font_panel .area .sub-button:hover p {
+			color: black;
+		}
+		#colorbox {
+			border-radius: 10px;
+		}
+		#colorbox.colorbox_IN {
+			top: -60px;
+			opacity: 1.0;
+			-moz-box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.70);
+			-webkit-box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.70);
+			box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.70);
+		}
+		#colorbox.colorbox_OUT {
+			top: 0;
+			opacity: 0;
+		}
+	#font_panel .pointer {
+		bottom: -11px;
+	}
+
+#toc_panel, .panel.style1.left {
+	border-right: 10px solid #900000;
+}
+	#toc_panel.out, .panel.style1.left.out {
+		margin-left: -15px;
+	}
+#opt_panel, #bmark_panel, .panel.style1.right {
+	border-left: 10px solid #900000;
+}
+	#opt_panel.out, #bmark_panel.out,
+	.panel.style1.right.out {
+		margin-right: -15px;
+	}
+#toc_panel ul li a, #bmark_panel ul li a, .panel ul li a {
+	font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+}
+.list_up a {
+	color: #000;
+}
+.list_down {
+	background-color: yellow;
+}
+	.list_down a {
+		color: #990000;
+	}
+.optitem {
+	font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+	color: #000;
+}
+
+	.opt-switch span.symbol::before {
+		background-color: darkblue;
+		border: 1px solid #000;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		-ms-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		-ms-border-radius: 0px;
+		border-radius: 0px;
+		width: 55px;
+		text-align: right;
+		padding-right: 5px;
+		content: '\f186';
+		font-family: 'FontAwesome';
+		color: white;
+		line-height: 30px;
+	}
+	.opt-switch span.symbol::after {
+		background: #eee url('images/halftone.png') 0 0 repeat-x;
+		border-radius: 0px;
+		border: 1px solid black;
+		top: 0px; left: 0px;
+	}
+		.opt-switch.opt-on span.symbol::before {
+			background-color: yellow;
+			content: '\f185';
+			color: black;
+			text-align: left;
+			padding-left: 5px;
+			padding-right: 0px;
+		}
+#bmark_panel ul .button {
+	background: transparent;
+}
+.iscrollbarV > div, .iScrollVerticalScrollbar > div {
+	background: red;
+}
+.plank {
+	font-family: 'VTCLettererProRegular', 'Comic Sans MS', Arial, sans-serif;
+	font-weight: bold;
+	color: yellow;
+	text-shadow: 2px 2px 1px black;
+}

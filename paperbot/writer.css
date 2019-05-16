@@ -1,0 +1,252 @@
+/* 	Title: Paperbot
+	Ryuzine Version: 1.0
+	Copyright 2015 K.M. Hansen (software@kmhcreative.com)
+	License: CC BY-SA 4.0
+	License URI: http://creativecommons.org/licenses/by-sa/4.0/
+	
+	Comments: Designed for Android Material UI (see modification instructions at end)
+*/
+
+@import url('writer_base.css');
+@import url('theme.css');
+
+
+#b_start p span.symbol::before, #b_start1 p span.symbol::before {
+	margin-top: 14px;
+}
+#startbuttons .button {
+background: #ccc;
+width: auto;
+height: 36px;
+margin: 0px 16px 10px 16px;
+box-shadow: 0 1px 2px rgba(0,0,0,.26);
+}
+	#startbuttons div.button:hover,
+	#startbuttons div.button:focus {
+		box-shadow: 0 2px 2px rgba(0,0,0,.5);
+	}
+	#startbuttons .button p span.label {
+		color: black;
+		font-size: 14px;
+		font-family: 'robotoregular';
+		padding: 0;
+		margin: 0;
+		line-height: 36px;
+		text-align: center;
+	}
+#binder.binder_shift {
+	top: 112px;
+}
+.workspace {
+	top: 0px;
+	bottom: 0px;
+}
+#controlbox0.navbars_show,
+#controlbox0.navbars_hide {
+	top: 56px;
+	bottom: auto;
+}
+	#navbar0 {
+	 	height: 56px;
+	 	background: transparent;
+		box-shadow: none;
+	}
+	.navbars, .titlebar { 
+		background: none;
+		border: none;
+	}
+		.navset {
+			-webkit-transition-delay: 0;
+			-webkit-transition-duration: 200ms;
+			-moz-transition-delay: 0;
+			-moz-transition-duration: 200ms;
+			-o-transition-delay: 0;
+			-o-transition-duration: 200ms;
+			-ms-transition-delay: 0;
+			-ms-transition-duration: 200ms;
+			transition-delay: 0;
+			transition-duration: 200ms;
+		}
+		.nav_deck {
+			top: -60px;
+		}
+		
+		.nav_in {
+			top: 0px;
+		}
+		.nav_out {
+			top: 60px;
+		}	
+		.navset .button {
+			height: 50px;
+			width: 50px;
+			margin: 3px 4px 0px 8px;
+		}
+			.navset .button p { color: #666; }
+			.navset .button p span.symbol,
+			.navset .button.type1 p span.symbol,
+			.navset .button.type2 p span.symbol { 
+				margin: 0;
+				line-height: 42px;
+				display: block; 
+			}
+			.navset .button p span.label,
+			.navset .button.type1 p span.label,
+			.navset .button.type2 p span.label { 
+				font-size: 10px;
+				line-height: 32px;
+				display: block;
+			}	
+
+#controlset0 .button {
+	margin-top: 12px;
+}
+#controlset0 .button.type1 p span.label {
+	display: block;
+}
+#controlset0 .button.selected_workspace {
+	-webkit-box-shadow: none;
+	-webkit-border-radius: 3px;
+	-moz-box-shadow: none;
+	-moz-border-radius: 3px;
+	-ms-box-shadow: none;
+	-ms-border-radius: 3px;
+	box-shadow: none;
+	border-radius: 3px;
+	background-color: rgba(0,0,0,.25);
+}
+	#controlset0 .button.selected_workspace p span.symbol,
+	#controlset0 .button.selected_workspace p span.label {
+		color: #eee;
+	}	
+div#optbutton.button {
+	position: relative;
+	right: auto;
+	margin: 12px 8px 0px 4px;
+	width: 50px;
+}
+div#addonsbutton.button, div#addonsbutton.button.selected_workspace {
+	margin-right: 0px;
+}
+	div#addonsbutton.button p span.symbol {
+		margin-top: 5px !important;
+	}
+#addons_panel.in {
+	top: -56px;
+	bottom: 56px;
+	left: auto;
+	right: 0%;
+	margin-right: -56px;
+}
+#addons_panel.out {
+	top: -56px;
+	bottom: 56px;
+	left: auto;
+	right: -100%;
+	margin-right: -56px;
+}
+
+	.htmlarea .toolbar select,
+	.htmlarea .toolbar select:hover,
+	.htmlarea .toolbar select:focus,
+	.htmlarea .toolbar select:active {
+		border: 1px solid #999;
+		top: 0px;
+		margin: 2px;
+		padding: 0px;
+		height: 32px;
+		font-size: 16px;
+		font-family: 'robotolight', sans-serif;
+		color: #555;
+	}
+	.htmlarea .toolbar select[name="formatblock"] {
+		background: none;
+		border: none;
+	}
+		.htmlarea .toolbar .droplist.formatblock::after {
+			font-family: 'FontAwesome';
+			content: " \f0d7";
+			margin: 0 2px 0 -2px;
+			font-size: 14px;
+		}
+	.htmlarea .toolbar select[name="fontname"] {
+		margin-right: 0px;
+		-webkit-border-top-right-radius: 0px;
+		-webkit-border-bottom-right-radius: 0px;
+		-moz-border-top-right-radius: 0px;
+		-moz-border-bottom-right-radius: 0px;
+		-ms-border-top-right-radius: 0px;
+		-ms-border-bottom-right-radius: 0px;
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+	}
+	.htmlarea .toolbar select[name="fontsize"] {
+		margin-left: 0px;
+		border-left: none;
+		-webkit-border-top-left-radius: 0px;
+		-webkit-border-bottom-left-radius: 0px;
+		-moz-border-top-left-radius: 0px;
+		-moz-border-bottom-left-radius: 0px;
+		-ms-border-top-left-radius: 0px;
+		-ms-border-bottom-left-radius: 0px;
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+/* Help Bubble */
+
+.writer .card3 {
+	margin-top: 75px;
+}
+.writer .card8 {
+	margin-top: 75px;
+}
+.writer .card9 {
+	margin-top: 75px;
+}
+.writer .card11 {
+	margin-top: 75px;
+}
+.writer .card14 {
+	margin-top: 75px;
+}
+.writer .card17 {
+	margin-top: 75px;
+}
+.writer .card18 {
+	margin-top: 75px;
+}
+.writer .card20 {
+	margin-top: 75px;
+}
+.writer .card21 {
+	margin-top: 75px;
+}
+.writer .card22 {
+	margin-top: 75px;
+}
+.writer .card26 {
+	margin-top: 75px;
+}
+.writer .card30 {
+	margin-top: 75px;
+}
+.writer .card32 {
+	margin-top: 75px;
+}
+.writer .card34 {
+	margin-top: 75px;
+}
+.writer .card36 {
+	margin-top: 75px;
+}
+@media screen and (max-width: 719px) {
+	.htmlarea .toolbar .droplist:hover,
+	.htmlarea .toolbar .droplist:focus {
+		background: #ccc;
+		background: rgba(0,0,0,.10);
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		border-radius: 5px;
+	}
+}

@@ -1,0 +1,260 @@
+/* 	Light UI Color Theme
+	v. 1.0
+	Copyright 2015 K.M. Hansen (software@kmhcreative.com)
+	License: CC BY-SA 4.0
+	License URI: http://creativecommons.org/licenses/by-sa/4.0/
+	
+	Description: New default Dark Theme
+
+*/
+
+body {
+	background-color: #27AAe1;
+}
+#loadicon::before {
+	color: #333;
+}
+#controltoggle {
+	background-color: #000;
+}
+#splash {
+	background-color: #eee;
+	color: #000;
+}
+.splash-port {
+	color: #27AAe1;
+}
+.splash-fineprint a {
+	color: #000;
+}
+	.splash-fineprint a:visited {
+		color: #333;
+	}
+.title {
+	color: #000;
+}
+.navbars, .titlebar {
+	background-color: #eee;
+	border-bottom: 1px solid #ccc;
+}
+.tabbars {
+	background-color: #eee;
+	border-top: 1px solid #ccc;
+}
+.panel.style1 {
+	background-color: #eee;
+	background-color: rgba(238,238,238,.93);
+}
+.panel.style2 {
+	background-color: #eee;
+	border: 1px solid #eee;
+}
+.panel.style3 {
+	background: #eee;
+
+	border: 1px solid #eee;
+}
+.pointer {
+	background-color: #eee;
+	border-bottom: 1px solid #eee;
+	border-right:  1px solid #eee;
+}
+.dialog {
+	background: rgb(193,196,206);
+}
+.button p {
+	color: #000;
+}
+	.button:hover p {
+		color: #0556A5;
+	}
+.button.type1 {
+
+}
+	.button.type1:hover, .button.type1:focus {
+	
+	}
+	.button.type1:hover p, .button.type1:focus p {
+	
+	}
+.button.type2 {
+
+}
+	.button.type2:hover, .button.type2:focus {
+	
+	}
+	.button.type2:hover p, .button.type2:focus p {
+	
+	}
+.button.type3 {
+	background-color: #fff;
+}
+	.button.type3:hover, .button.type3:focus {
+		background-color: #0556A5;
+	}
+	.button.type3:hover p, .button.type3:focus p {
+		color: #fff;
+	}
+.button.type4 {
+	background-color: #0556A5;
+}
+	.button.type4 p {
+		color: #fff;
+	}
+	.button.type4:hover, .button.type4:focus {
+		background-color: #eee;
+	}
+	.button.type4:hover p, .button.type4:focus p {
+		color:  #0556a5;
+	}
+
+/* share widget */
+.rz-sharethis.iconfont a.rz-share {
+	color: #000;
+}
+.rz-sharethis.iconfont a.rz-share:hover,
+.rz-sharethis.iconfont a.rz-share:hover span {
+	color: #0556A5;
+}
+
+#bmark_panel ul li {
+	border-bottom: 1px solid #ccc;
+}
+	#bmark_panel ul .button:hover, #bmark_panel ul .button:focus {
+	
+	}
+	#bmark_panel ul .button:hover p, #bmark_panel ul .button:focus p {
+		color: #cc0000;
+	}
+#opt_panel ul li {
+	border-bottom: 1px solid #ccc;
+}
+	.opt-switch span.symbol::before { /* switch track */
+		background-color: #eee;
+		border: 2px solid #ccc;
+	}
+		.opt-switch.opt-on span.symbol::before {
+			background-color: #27AAe1;
+		}
+	.opt-switch span.symbol::after { /* switch knob */
+		background-color:  #0556A5;
+	}
+		.opt-switch.opt-on span.symbol::after {
+		
+		}
+	#opt_panel .smallprint {
+		color: #333;
+	}
+	.buttonbox {	/* if UI Constructor puts bar buttons in panels */
+		border: 1px solid #ccc;
+	}
+#toc_panel ul li {
+	border-bottom: 1px solid #ccc;
+}
+	.list_up {
+	
+	}
+	.list_up a, .list_up .label {
+		color: #333;
+	}
+	.list_down {
+		background-color: #27AAe1;
+	}
+	.list_down a, .list_down .label {
+		color: #fff;
+	}
+#font_panel .area .sub-button:hover, #font_panel .area .sub-button:focus {
+	background-color: #27AAe1;
+}
+	#font_panel .area .sub-button:hover p,
+	#font_panel .area .sub-button:focus p {
+		color: #000;
+	}
+	#fontbox, #colorbox {
+		background-color: #eee;
+		border: 1px solid #eee;
+	}
+	#fontup {
+		border-color: #ccc;
+	}
+#tocslider_track {
+	background-image: url('images/slider.png');
+}
+#tocslider_button {
+	background-color: #eee;
+	border: 1px solid #333;
+}
+	#tocslider_button p {
+		color: #333;
+	}
+	#tocslider_button:hover, #tocslider_button:focus {
+		background-color: #0556A5;
+		border: 1px solid #eee;
+	}
+	#tocslider_button:hover p, #tocslider_button:focus p {
+		color: #eee;
+	}	
+
+.ryudialog {
+	background-color: #eee;
+}
+	.ryudialog .area.action {
+		border-bottom: 1px solid #ccc;
+	}
+	.ryudialog .area ul.opts {
+		background-color: #fff;
+		border: 1px solid #ccc;
+	}
+		.ryudialog .area ul.opts li span.optitem {
+			color: #333;
+		}
+	.ryudialog .actionbar {
+		background-color: #ccc;
+	}
+		.ryudialog .actionbar .hidebox {
+			color: #333;
+		}
+
+#boxad_timer {
+	color: #333;
+}				
+
+/* Ryuzine Rack */
+
+#racktop h1 {
+	color: #fff;
+}
+	.promo .description h4 {
+		background: -moz-linear-gradient(left,  rgba(123,226,38,1) 0%, rgba(123,226,38,1) 70%, rgba(123,226,38,0) 77%, rgba(123,226,38,0) 87%, rgba(123,226,38,1) 95%, rgba(123,226,38,1) 100%);
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(123,226,38,1)), color-stop(70%,rgba(123,226,38,1)), color-stop(77%,rgba(123,226,38,0)), color-stop(87%,rgba(123,226,38,0)), color-stop(95%,rgba(123,226,38,1)), color-stop(100%,rgba(123,226,38,1)));
+		background: -webkit-linear-gradient(left,  rgba(123,226,38,1) 0%,rgba(123,226,38,1) 70%,rgba(123,226,38,0) 77%,rgba(123,226,38,0) 87%,rgba(123,226,38,1) 95%,rgba(123,226,38,1) 100%);
+		background: -o-linear-gradient(left,  rgba(123,226,38,1) 0%,rgba(123,226,38,1) 70%,rgba(123,226,38,0) 77%,rgba(123,226,38,0) 87%,rgba(123,226,38,1) 95%,rgba(123,226,38,1) 100%);
+		background: -ms-linear-gradient(left,  rgba(123,226,38,1) 0%,rgba(123,226,38,1) 70%,rgba(123,226,38,0) 77%,rgba(123,226,38,0) 87%,rgba(123,226,38,1) 95%,rgba(123,226,38,1) 100%);
+		background: linear-gradient(to right,  rgba(123,226,38,1) 0%,rgba(123,226,38,1) 70%,rgba(123,226,38,0) 77%,rgba(123,226,38,0) 87%,rgba(123,226,38,1) 95%,rgba(123,226,38,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7be226', endColorstr='#7be226',GradientType=1 );
+	}
+	.promo .read .button, #gallery1 .read .button {
+		background: #27aae1;
+	}
+	.read .button {
+		border: 1px solid #333;
+	}
+	.read .button:hover, .read .button:focus {
+		background: #27aae1;
+		border: 1px solid #0556a5;
+	}
+	.read .button:hover p, .read .button:focus p {
+		color: #0556a5;
+	}
+#longbox {
+	background-color: #fff;
+}
+#dropbar {
+	border-bottom: 1px solid #ccc;
+}
+	#droptab {
+		background-color: #eee;
+		background-color: rgba(238,238,238,.5);
+		border: 1px solid #333;
+		border-top: none;
+	}

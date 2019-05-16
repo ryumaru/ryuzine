@@ -1,0 +1,117 @@
+/* 	Title: Urban Theme
+	Ryuzine Version: 1.0
+	Copyright 2015 K.M. Hansen (software@kmhcreative.com)
+	License: CC BY-SA 4.0
+	License URI: http://creativecommons.org/licenses/by-sa/4.0/
+
+	Comments: Designed for Windows Metro/Modern
+*/
+
+@import url('theme.css');
+
+/* Writer Over-rides for theme */
+
+	#ryuzinewriter #splashblock, #ryuzinewriter #logo {
+		background: url('images/writer_white.png') center center no-repeat;
+	}
+	#navbar0, #navbar0 .titlebar { background: #333; border: none; }
+	#navbar0 .title {
+		text-align:right !important;
+		margin-right: 10px;
+		color: #666;
+		font-weight: 100;
+		font-size: 36px;
+		line-height: 48px;
+	}
+	#navbar0 .button {
+		float: left !important;
+	}
+	#navbar0 .button p span.symbol {
+		border: none;
+	}
+	#b_start p span.symbol {
+		border: none;
+		margin-top: 14px;
+	}
+	#navbar0 .button:hover p, #b_start:hover p { color: #2771ee;}
+	#navbar0 .button:hover p span.symbol, #b_start:hover p span.symbol {
+		background-color: transparent;
+	}
+	.nav_deck { top: 50px;}
+	.nav_out { top: -50px;}
+	.workspace {
+		top: 48px;
+		bottom: 68px;
+	}
+	.htmlarea .toolbar {
+		border-top: none;
+	}
+	.htmlarea .toolbar select,
+	.htmlarea .toolbar select:hover,
+	.htmlarea .toolbar select:focus,
+	.htmlarea .toolbar select:active {
+		border: 1px solid #999;
+		top: 0px;
+		margin: 6px 2px;
+		padding: 0px;
+		height: 24px;
+		font-size: 16px;
+		color: #555;
+	}
+	.htmlarea .toolbar select[name="formatblock"] {
+		background: none;
+		border: none;
+		color: #eee;
+	}
+		.htmlarea .toolbar .droplist.formatblock::after {
+			font-family: 'FontAwesome';
+			content: " \f0d7";
+			margin: 0 2px 0 -2px;
+			font-size: 14px;
+			color: #eee;
+		}
+	.htmlarea .toolbar select[name="fontname"] {
+		margin-right: 0px;
+		-webkit-border-top-right-radius: 0px;
+		-webkit-border-bottom-right-radius: 0px;
+		-moz-border-top-right-radius: 0px;
+		-moz-border-bottom-right-radius: 0px;
+		-ms-border-top-right-radius: 0px;
+		-ms-border-bottom-right-radius: 0px;
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+	}
+	.htmlarea .toolbar select[name="fontsize"] {
+		margin-left: 0px;
+		border-left: none;
+		-webkit-border-top-left-radius: 0px;
+		-webkit-border-bottom-left-radius: 0px;
+		-moz-border-top-left-radius: 0px;
+		-moz-border-bottom-left-radius: 0px;
+		-ms-border-top-left-radius: 0px;
+		-ms-border-bottom-left-radius: 0px;
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+div.dialog div.panel_flyout ul {
+	border: 1px solid black;
+}
+@media screen and (max-width: 600px) {
+	.workspace {
+		bottom: 48px;
+	}
+}
+@media screen and (max-width: 479px) {
+	#tabbar0 {
+		height: 96px;
+	}
+	#controlbox1 {
+		-webkit-transition-property: top, bottom, height;
+		-moz-transition-property: top, bottom, height;
+		-ms-transition-property: top, bottom, height;
+		transition-property: top, bottom, height;
+	}
+	#controlbox1:hover, #controlbox1:focus {
+		height: 96px;
+	}
+}

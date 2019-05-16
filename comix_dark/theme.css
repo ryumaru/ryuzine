@@ -1,0 +1,613 @@
+/* 	Comix Dark Theme
+	v. 1.0
+	Copyright 2015 K.M. Hansen (software@kmhcreative.com)
+	License: CC BY-SA 4.0
+	License URI: http://creativecommons.org/licenses/by-sa/4.0/
+
+	
+	Description: A theme suitable for dark, brooding anti-heroes.
+
+*/
+@import url('../dark/theme.css');
+@font-face {
+    font-family: 'VTCLettererProRegular';
+    src: url('fonts/VTC-Letterer-Pro/VTC_letterer_pro-webfont.eot');
+    src: url('fonts/VTC-Letterer-Pro/VTC_letterer_pro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/VTC-Letterer-Pro/VTC_letterer_pro-webfont.woff') format('woff'),
+         url('fonts/VTC-Letterer-Pro/VTC_letterer_pro-webfont.ttf') format('truetype'),
+         url('fonts/VTC-Letterer-Pro/VTC_letterer_pro-webfont.svg#VTCLettererProRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	background: #666 url('images/carbonfiber.jpg');
+}
+
+
+	.ryudialog {
+		border: 2px solid #00369B;
+		-moz-box-shadow: 0px 0px 40px rgba(109,179,242,.70);
+		-webkit-box-shadow: 0px 0px 40px rgba(109,179,242,.70);
+		box-shadow: 0px 0px 40px rgba(109,179,242,.70);
+		background: #000; /* Old browsers */
+		font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+	}
+		.ryudialog .area, .ryudialog .area .button p {
+			color: white;
+		}
+
+	#controltoggle {
+		color: #ccc;
+		background: rgba(0,0,0,.75);
+		font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+	}
+
+/* Splash "Loading..." Page */
+/*==========================*/
+#splash {		
+	color: #333;
+background: rgb(0,0,0);
+background: -moz-linear-gradient(top,  rgba(0,0,0,1) 4%, rgba(109,179,242,1) 10%, rgba(0,3,105,1) 10%, rgba(0,3,105,1) 10%, rgba(0,0,0,1) 10%, rgba(17,17,17,1) 30%, rgba(17,17,17,1) 70%, rgba(0,0,0,1) 89%, rgba(0,3,105,1) 90%, rgba(0,3,105,1) 90%, rgba(109,179,242,1) 90%, rgba(0,0,0,1) 96%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(4%,rgba(0,0,0,1)), color-stop(10%,rgba(109,179,242,1)), color-stop(10%,rgba(0,3,105,1)), color-stop(10%,rgba(0,3,105,1)), color-stop(10%,rgba(0,0,0,1)), color-stop(30%,rgba(17,17,17,1)), color-stop(70%,rgba(17,17,17,1)), color-stop(89%,rgba(0,0,0,1)), color-stop(90%,rgba(0,3,105,1)), color-stop(90%,rgba(0,3,105,1)), color-stop(90%,rgba(109,179,242,1)), color-stop(96%,rgba(0,0,0,1)));
+background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 4%,rgba(109,179,242,1) 10%,rgba(0,3,105,1) 10%,rgba(0,3,105,1) 10%,rgba(0,0,0,1) 10%,rgba(17,17,17,1) 30%,rgba(17,17,17,1) 70%,rgba(0,0,0,1) 89%,rgba(0,3,105,1) 90%,rgba(0,3,105,1) 90%,rgba(109,179,242,1) 90%,rgba(0,0,0,1) 96%);
+background: -o-linear-gradient(top,  rgba(0,0,0,1) 4%,rgba(109,179,242,1) 10%,rgba(0,3,105,1) 10%,rgba(0,3,105,1) 10%,rgba(0,0,0,1) 10%,rgba(17,17,17,1) 30%,rgba(17,17,17,1) 70%,rgba(0,0,0,1) 89%,rgba(0,3,105,1) 90%,rgba(0,3,105,1) 90%,rgba(109,179,242,1) 90%,rgba(0,0,0,1) 96%);
+background: -ms-linear-gradient(top,  rgba(0,0,0,1) 4%,rgba(109,179,242,1) 10%,rgba(0,3,105,1) 10%,rgba(0,3,105,1) 10%,rgba(0,0,0,1) 10%,rgba(17,17,17,1) 30%,rgba(17,17,17,1) 70%,rgba(0,0,0,1) 89%,rgba(0,3,105,1) 90%,rgba(0,3,105,1) 90%,rgba(109,179,242,1) 90%,rgba(0,0,0,1) 96%);
+background: linear-gradient(top,  rgba(0,0,0,1) 4%,rgba(109,179,242,1) 10%,rgba(0,3,105,1) 10%,rgba(0,3,105,1) 10%,rgba(0,0,0,1) 10%,rgba(17,17,17,1) 30%,rgba(17,17,17,1) 70%,rgba(0,0,0,1) 89%,rgba(0,3,105,1) 90%,rgba(0,3,105,1) 90%,rgba(109,179,242,1) 90%,rgba(0,0,0,1) 96%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 );
+}
+	#racktop, #carousel{
+		-moz-box-shadow: 0px 0px 40px rgba(109,179,242,.70);
+		-webkit-box-shadow: 0px 0px 40px rgba(109,179,242,.70);
+		box-shadow: 0px 0px 40px rgba(109,179,242,.70);
+		background: #000; /* Old browsers */
+	}
+		#racktop, #racktop a {
+			color: #999;
+		}
+	.splash-title, #racktop h1 {
+		color: #000; 
+		text-shadow: 0px 0px 2px rgb(109,179,242), 0px 0px 20px rgb(109,179,242);
+	}
+	
+	.splash-port {
+		color: rgb(17,17,17); 
+		text-shadow: 0px 0px 20px rgb(109,179,242);
+		}
+	
+	.splash-notice {
+		text-shadow: 0px 2px 2px #000;
+	}
+	.splash-fineprint a {
+		color: #333;
+	}
+	.splash-fineprint a:visited {
+		color: #222;
+	}
+	
+.plank p {
+	width: 55%;
+	margin: 18px auto;
+	color: #666;
+	font-weight: bold;
+	text-align: left;
+	text-shadow: 0px 2px 1px #000;
+	font-family: 'VTCLettererProRegular', 'Comic Sans MS', Arial, sans-serif;
+	font-size: 18px;
+}
+	.plank a {
+		text-decoration: none;
+		color: #666;
+	}
+.plank .salute, .plank h1, .plank h2, .plank h3, .plank h4 {
+	width: 100%;
+	text-align: center;
+	font-size: 48px;
+	color: #666;
+	text-shadow: 2px 2px 5px rgba(0,0,0,.50), -1px -1px 5px rgba(0,0,0,.50);
+}
+
+
+/* Generic Styles for UI Labels */
+.title {
+	font-size: 18px;
+	color: #ccc;
+	text-shadow: 0px 1px 1px #333;
+	font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+	font-weight: bold;
+}
+
+.button p {
+	color: #ccc;
+}
+
+/* Generic Navbar/Tabbar Styles */
+/*==============================*/
+
+	/* Apply to ALL Navbars & Tabbars */
+	.navbars, .titlebar {
+		border-bottom: 1px solid #00369B;
+		background: #000; /* Old browsers */	
+		}
+	
+	.tabbars {
+		border-top: 1px solid #00369B;
+		background: #000; /* Old browsers */
+		}
+	
+	
+
+/* Generic Panel and Button Styles */
+/*=================================*/
+
+	
+		.panel .title {
+		
+		}
+		.panel .titlebar {
+			border-bottom: 1px solid #00369B;
+		}
+		
+		.pointer {
+			background: #ccc;
+			position: relative;
+			background: #000;
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-moz-box-shadow: 8px 8px 10px rgba(109,179,242,.25);
+			-webkit-box-shadow: 8px 8px 10px rgba(109,179,242,.25);
+			box-shadow: 8px 8px 10px rgba(109,179,242,.25);
+			z-index: 0;
+		}
+	/* Panel Sub-Type Appearances */
+	.panel.style1 { /* Used for Help & TOC */
+		background: #111;
+	}
+		.panel.style1 .titlebar {
+
+		}
+		.panel.style1 .area {
+		background: #111;
+		}
+	
+	.panel.style2 { /* Used for Fonts & Share */
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		-moz-box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		-webkit-box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		border: 2px solid #00369B;
+		background: #000; /* Old browsers */
+	}
+		.panel.style2 .titlebar {
+
+		}
+		.panel.style2 .area {
+		
+		}
+		
+		.panel.style2 .pointer {
+			background: #000;
+		}
+	
+	.panel.style3 { /* Used for Views */
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		-moz-box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		-webkit-box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		border: 2px solid #00369B;
+		background: #000; /* Old browsers */
+	}
+		.panel.style3 .titlebar {
+	
+		}
+		.panel.style3 .area {
+		
+		}
+	.panel.style1.left {
+		-moz-box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		-webkit-box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+	}
+	.panel.style1.right {
+		-moz-box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		-webkit-box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		box-shadow: 0px 0px 10px rgba(109,179,242,.70);	
+	}
+
+	/* Dialog Boxes */
+	.dialog {
+		background: rgb(193,196,206);
+		background: -moz-linear-gradient(top, rgb(245,245,247) 0%, rgb(193,196,206) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(245,245,247)), color-stop(100%,rgb(193,196,206)));
+		background: -webkit-linear-gradient(top, rgb(245,245,247) 0%,rgb(193,196,206) 100%);
+		background: -o-linear-gradient(top, rgb(245,245,247) 0%,rgb(193,196,206) 100%);
+		background: -ms-linear-gradient(top, rgb(245,245,247) 0%,rgb(193,196,206) 100%);
+		background: linear-gradient(top, rgb(245,245,247) 0%,rgb(193,196,206) 100%);
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+	}
+	
+	/* Button Appearances */
+	.button { /* Default Generic Button */
+		height: 44px;
+		margin-top: 0;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		background: #000;
+		border: none;
+	}
+	.button:hover {
+		background: #000;
+		-webkit-box-shadow: 0px 0px 10px rgba(109,179,242,1);
+		-moz-box-shadow: 0px 0px 10px rgba(109,179,242,1);
+		box-shadow: 0px 0px 10px rgba(109,179,242,1);
+	}
+	
+	.button.type1 { /* Standard Button */
+		border-left: 1px solid #00369B;
+		border-right: 1px solid #00369B;
+	}
+	.button.type1:hover, .button.type1:focus {
+	}
+		.button.type1 p {
+			font-family: VTCLettererProRegular, Arial, sans-serif;
+			line-height: 44px;
+		}
+		.button.type1:hover p, .button.type1:focus p {
+			color: #ccc;
+		}
+	
+	.button.type2 { /* Blue Button */
+		background: #00369B; /* Old browsers */	
+	}
+	
+	.button.type2:hover, .button.type2:focus {
+		background: #000;
+	}
+		.button .type2 p {
+			color: #000;
+			line-height: 43px;
+			font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+		}
+		
+		.button.type2:hover p, .button.type2:focus p {
+			color: #ccc;
+		}
+	
+	.button.type3 { /* Widebutton */
+		border: 1px double #00369B;
+		background: #000; /* Old browsers */
+	}
+	
+	.button.type3:hover, .button.type3:focus {
+	background: #00369B; /* Old browsers */
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+	
+		.button.type3 p {
+			font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+			color: #ccc;
+		}
+		
+		.button.type3:hover p, .button.type3:focus p {
+			color: #000;
+		}
+		
+		
+	.button.type4 { /* Wide Cancel Button */
+	border: 1px double #00369B;
+	background: #00369B; /* Old browsers */
+	}
+	
+	.button.type4:hover, .button.type4:focus {
+		background: #000; /* Old browsers */
+	}
+	
+		.button.type4 p {
+			font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+			color: #000;
+		}
+		.button.type4:hover p, .button.type4:focus p {
+			color: #ccc;
+		}
+
+		.rz-sharethis.iconfont a.rz-share:hover,
+		.rz-sharethis.iconfont a.rz-share:hover span {
+			color: black;
+			-moz-text-shadow: 0px 0px 10px rgba(109,179,242,.70);
+			-webkit-text-shadow: 0px 0px 10px rgba(109,179,242,.70);
+			text-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		}
+
+.flipleft .margin-arrow {
+	border-top:20px solid transparent;  /* left arrow slant */
+	border-bottom:20px solid transparent; /* right arrow slant */
+	border-right:20px solid #ccc; /* top, add background color here */
+}
+
+.flipleft:hover .margin-arrow {
+	border-right:20px solid #000;
+	opacity: 1.0;
+}
+
+.flipright .margin-arrow {
+	border-top:20px solid transparent;  /* left arrow slant */
+	border-bottom:20px solid transparent; /* right arrow slant */
+	border-left:20px solid #ccc; /* top, add background color here */
+}
+
+.flipright:hover .margin-arrow {
+	border-left:20px solid #000;
+	opacity: 1.0;
+}
+
+
+.flipper:hover {
+	background: #ccc;
+	opacity: .50;
+}
+
+
+	#navbar0 {
+	
+	}
+		
+	#tabbar0 {
+	
+	}
+	
+	#lessbutton1, #tocbutton, #fontbutton,
+	#viewsbutton, #morebutton2, #sharebutton {
+		margin-top: 0;
+	}
+	
+/* Size & Position of Bookmarks Panel */
+/*===============================*/
+
+	
+		#bmark_panel .area {
+		background: #111;
+		}
+		
+			#bmark_panel ul li {
+				height: 43px;
+				width: 100%;
+				margin-right: -100px;
+				border-bottom: 1px solid #00369B;
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+			}
+				#bmark_panel ul li a {
+					font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+					font-size: 18px;
+					font-weight: bold;
+				}
+
+		#toc_panel .area {
+			background: #111;
+		}
+
+			#toc_panel ul li {
+				border-bottom: 1px solid #00369B;
+			}
+				#toc_panel ul li a, #toc_panel ul li .label {
+					font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+				}
+				
+	/* Navigation List Element Colors */
+	/* Following are used by script to dynamically assign style */
+	.list_up {
+		/* Setting a background color obscures border radius on container */
+	}
+	.list_up a, .list_up .label {
+		color: #ccc;
+	}
+	.list_down {
+		background: #00369B;
+	}
+	.list_down a, .list_up .label {
+		color: #000;
+	}
+
+/* Size & Position of Fonts Panel */
+/*================================*/
+#font_panel {
+	width: 183px;
+	background: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	border-radius: 10px;
+}
+		#font_panel .area .sub-button:hover, #font_panel .area .sub-button:focus {
+			background: #00369B;
+			color: #fff;
+		}
+		#fontbox {
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			-ms-border-radius: 10px;
+			border-radius: 10px;
+		}
+	#fontdn, #color_basic {
+		-webkit-border-top-left-radius: 10px;
+		-webkit-border-bottom-left-radius: 10px;
+		-moz-border-radius-topleft: 10px;
+		-moz-border-radius-bottomleft: 10px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
+		#fontup {
+			border-left: 2px solid #00369B;
+			border-right: 2px solid #00369B;
+		}
+	#colors, #color_black {
+		-webkit-border-top-right-radius: 10px;
+		-webkit-border-bottom-right-radius: 10px;
+		-moz-border-radius-topright: 10px;
+		-moz-border-radius-bottomright: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+		#font_panel .area p {
+			font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+		}
+		#colorbox {
+			border-radius: 10px;
+		}		
+		.colorbox_IN {
+			-moz-box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.70);
+			-webkit-box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.70);
+			box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.70);
+		}
+		
+		
+#views_panel {
+	background: #111;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	border-radius: 10px;
+}
+	#views_panel .pointer {
+		background: #111;
+	}
+
+
+	
+		.optitem {
+		line-height: 43px;
+		font-weight: bold;
+		padding-left: 10px;
+		font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+		color: #ccc;
+	}		
+
+	
+		#opt_panel .area {
+			background: #111;
+		}
+			
+			#opt_panel ul li {
+				background: #111;
+				border-top: none;
+				border-bottom: 1px solid #00369B;
+			}
+			
+		.opt-disabled {
+			color: #333;
+		}
+
+	.opt-switch span.symbol::before {
+		background-color: #666;
+		border: 1px solid #000;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		-ms-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		-ms-border-radius: 0px;
+		border-radius: 0px;
+		width: 55px;
+		text-align: right;
+		padding-right: 5px;
+		content: '\f186';
+		font-family: 'FontAwesome';
+		color: black;
+		line-height: 30px;
+	}
+	.opt-switch span.symbol::after {
+		background: #eee url('images/halftone.png') 0 0 repeat-x;
+		border-radius: 0px;
+		border: 1px solid #00369B;
+		top: 0px; left: 0px;
+	}
+		.opt-switch.opt-on span.symbol::before {
+			background-color: #00369B;
+			color: #eee;
+			text-align: left;
+			padding-left: 5px;
+			padding-right: 0px;
+		}		
+		#opt_panel .smallprint {
+			text-align: center;
+			color: #666;
+			font-size: 14px;
+			font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+		}
+	
+		.appbannerbox p {
+			background: black;
+			color: #ccc;
+		}
+/* For RyuzineRack */
+.slot .cover:hover {
+	-moz-box-shadow: 0px 0px 40px rgba(109,179,242,.70);
+	-webkit-box-shadow: 0px 0px 40px rgba(109,179,242,.70);
+	box-shadow: 0px 0px 40px rgba(109,179,242,.70);
+	background: #000; /* Old browsers */
+}
+.slot .description,.slot .description .meta a {
+	color: #666;
+	background: rgba(0,0,0,.75);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	border-radius: 10px;
+}
+	.slot .description .meta {
+		float: none;
+	}
+	.promo .description h4 {
+		-webkit-filter: saturate(0) brightness(.25);
+		-moz-filter: saturate(0) brightness(.25);
+		-ms-filter: saturate(0) brightness(.25);
+		filter: saturate(0) brightness(.25);
+	}
+	/* Lightbox Styling */
+	#lightbox .pic {
+		color: #fff;
+		background: #000;
+		border: 3px solid #00369B;
+		-moz-box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		-webkit-box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		-o-box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		-ms-box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+		box-shadow: 0px 0px 10px rgba(109,179,242,.70);
+	}
+	#lightbox .caption, #lightbox .ryubox p {
+		background: transparent;
+		font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+	}
+	#lightbox .closeit {	
+		border-color: #00369B;
+	}
+#tocslider { height: 36px; }
+#tocslider_track { background: #00369B;}
+#tocslider_button { 
+	background: #000;
+	border: 1px solid #00369B;}
+#tocslider_button p {
+	font-family: VTCLettererProRegular, 'Comic Sans MS', Arial, sans-serif;
+	font-size: 14px;
+}
+#tocslider_button:hover, #tocslider_button:focus {
+		background: #000;
+		-webkit-box-shadow: 0px 0px 10px rgba(109,179,242,1);
+		-moz-box-shadow: 0px 0px 10px rgba(109,179,242,1);
+		box-shadow: 0px 0px 10px rgba(109,179,242,1);
+}
+	#tocslider_button:hover p, #tocslider_button:focus p {
+		color: #ccc;
+	}
+	#back2rack, #numark, #unmark { margin-top: 0; }
+	#unmark:hover, #unmark:focus { background-color: black;color:white; }

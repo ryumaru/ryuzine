@@ -1,0 +1,51 @@
+Version 1.0
+===========
+
+THEME PACK FOR RYUZINE WEBAPPS
+
+MANIFEST
+========
+
+* comix
+* comix_dark
+* dark
+* light
+* light_writer
+* mobilefruit
+* mobilefruit_writer
+* paperbot
+* urban
+* writer
+
+DETAILS
+=======
+
+comix
+A theme for all Ryuzine webapps with a superhero comic book feel.
+
+comix_dark
+A theme for all Ryuzine webapps with a dark, brooding superhero feel.
+
+dark
+Default theme for all Ryuzine webapps with dark colors.
+
+light
+Light color version of the default theme for all Ryuzine webapps.
+
+light_writer
+A light-color tabbed version of the light theme for Ryuzine Writer.
+
+mobilefruit
+A theme for all Ryuzine webapps with an iOS feel.
+
+mobilefruit_writer
+A tabbed theme for Ryuzine Writer based on Mobilefruit.
+
+paperbot
+A theme for all Ryuzine webapps with an Android Material Design feel.
+
+urban
+A theme for all Ryuzine webapps with a Windows Metro feel.
+
+writer
+The preferred, tabbed theme for Ryuzine Writer based on the Dark theme.
