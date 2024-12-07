@@ -1,6 +1,6 @@
 /*	
 name	: "Social Widget",
-version	: "1.0",
+version	: "1.1",
 author	: "K.M. Hansen",
 url		: "http://www.kmhcreative.com/labs",
 license	: "MIT",
@@ -15,11 +15,15 @@ RYU.addon.register({
 	name : 'socialwidget',
 	info : {
 		name	: "Social Widget",
-		version	: "1.0",
+		version	: "1.1",
 		author	: "K.M. Hansen",
 		url		: "http://www.kmhcreative.com/labs",
 		license	: "MIT",
 		about	: "Default social media sharing widget for Ryuzine."
 	},
-	inject : {js:[['socialwidget.js?1.0',0,'socialwidget']]}
+	inject : {js:[
+					['socialwidget.js?1.1',0,'socialwidget'],
+					['some.js?1.4',0,'mastodonshare']
+				 ]
+			 }
 });

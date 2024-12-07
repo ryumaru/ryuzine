@@ -1,6 +1,6 @@
 /*
 RYUZINE RACK
-Version: 1.0
+Version: 1.1
 Author: K.M. Hansen
 Author URI: http://www.kmhcreative.com
 License: MPL 2.0
@@ -22,7 +22,7 @@ var RYU = RYU || {};
 RYU = function() {
 	// Default Values //
 	var _lc = function(string) {string.toString();return string;};	// RYU._lc() like php echo
-	var pagecount = 2; 		var current = 0;			var version = "1.0";
+	var pagecount = 2; 		var current = 0;			var version = "1.1";
 	var folio = [];			var page = [];				
 	var header = [];		var back = [];				var next = [];
 	var live = [];			var livescroll = [];
