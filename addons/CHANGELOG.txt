@@ -1,5 +1,6 @@
-Version 1.0
+Version 1.1
 ===========
+* iScroll outdated and abandoned so removed
 
 ADD-ONS PACK FOR RYUZINE READER & RACK
 
@@ -7,7 +8,6 @@ MANIFEST
 ========
 
 * depthfx
-* iscroll
 * lightbox
 * localize
 * ovr
@@ -20,9 +20,6 @@ DETAILS
 
 * depthfx (new)
 ..+ "pagecurves" appearance broken out into this optional add-on.
-
-* iscroll
-..+ updated to iScroll 5.1.3
 
 * lightbox
 ..+ updated with new add-on info block
